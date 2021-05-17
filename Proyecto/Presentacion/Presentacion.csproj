@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{385148BB-0D20-4F11-AA48-2167932C8DEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Eventick.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actividad.cs" />
+    <Compile Include="Administradores.cs" />
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cache\AdminLoginCache.cs" />
+    <Compile Include="Cache\UserLoginCache.cs" />
+    <Compile Include="CambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarContraseña.designer.cs">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="CrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCuenta.designer.cs">
+      <DependentUpon>CrearCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elemento_a_ofrecer.cs" />
+    <Compile Include="Eventos.cs" />
+    <Compile Include="FrmActPpal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActPpal.designer.cs">
+      <DependentUpon>FrmActPpal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas.cs" />
+    <Compile Include="InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSesion.designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="PantallaCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCarga.designer.cs">
+      <DependentUpon>PantallaCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CambiarContraseña.resx">
+      <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCuenta.resx">
+      <DependentUpon>CrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActPpal.resx">
+      <DependentUpon>FrmActPpal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCarga.resx">
+      <DependentUpon>PantallaCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Presentacion.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura-removebg-preview%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_circle-cross_226589.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\1.gif" />
+    <Content Include="bin\Debug\AccesoDatos.dll" />
+    <Content Include="bin\Debug\AccesoDatos.pdb" />
+    <Content Include="bin\Debug\BouncyCastle.Crypto.dll" />
+    <Content Include="bin\Debug\Comun.dll" />
+    <Content Include="bin\Debug\Comun.pdb" />
+    <Content Include="bin\Debug\Dominio.dll" />
+    <Content Include="bin\Debug\Dominio.pdb" />
+    <Content Include="bin\Debug\Google.Protobuf.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.dll" />
+    <Content Include="bin\Debug\K4os.Compression.LZ4.Streams.dll" />
+    <Content Include="bin\Debug\K4os.Hash.xxHash.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Data.xml" />
+    <Content Include="bin\Debug\Presentacion.exe" />
+    <Content Include="bin\Debug\Presentacion.pdb" />
+    <Content Include="bin\Debug\Renci.SshNet.dll" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\Ubiety.Dns.Core.dll" />
+    <Content Include="bin\Debug\Zstandard.Net.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
