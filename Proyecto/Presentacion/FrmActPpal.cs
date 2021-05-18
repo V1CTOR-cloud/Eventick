@@ -22,7 +22,6 @@ namespace Eventick
             cbbTipo.SelectedIndex = 0;
             cbbTiempo.SelectedIndex = 0;
             cbbDificultad.SelectedIndex = 0;
-            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
             lblDistancia.Text = trbDistancia.Value.ToString() + " km";
 
             txtPalabraClave.Text = "PALABRA CLAVE";
@@ -46,21 +45,6 @@ namespace Eventick
             Application.Exit();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
-
-                this.WindowState = FormWindowState.Normal;
-            }
-            
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -69,9 +53,6 @@ namespace Eventick
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
-            this.WindowState = FormWindowState.Normal;
             List<Actividad> lista = new List<Actividad>();
             if (conexion.AbrirConexion())
             {
@@ -122,13 +103,13 @@ namespace Eventick
         private bool mouseDown;
         private Point lastLocation;
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        private void FrmActPpal_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             lastLocation = e.Location;
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void FrmActPpal_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
             {
@@ -139,7 +120,7 @@ namespace Eventick
             }
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        private void FrmActPpal_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }
@@ -305,5 +286,11 @@ namespace Eventick
             panelUser.Visible = !panelUser.Visible;
         }
 
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPerfilUsuario perfilusu = new frmPerfilUsuario();
+            perfilusu.Show();
+        }
     }
 }

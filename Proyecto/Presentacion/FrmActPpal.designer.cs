@@ -52,17 +52,16 @@ namespace Eventick
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picSalir = new System.Windows.Forms.PictureBox();
             this.flpNoticias = new System.Windows.Forms.FlowLayoutPanel();
             this.btnActividad = new System.Windows.Forms.Button();
             this.btnEvento = new System.Windows.Forms.Button();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnMiLista = new System.Windows.Forms.Button();
             this.btnMessages = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnCargarAct = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
@@ -76,7 +75,6 @@ namespace Eventick
             this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
             this.panelUser.SuspendLayout();
             this.SuspendLayout();
@@ -329,7 +327,6 @@ namespace Eventick
             this.panelBorde.Controls.Add(this.label1);
             this.panelBorde.Controls.Add(this.pictureBox5);
             this.panelBorde.Controls.Add(this.picMinimizar);
-            this.panelBorde.Controls.Add(this.picMaximizar);
             this.panelBorde.Controls.Add(this.picSalir);
             this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
@@ -337,9 +334,9 @@ namespace Eventick
             this.panelBorde.Name = "panelBorde";
             this.panelBorde.Size = new System.Drawing.Size(1235, 29);
             this.panelBorde.TabIndex = 5;
-            this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.panelBorde.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            this.panelBorde.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseDown);
+            this.panelBorde.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseMove);
+            this.panelBorde.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseUp);
             // 
             // label1
             // 
@@ -371,7 +368,7 @@ namespace Eventick
             this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1168, 2);
+            this.picMinimizar.Location = new System.Drawing.Point(1191, 2);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(19, 20);
@@ -379,21 +376,6 @@ namespace Eventick
             this.picMinimizar.TabIndex = 2;
             this.picMinimizar.TabStop = false;
             this.picMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
-            this.picMaximizar.Location = new System.Drawing.Point(1191, 2);
-            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 1;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // picSalir
             // 
@@ -462,51 +444,51 @@ namespace Eventick
             this.panelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelUser.Controls.Add(this.button7);
-            this.panelUser.Controls.Add(this.button6);
+            this.panelUser.Controls.Add(this.btnLogOut);
+            this.panelUser.Controls.Add(this.btnMiLista);
             this.panelUser.Controls.Add(this.btnMessages);
-            this.panelUser.Controls.Add(this.button3);
-            this.panelUser.Controls.Add(this.button2);
+            this.panelUser.Controls.Add(this.btnSettings);
+            this.panelUser.Controls.Add(this.btnPerfil);
             this.panelUser.Location = new System.Drawing.Point(1062, 103);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(161, 151);
             this.panelUser.TabIndex = 26;
             this.panelUser.Visible = false;
             // 
-            // button7
+            // btnLogOut
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 120);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(159, 30);
-            this.button7.TabIndex = 32;
-            this.button7.Text = "Cerrar sesión";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 120);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(159, 30);
+            this.btnLogOut.TabIndex = 32;
+            this.btnLogOut.Text = "Cerrar sesión";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnMiLista
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 90);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 30);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "       Mi lista";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnMiLista.BackColor = System.Drawing.Color.Transparent;
+            this.btnMiLista.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMiLista.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMiLista.FlatAppearance.BorderSize = 0;
+            this.btnMiLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiLista.Image = ((System.Drawing.Image)(resources.GetObject("btnMiLista.Image")));
+            this.btnMiLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMiLista.Location = new System.Drawing.Point(0, 90);
+            this.btnMiLista.Name = "btnMiLista";
+            this.btnMiLista.Size = new System.Drawing.Size(159, 30);
+            this.btnMiLista.TabIndex = 31;
+            this.btnMiLista.Text = "       Mi lista";
+            this.btnMiLista.UseVisualStyleBackColor = false;
             // 
             // btnMessages
             // 
@@ -525,40 +507,41 @@ namespace Eventick
             this.btnMessages.Text = "          Mensajes";
             this.btnMessages.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnSettings
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 30);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Configuración";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 30);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(159, 30);
+            this.btnSettings.TabIndex = 28;
+            this.btnSettings.Text = "Configuración";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSettings.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnPerfil
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 30);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "    Perfil";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(159, 30);
+            this.btnPerfil.TabIndex = 27;
+            this.btnPerfil.Text = "    Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnCargarAct
             // 
@@ -588,6 +571,7 @@ namespace Eventick
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmActPpal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventick";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
@@ -605,7 +589,6 @@ namespace Eventick
             this.panelBorde.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
             this.panelUser.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -619,7 +602,6 @@ namespace Eventick
         private System.Windows.Forms.Panel panelBorde;
         private System.Windows.Forms.PictureBox picSalir;
         private System.Windows.Forms.PictureBox picMinimizar;
-        private System.Windows.Forms.PictureBox picMaximizar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label1;
@@ -641,11 +623,11 @@ namespace Eventick
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Panel panelUser;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnMiLista;
         private System.Windows.Forms.Button btnMessages;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnCargarAct;
     }
 }

@@ -34,7 +34,6 @@ namespace Eventick
             this.txtContraseña = new System.Windows.Forms.MaskedTextBox();
             this.lblEntrarComoInvitado = new System.Windows.Forms.Label();
             this.lblCambiarContraseña = new System.Windows.Forms.Label();
-            this.picReajustar = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
@@ -42,14 +41,8 @@ namespace Eventick
             this.panelBarranav = new System.Windows.Forms.Panel();
             this.lblusuario_correo = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
-=======
-            //this.btnRegistrarse = new Eventick.RoundButton();
-            //this.btnIniciarSesion = new Eventick.RoundButton();
->>>>>>> 91ec748d0911b7f68b554674ebbe857fa77e4358
-            ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -61,7 +54,7 @@ namespace Eventick
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.Gainsboro;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(464, 237);
+            this.txtUsuario.Location = new System.Drawing.Point(462, 219);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(326, 27);
@@ -71,7 +64,7 @@ namespace Eventick
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.Gainsboro;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(464, 360);
+            this.txtContraseña.Location = new System.Drawing.Point(462, 342);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -83,7 +76,7 @@ namespace Eventick
             this.lblEntrarComoInvitado.AutoSize = true;
             this.lblEntrarComoInvitado.BackColor = System.Drawing.Color.Gainsboro;
             this.lblEntrarComoInvitado.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblEntrarComoInvitado.Location = new System.Drawing.Point(851, 399);
+            this.lblEntrarComoInvitado.Location = new System.Drawing.Point(850, 388);
             this.lblEntrarComoInvitado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEntrarComoInvitado.Name = "lblEntrarComoInvitado";
             this.lblEntrarComoInvitado.Size = new System.Drawing.Size(104, 13);
@@ -96,27 +89,13 @@ namespace Eventick
             this.lblCambiarContraseña.AutoSize = true;
             this.lblCambiarContraseña.BackColor = System.Drawing.Color.Gainsboro;
             this.lblCambiarContraseña.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblCambiarContraseña.Location = new System.Drawing.Point(440, 399);
+            this.lblCambiarContraseña.Location = new System.Drawing.Point(441, 388);
             this.lblCambiarContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCambiarContraseña.Name = "lblCambiarContraseña";
             this.lblCambiarContraseña.Size = new System.Drawing.Size(101, 13);
             this.lblCambiarContraseña.TabIndex = 10;
             this.lblCambiarContraseña.Text = "Cambiar contraseña";
             this.lblCambiarContraseña.Click += new System.EventHandler(this.lblCambiarContraseña_Click);
-            // 
-            // picReajustar
-            // 
-            this.picReajustar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picReajustar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picReajustar.Image = ((System.Drawing.Image)(resources.GetObject("picReajustar.Image")));
-            this.picReajustar.Location = new System.Drawing.Point(1310, 4);
-            this.picReajustar.Margin = new System.Windows.Forms.Padding(2);
-            this.picReajustar.Name = "picReajustar";
-            this.picReajustar.Size = new System.Drawing.Size(22, 21);
-            this.picReajustar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picReajustar.TabIndex = 13;
-            this.picReajustar.TabStop = false;
-            this.picReajustar.Click += new System.EventHandler(this.picReajustar_Click);
             // 
             // picLogo
             // 
@@ -131,9 +110,10 @@ namespace Eventick
             // 
             // picMinimizar
             // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1284, 4);
+            this.picMinimizar.Location = new System.Drawing.Point(1308, 4);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(22, 21);
@@ -147,7 +127,7 @@ namespace Eventick
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(1336, 4);
+            this.picCerrar.Location = new System.Drawing.Point(1334, 4);
             this.picCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(22, 21);
@@ -158,11 +138,12 @@ namespace Eventick
             // 
             // picFondoLogIn
             // 
+            this.picFondoLogIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFondoLogIn.Image = ((System.Drawing.Image)(resources.GetObject("picFondoLogIn.Image")));
-            this.picFondoLogIn.Location = new System.Drawing.Point(-1, 26);
+            this.picFondoLogIn.Location = new System.Drawing.Point(0, 0);
             this.picFondoLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.picFondoLogIn.Name = "picFondoLogIn";
-            this.picFondoLogIn.Size = new System.Drawing.Size(1380, 738);
+            this.picFondoLogIn.Size = new System.Drawing.Size(1378, 759);
             this.picFondoLogIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFondoLogIn.TabIndex = 0;
             this.picFondoLogIn.TabStop = false;
@@ -170,19 +151,22 @@ namespace Eventick
             // panelBarranav
             // 
             this.panelBarranav.Controls.Add(this.picCerrar);
-            this.panelBarranav.Controls.Add(this.picReajustar);
             this.panelBarranav.Controls.Add(this.picMinimizar);
-            this.panelBarranav.Location = new System.Drawing.Point(-1, 0);
+            this.panelBarranav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarranav.Location = new System.Drawing.Point(0, 0);
             this.panelBarranav.Name = "panelBarranav";
-            this.panelBarranav.Size = new System.Drawing.Size(1380, 27);
+            this.panelBarranav.Size = new System.Drawing.Size(1378, 27);
             this.panelBarranav.TabIndex = 16;
+            this.panelBarranav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseDown);
+            this.panelBarranav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseMove);
+            this.panelBarranav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseUp);
             // 
             // lblusuario_correo
             // 
             this.lblusuario_correo.AutoSize = true;
             this.lblusuario_correo.BackColor = System.Drawing.Color.Gainsboro;
             this.lblusuario_correo.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblusuario_correo.Location = new System.Drawing.Point(461, 222);
+            this.lblusuario_correo.Location = new System.Drawing.Point(459, 204);
             this.lblusuario_correo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblusuario_correo.Name = "lblusuario_correo";
             this.lblusuario_correo.Size = new System.Drawing.Size(78, 13);
@@ -194,72 +178,28 @@ namespace Eventick
             this.lblcontraseña.AutoSize = true;
             this.lblcontraseña.BackColor = System.Drawing.Color.Gainsboro;
             this.lblcontraseña.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblcontraseña.Location = new System.Drawing.Point(461, 345);
+            this.lblcontraseña.Location = new System.Drawing.Point(459, 327);
             this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(61, 13);
             this.lblcontraseña.TabIndex = 18;
             this.lblcontraseña.Text = "Contraseña";
             // 
-<<<<<<< HEAD
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(730, 477);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(631, 423);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(119, 23);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(129, 23);
             this.btnIniciarSesion.TabIndex = 19;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-=======
-            // btnRegistrarse
-            // 
-            //this.btnRegistrarse.BorderColor = System.Drawing.Color.Silver;
-            //this.btnRegistrarse.ButtonColor = System.Drawing.Color.Red;
-            //this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            //this.btnRegistrarse.FlatAppearance.BorderSize = 0;
-            //this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            //this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            //this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.btnRegistrarse.Location = new System.Drawing.Point(854, 463);
-            //this.btnRegistrarse.Name = "btnRegistrarse";
-            //this.btnRegistrarse.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            //this.btnRegistrarse.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
-            //this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
-            //this.btnRegistrarse.Size = new System.Drawing.Size(101, 31);
-            //this.btnRegistrarse.TabIndex = 20;
-            //this.btnRegistrarse.Text = "Registrarse";
-            //this.btnRegistrarse.TextColor = System.Drawing.Color.White;
-            //this.btnRegistrarse.UseVisualStyleBackColor = true;
-            //this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
-            // 
-            // btnIniciarSesion
-            // 
-            //this.btnIniciarSesion.BorderColor = System.Drawing.Color.Silver;
-            //this.btnIniciarSesion.ButtonColor = System.Drawing.Color.Red;
-            //this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            //this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            //this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            //this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            //this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.btnIniciarSesion.Location = new System.Drawing.Point(714, 463);
-            //this.btnIniciarSesion.Name = "btnIniciarSesion";
-            //this.btnIniciarSesion.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            //this.btnIniciarSesion.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
-            //this.btnIniciarSesion.OnHoverTextColor = System.Drawing.Color.White;
-            //this.btnIniciarSesion.Size = new System.Drawing.Size(120, 31);
-            //this.btnIniciarSesion.TabIndex = 19;
-            //this.btnIniciarSesion.Text = "Iniciar Sesión";
-            //this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
-            //this.btnIniciarSesion.UseVisualStyleBackColor = true;
-            //this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
->>>>>>> 91ec748d0911b7f68b554674ebbe857fa77e4358
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(878, 477);
+            this.btnRegistrarse.Location = new System.Drawing.Point(802, 423);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(95, 23);
+            this.btnRegistrarse.Size = new System.Drawing.Size(129, 23);
             this.btnRegistrarse.TabIndex = 20;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
@@ -271,8 +211,8 @@ namespace Eventick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1378, 759);
-            //this.Controls.Add(this.btnRegistrarse);
-            //this.Controls.Add(this.btnIniciarSesion);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario_correo);
             this.Controls.Add(this.panelBarranav);
@@ -288,12 +228,7 @@ namespace Eventick
             this.Name = "frmLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventick - Inicio sesión";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLogIn_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
@@ -314,10 +249,11 @@ namespace Eventick
         private System.Windows.Forms.Label lblCambiarContraseña;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox picCerrar;
-        private System.Windows.Forms.PictureBox picReajustar;
         private System.Windows.Forms.Panel panelBarranav;
         private System.Windows.Forms.Label lblusuario_correo;
         private System.Windows.Forms.Label lblcontraseña;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnRegistrarse;
     }
 }
 

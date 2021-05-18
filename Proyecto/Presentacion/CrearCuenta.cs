@@ -30,28 +30,10 @@ namespace Eventick
             Visible = false;
         }
 
-        private void picReajustar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                picReajustar.Image = Image.FromFile(@"..\..\img\max.png");
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                picReajustar.Image = Image.FromFile(@"..\..\img\min.png");
-            }
-        }
 
         private void picMinimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnRegistrarse_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Limpiacajas()
@@ -147,6 +129,31 @@ namespace Eventick
             {
                 return false;
             }
+        }
+
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void panelBarranav_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panelBarranav_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void panelBarranav_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
 
     }

@@ -36,27 +36,27 @@ namespace Eventick
             this.txtViejaContraseña = new System.Windows.Forms.TextBox();
             this.panelBarranav = new System.Windows.Forms.Panel();
             this.picCerrar = new System.Windows.Forms.PictureBox();
-            this.picReajustar = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
             this.lblusuario_correo = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
             this.lblNuevaContraseña = new System.Windows.Forms.Label();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             this.panelBarranav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // picFondo
             // 
+            this.picFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picFondo.Image = ((System.Drawing.Image)(resources.GetObject("picFondo.Image")));
-            this.picFondo.Location = new System.Drawing.Point(-1, 29);
+            this.picFondo.Location = new System.Drawing.Point(0, 29);
             this.picFondo.Margin = new System.Windows.Forms.Padding(2);
             this.picFondo.Name = "picFondo";
-            this.picFondo.Size = new System.Drawing.Size(1383, 738);
+            this.picFondo.Size = new System.Drawing.Size(1235, 644);
             this.picFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFondo.TabIndex = 0;
             this.picFondo.TabStop = false;
@@ -64,7 +64,7 @@ namespace Eventick
             // picAtras
             // 
             this.picAtras.Image = ((System.Drawing.Image)(resources.GetObject("picAtras.Image")));
-            this.picAtras.Location = new System.Drawing.Point(217, 170);
+            this.picAtras.Location = new System.Drawing.Point(194, 150);
             this.picAtras.Margin = new System.Windows.Forms.Padding(2);
             this.picAtras.Name = "picAtras";
             this.picAtras.Size = new System.Drawing.Size(35, 39);
@@ -77,38 +77,41 @@ namespace Eventick
             // 
             this.txtEmail.BackColor = System.Drawing.Color.Gainsboro;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(491, 285);
+            this.txtEmail.Location = new System.Drawing.Point(437, 250);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(280, 33);
+            this.txtEmail.Size = new System.Drawing.Size(253, 33);
             this.txtEmail.TabIndex = 13;
             // 
             // txtViejaContraseña
             // 
             this.txtViejaContraseña.BackColor = System.Drawing.Color.Gainsboro;
             this.txtViejaContraseña.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtViejaContraseña.Location = new System.Drawing.Point(490, 381);
+            this.txtViejaContraseña.Location = new System.Drawing.Point(437, 335);
             this.txtViejaContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtViejaContraseña.Name = "txtViejaContraseña";
             this.txtViejaContraseña.PasswordChar = '*';
-            this.txtViejaContraseña.Size = new System.Drawing.Size(281, 33);
+            this.txtViejaContraseña.Size = new System.Drawing.Size(253, 33);
             this.txtViejaContraseña.TabIndex = 14;
             // 
             // panelBarranav
             // 
             this.panelBarranav.Controls.Add(this.picCerrar);
-            this.panelBarranav.Controls.Add(this.picReajustar);
             this.panelBarranav.Controls.Add(this.picMinimizar);
-            this.panelBarranav.Location = new System.Drawing.Point(0, -1);
+            this.panelBarranav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarranav.Location = new System.Drawing.Point(0, 0);
             this.panelBarranav.Name = "panelBarranav";
-            this.panelBarranav.Size = new System.Drawing.Size(1382, 30);
+            this.panelBarranav.Size = new System.Drawing.Size(1235, 29);
             this.panelBarranav.TabIndex = 21;
+            this.panelBarranav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseDown);
+            this.panelBarranav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseMove);
+            this.panelBarranav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseUp);
             // 
             // picCerrar
             // 
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Image = global::Eventick.Properties.Resources.iconfinder_circle_cross_226589;
-            this.picCerrar.Location = new System.Drawing.Point(1330, 4);
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(1183, 4);
             this.picCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(22, 21);
@@ -117,23 +120,11 @@ namespace Eventick
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
-            // picReajustar
-            // 
-            this.picReajustar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picReajustar.Image = global::Eventick.Properties.Resources.iconfinder_minimize_2_3324969;
-            this.picReajustar.Location = new System.Drawing.Point(1304, 4);
-            this.picReajustar.Margin = new System.Windows.Forms.Padding(2);
-            this.picReajustar.Name = "picReajustar";
-            this.picReajustar.Size = new System.Drawing.Size(22, 21);
-            this.picReajustar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picReajustar.TabIndex = 16;
-            this.picReajustar.TabStop = false;
-            this.picReajustar.Click += new System.EventHandler(this.picReajustar_Click);
-            // 
             // picMinimizar
             // 
-            this.picMinimizar.Image = global::Eventick.Properties.Resources.iconfinder_minus_circle_2561243;
-            this.picMinimizar.Location = new System.Drawing.Point(1278, 4);
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
+            this.picMinimizar.Location = new System.Drawing.Point(1159, 4);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(22, 21);
@@ -146,11 +137,11 @@ namespace Eventick
             // 
             this.txtNuevaContraseña.BackColor = System.Drawing.Color.Gainsboro;
             this.txtNuevaContraseña.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaContraseña.Location = new System.Drawing.Point(490, 478);
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(439, 419);
             this.txtNuevaContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtNuevaContraseña.Name = "txtNuevaContraseña";
             this.txtNuevaContraseña.PasswordChar = '*';
-            this.txtNuevaContraseña.Size = new System.Drawing.Size(281, 33);
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(251, 33);
             this.txtNuevaContraseña.TabIndex = 22;
             // 
             // lblusuario_correo
@@ -158,7 +149,7 @@ namespace Eventick
             this.lblusuario_correo.AutoSize = true;
             this.lblusuario_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.lblusuario_correo.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblusuario_correo.Location = new System.Drawing.Point(490, 267);
+            this.lblusuario_correo.Location = new System.Drawing.Point(436, 232);
             this.lblusuario_correo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblusuario_correo.Name = "lblusuario_correo";
             this.lblusuario_correo.Size = new System.Drawing.Size(78, 13);
@@ -170,7 +161,7 @@ namespace Eventick
             this.lblcontraseña.AutoSize = true;
             this.lblcontraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.lblcontraseña.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblcontraseña.Location = new System.Drawing.Point(488, 363);
+            this.lblcontraseña.Location = new System.Drawing.Point(435, 317);
             this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(99, 13);
@@ -182,7 +173,7 @@ namespace Eventick
             this.lblNuevaContraseña.AutoSize = true;
             this.lblNuevaContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.lblNuevaContraseña.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.lblNuevaContraseña.Location = new System.Drawing.Point(488, 460);
+            this.lblNuevaContraseña.Location = new System.Drawing.Point(437, 400);
             this.lblNuevaContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNuevaContraseña.Name = "lblNuevaContraseña";
             this.lblNuevaContraseña.Size = new System.Drawing.Size(95, 13);
@@ -191,12 +182,20 @@ namespace Eventick
             // 
             // btnCambiarContraseña
             // 
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(610, 490);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(236, 39);
+            this.btnCambiarContraseña.TabIndex = 26;
+            this.btnCambiarContraseña.Text = "Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // CambiarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 738);
+            this.ClientSize = new System.Drawing.Size(1235, 673);
+            this.Controls.Add(this.btnCambiarContraseña);
             this.Controls.Add(this.lblNuevaContraseña);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario_correo);
@@ -210,16 +209,15 @@ namespace Eventick
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CambiarContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecuperarContraseña";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CambiarContraseña_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CambiarContraseña_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CambiarContraseña_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelBarranav_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             this.panelBarranav.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,10 +233,10 @@ namespace Eventick
         private System.Windows.Forms.Panel panelBarranav;
         private System.Windows.Forms.TextBox txtNuevaContraseña;
         private System.Windows.Forms.PictureBox picCerrar;
-        private System.Windows.Forms.PictureBox picReajustar;
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.Label lblusuario_correo;
         private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.Label lblNuevaContraseña;
+        private System.Windows.Forms.Button btnCambiarContraseña;
     }
 }

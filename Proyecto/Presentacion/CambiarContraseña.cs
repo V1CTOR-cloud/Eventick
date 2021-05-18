@@ -31,19 +31,6 @@ namespace Eventick
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void picReajustar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                picReajustar.Image = Image.FromFile(@"..\..\img\max.png");
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                picReajustar.Image = Image.FromFile(@"..\..\img\min.png");
-            }
-        }
 
         private void picCerrar_Click(object sender, EventArgs e)
         {
@@ -184,13 +171,13 @@ namespace Eventick
             }
         }
 
-        private void CambiarContraseña_MouseDown(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             lastLocation = e.Location;
         }
 
-        private void CambiarContraseña_MouseMove(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
             {
@@ -201,7 +188,7 @@ namespace Eventick
             }
         }
 
-        private void CambiarContraseña_MouseUp(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }

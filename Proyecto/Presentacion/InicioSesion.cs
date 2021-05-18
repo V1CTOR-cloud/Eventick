@@ -19,6 +19,7 @@ namespace Eventick
         private void frmLogIn_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -26,13 +27,13 @@ namespace Eventick
             Application.Exit();
         }
 
-        private void frmLogIn_MouseDown(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
             lastLocation = e.Location;
         }
 
-        private void frmLogIn_MouseMove(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
             {
@@ -43,7 +44,7 @@ namespace Eventick
             }
         }
 
-        private void frmLogIn_MouseUp(object sender, MouseEventArgs e)
+        private void panelBarranav_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }
@@ -55,19 +56,6 @@ namespace Eventick
             Visible = false;
         }
 
-        private void picReajustar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                picReajustar.Image = Image.FromFile(@"..\..\img\max.png");
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                picReajustar.Image = Image.FromFile(@"..\..\img\min.png");
-            }
-        }
 
         private void picMinimizar_Click(object sender, EventArgs e)
         {
@@ -80,7 +68,7 @@ namespace Eventick
             {
                 if (bdatos.AbrirConexion())
                 {
-                    if (txtUsuario.Text.Contains("ayto"))
+                    if (txtUsuario.Text.StartsWith("ayto"))
                     {
                         if (Administradores.ComprobarAdmin(bdatos.Conexion, txtUsuario.Text).Count > 0)
                         {
@@ -225,6 +213,7 @@ namespace Eventick
             cambiar_contraseña.Visible = true;
             Visible = false;
         }
+
 
     }
 }
