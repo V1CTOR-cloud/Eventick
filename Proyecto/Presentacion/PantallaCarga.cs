@@ -47,9 +47,9 @@ namespace Eventick
             if (this.Opacity == 0)
             {
                 tmr2.Stop();
-                frmLogIn inicio_sesion = new frmLogIn();
-                inicio_sesion.Visible = true;
                 Visible = false;
+                FrmActPpal home = new FrmActPpal();
+                home.Show();
             }
         }
 

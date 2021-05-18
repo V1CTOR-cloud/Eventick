@@ -43,7 +43,7 @@ namespace Eventick
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

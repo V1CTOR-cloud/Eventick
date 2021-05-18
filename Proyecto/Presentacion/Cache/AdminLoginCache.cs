@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comun.Cache
+namespace Eventick
 {
    public static class AdminLoginCache
     {
-        public static string Nickname { get; set; }
         public static string Nombre { get; set; }
         public static string Email { get; set; }
-        public static string CP { get; set; }
+        public static int CP { get; set; }
 
     }
 }

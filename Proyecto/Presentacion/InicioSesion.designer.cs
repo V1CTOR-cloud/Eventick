@@ -42,8 +42,8 @@ namespace Eventick
             this.panelBarranav = new System.Windows.Forms.Panel();
             this.lblusuario_correo = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
-            this.btnRegistrarse = new Eventick.RoundButton();
-            this.btnIniciarSesion = new Eventick.RoundButton();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
@@ -102,6 +102,7 @@ namespace Eventick
             // picReajustar
             // 
             this.picReajustar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picReajustar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picReajustar.Image = ((System.Drawing.Image)(resources.GetObject("picReajustar.Image")));
             this.picReajustar.Location = new System.Drawing.Point(1310, 4);
             this.picReajustar.Margin = new System.Windows.Forms.Padding(2);
@@ -125,6 +126,7 @@ namespace Eventick
             // 
             // picMinimizar
             // 
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
             this.picMinimizar.Location = new System.Drawing.Point(1284, 4);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
@@ -138,6 +140,7 @@ namespace Eventick
             // picCerrar
             // 
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
             this.picCerrar.Location = new System.Drawing.Point(1336, 4);
             this.picCerrar.Margin = new System.Windows.Forms.Padding(2);
@@ -193,47 +196,25 @@ namespace Eventick
             this.lblcontraseña.TabIndex = 18;
             this.lblcontraseña.Text = "Contraseña";
             // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.BorderColor = System.Drawing.Color.Silver;
-            this.btnRegistrarse.ButtonColor = System.Drawing.Color.Red;
-            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Location = new System.Drawing.Point(854, 463);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarse.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
-            this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrarse.Size = new System.Drawing.Size(101, 31);
-            this.btnRegistrarse.TabIndex = 20;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.TextColor = System.Drawing.Color.White;
-            this.btnRegistrarse.UseVisualStyleBackColor = true;
-            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
-            // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.BorderColor = System.Drawing.Color.Silver;
-            this.btnIniciarSesion.ButtonColor = System.Drawing.Color.Red;
-            this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(714, 463);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(730, 477);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnIniciarSesion.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
-            this.btnIniciarSesion.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Size = new System.Drawing.Size(120, 31);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(119, 23);
             this.btnIniciarSesion.TabIndex = 19;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.Location = new System.Drawing.Point(878, 477);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(95, 23);
+            this.btnRegistrarse.TabIndex = 20;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // frmLogIn
             // 
@@ -288,8 +269,8 @@ namespace Eventick
         private System.Windows.Forms.Panel panelBarranav;
         private System.Windows.Forms.Label lblusuario_correo;
         private System.Windows.Forms.Label lblcontraseña;
-        private RoundButton btnIniciarSesion;
-        private RoundButton btnRegistrarse;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnRegistrarse;
     }
 }
 

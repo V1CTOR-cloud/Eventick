@@ -18,8 +18,6 @@ namespace Eventick
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-            Herramientas.CambiarColor(btnIniciarSesion);
-            Herramientas.CambiarColor(btnRegistrarse);
 
         }
 
@@ -227,5 +225,6 @@ namespace Eventick
             cambiar_contraseña.Visible = true;
             Visible = false;
         }
+
     }
 }

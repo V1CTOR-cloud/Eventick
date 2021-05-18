@@ -35,8 +35,7 @@ namespace Eventick
 
         public static List<Administradores> ComprobarAdmin(MySqlConnection conexion, string nombre)
         {
-            List<Administradores> administradores = new List<Administradores>();
-
+            List<Administradores> admins = new List<Administradores>();
             string consulta = String.Format("SELECT * FROM admin WHERE nombre='{0}' OR email='{0}'", nombre);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
@@ -45,24 +44,24 @@ namespace Eventick
 
             if (reader.HasRows)
             {
+
                 while (reader.Read())
                 {
                     Administradores admin = new Administradores();
-                    admin.usuario = reader.GetString(0);
-                    admin.email = reader.GetString(1);
-                    admin.cp = reader.GetInt32(2);
+
+                    admin.usuario = AdminLoginCache.Nombre = reader.GetString(0);
+                    admin.email = AdminLoginCache.Email = reader.GetString(1);
+                    admin.cp = AdminLoginCache.CP = reader.GetInt32(2);
                     admin.contraseña = reader.GetString(3);
-                    administradores.Add(admin);
                 }
             }
             reader.Close();
-            return administradores;
+            return admins;
         }
 
         public static List<Administradores> ComprobarAdminPorEmail(MySqlConnection conexion, string email)
         {
-            List<Administradores> administradores = new List<Administradores>();
-
+            List<Administradores> admins = new List<Administradores>();
             string consulta = "";
 
             foreach (char caracter in email)
@@ -86,15 +85,16 @@ namespace Eventick
                 while (reader.Read())
                 {
                     Administradores admin = new Administradores();
+
                     admin.usuario = reader.GetString(0);
                     admin.email = reader.GetString(1);
                     admin.cp = reader.GetInt32(2);
                     admin.contraseña = reader.GetString(3);
-                    administradores.Add(admin);
+                    admins.Add(admin);
                 }
             }
             reader.Close();
-            return administradores;
+            return admins;
         }
 
         public static string ComprobarAdminClave(MySqlConnection conexion, string nombre, string clave)

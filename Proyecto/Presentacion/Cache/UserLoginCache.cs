@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comun.Cache
+namespace Eventick
 {
    public static class UserLoginCache
     {
@@ -12,7 +12,8 @@ namespace Comun.Cache
         public static string Nombre { get; set; }
         public static string Apellidos { get; set; }
         public static string Email { get; set; }
-        public static string CP { get; set; }
+        public static int Edad{ get; set; }
+        public static int CP { get; set; }
 
 
     }

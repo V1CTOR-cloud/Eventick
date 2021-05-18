@@ -108,8 +108,7 @@ namespace Eventick
 
         public static List<Usuarios> ComprobarUsuario(MySqlConnection conexion, string nick)
         {
-            List<Usuarios> lista = new List<Usuarios>();
-
+            List<Usuarios> usuarios = new List<Usuarios>();
             string consulta = String.Format("SELECT * FROM usuario WHERE nickname='{0}' OR email='{0}'", nick);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
@@ -121,24 +120,24 @@ namespace Eventick
                 while (reader.Read())
                 {
                     Usuarios usu = new Usuarios();
-                    usu.Nick = reader.GetString(0);
-                    usu.Nombre = reader.GetString(1);
-                    usu.Apellidos = reader.GetString(2);
-                    usu.Email = reader.GetString(3);
-                    usu.Edad = reader.GetInt32(4);
-                    usu.Cp = reader.GetInt32(5);
+
+                    usu.Nick = UserLoginCache.Nickname = reader.GetString(0);
+                    usu.Nombre = UserLoginCache.Nombre = reader.GetString(1);
+                    usu.Apellidos = UserLoginCache.Apellidos = reader.GetString(2);
+                    usu.Email = UserLoginCache.Email = reader.GetString(3);
+                    usu.Edad = UserLoginCache.Edad = reader.GetInt32(4);
+                    usu.Cp = UserLoginCache.CP = reader.GetInt32(5);
                     usu.Contraseña = reader.GetString(6);
-                    lista.Add(usu);
+                    usuarios.Add(usu);
                 }
             }
             reader.Close();
-            return lista;
+            return usuarios;
         }
         
         public static List<Usuarios> ComprobarPorEmail(MySqlConnection conexion, string email)
         {
-            List<Usuarios> lista = new List<Usuarios>();
-
+            List<Usuarios> usuarios = new List<Usuarios>();
             string consulta = "";
 
             foreach (char caracter in email)
@@ -162,6 +161,7 @@ namespace Eventick
                 while (reader.Read())
                 {
                     Usuarios usu = new Usuarios();
+
                     usu.Nick = reader.GetString(0);
                     usu.Nombre = reader.GetString(1);
                     usu.Apellidos = reader.GetString(2);
@@ -169,11 +169,11 @@ namespace Eventick
                     usu.Edad = reader.GetInt32(4);
                     usu.Cp = reader.GetInt32(5);
                     usu.Contraseña = reader.GetString(6);
-                    lista.Add(usu);
+                    usuarios.Add(usu);
                 }
             }
             reader.Close();
-            return lista;
+            return usuarios;
         }       
     }
 }
