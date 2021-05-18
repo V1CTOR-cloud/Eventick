@@ -130,6 +130,7 @@ namespace Eventick
             // picDistancia
             // 
             this.picDistancia.BackColor = System.Drawing.Color.Transparent;
+            this.picDistancia.Image = ((System.Drawing.Image)(resources.GetObject("picDistancia.Image")));
             this.picDistancia.Location = new System.Drawing.Point(13, 183);
             this.picDistancia.Name = "picDistancia";
             this.picDistancia.Size = new System.Drawing.Size(45, 42);

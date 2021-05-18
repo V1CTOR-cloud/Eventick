@@ -48,7 +48,6 @@ namespace Eventick
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblNickname = new System.Windows.Forms.Label();
-            this.btnRegistrarse = new Eventick.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -256,33 +255,11 @@ namespace Eventick
             this.lblNickname.TabIndex = 26;
             this.lblNickname.Text = "Usuario";
             // 
-            // btnRegistrarse
-            // 
-            this.btnRegistrarse.BorderColor = System.Drawing.Color.Silver;
-            this.btnRegistrarse.ButtonColor = System.Drawing.Color.Red;
-            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarse.Location = new System.Drawing.Point(843, 592);
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnRegistrarse.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
-            this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrarse.Size = new System.Drawing.Size(156, 49);
-            this.btnRegistrarse.TabIndex = 27;
-            this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.TextColor = System.Drawing.Color.White;
-            this.btnRegistrarse.UseVisualStyleBackColor = true;
-            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
-            // 
             // CrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 759);
-            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.lblNickname);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblApellido);
@@ -339,6 +316,5 @@ namespace Eventick
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblNickname;
-        private RoundButton btnRegistrarse;
     }
 }

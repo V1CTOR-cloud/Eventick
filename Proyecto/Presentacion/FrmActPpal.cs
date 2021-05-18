@@ -103,7 +103,7 @@ namespace Eventick
                 panelInfo.Controls.Add(lblInfo5);
                 Label lblInfo6 = new Label() { /*Name = "lblInfo6",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
                 panelInfo.Controls.Add(lblInfo6);
-                Label lblInfo7 = new Label() { /*Name = "lblInfo7",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Duracion.Hour.ToString() + " h" };
+                Label lblInfo7 = new Label() { /*Name = "lblInfo7",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Duracion.ToString("t") + " horas"};
                 panelInfo.Controls.Add(lblInfo7);
                 Label lblInfo8 = new Label() { /*Name = "lblInfo8",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
                 panelInfo.Controls.Add(lblInfo8);
