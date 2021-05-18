@@ -14,20 +14,83 @@ namespace Eventick
         private int circular;
         private string dificultad;
 
+        //AÑADIDO (VF):
+        static int numActividad = 0;
+        private bool aPie;
+        private string tipoActividad;
+        private string Cp;
+
+
         public double Distancia { get { return distancia; } set { distancia = value; } }
         public int Circular { get {return circular; } set {circular = value; } }
         public string Dificultad { get{return dificultad; } set {dificultad = value; } }
+
+        //AÑADIDO(VF):
+        public int NumActividad { get { return numActividad; } }
+        public bool APie { get { return aPie; } set { aPie = value; } }
+        public string TipoActividad { get { return tipoActividad; } set { tipoActividad = value; } }
+        public string CP { get { return CP; } set { CP = value; } }
 
         public Actividad()
         {
 
         }
 
-        public Actividad(string identificador, string tittle, string descrip, string local, DateTime tiempo, int tip,double km,  int circulo, string dificil) : base(identificador,tittle,descrip,local,tiempo,tip)
+        public Actividad(string identificador, string tittle, string descrip, string local, DateTime tiempo, int tip,double km,  int circulo, string dificil, string CP, string tipoActividad, bool aPie) : base(identificador, tittle, descrip, local, tiempo, tip)
         {
             distancia = km;
             circular = circulo;
             dificultad = dificil;
+
+            //AÑADIDO NUEVO(VF):
+            //Elementos string CP, string tipoActividad, bool aPie añadidos en parametros
+            this.CP = CP;
+            this.tipoActividad = tipoActividad;
+            this.aPie = aPie;
+
+
+            numActividad++;
+
+            if (aPie == true)
+            {
+                if (tipoActividad == "Senderismo")
+                {
+                   Id = CP + "A" + "01" + numActividad;
+
+                }
+                else if (tipoActividad == "Andar")
+                {
+                    Id = CP + "A" + "02" + numActividad;
+
+                }
+                else if (tipoActividad == "Correr")
+                {
+                    Id = CP + "A" + "03" + numActividad;
+
+                }
+                else if (tipoActividad == "Caminata")
+                {
+                    Id = CP + "A" + "04" + numActividad;
+                }
+            }
+            else
+            {
+                if (tipoActividad == "Montaña")
+                {
+                    Id = CP + "A" + "05" + numActividad;
+
+                }
+                else if (tipoActividad == "Carretera")
+                {
+                    Id = CP + "A" + "06" + numActividad;
+
+                }
+
+            }
+
+
+
+
         }
 
         public static List<Actividad> CargarActividades(MySqlConnection conexion)

@@ -42,8 +42,13 @@ namespace Eventick
             this.panelBarranav = new System.Windows.Forms.Panel();
             this.lblusuario_correo = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+=======
+            //this.btnRegistrarse = new Eventick.RoundButton();
+            //this.btnIniciarSesion = new Eventick.RoundButton();
+>>>>>>> 91ec748d0911b7f68b554674ebbe857fa77e4358
             ((System.ComponentModel.ISupportInitialize)(this.picReajustar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
@@ -196,6 +201,7 @@ namespace Eventick
             this.lblcontraseña.TabIndex = 18;
             this.lblcontraseña.Text = "Contraseña";
             // 
+<<<<<<< HEAD
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Location = new System.Drawing.Point(730, 477);
@@ -205,6 +211,49 @@ namespace Eventick
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+=======
+            // btnRegistrarse
+            // 
+            //this.btnRegistrarse.BorderColor = System.Drawing.Color.Silver;
+            //this.btnRegistrarse.ButtonColor = System.Drawing.Color.Red;
+            //this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            //this.btnRegistrarse.FlatAppearance.BorderSize = 0;
+            //this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            //this.btnRegistrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            //this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.btnRegistrarse.Location = new System.Drawing.Point(854, 463);
+            //this.btnRegistrarse.Name = "btnRegistrarse";
+            //this.btnRegistrarse.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            //this.btnRegistrarse.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
+            //this.btnRegistrarse.OnHoverTextColor = System.Drawing.Color.White;
+            //this.btnRegistrarse.Size = new System.Drawing.Size(101, 31);
+            //this.btnRegistrarse.TabIndex = 20;
+            //this.btnRegistrarse.Text = "Registrarse";
+            //this.btnRegistrarse.TextColor = System.Drawing.Color.White;
+            //this.btnRegistrarse.UseVisualStyleBackColor = true;
+            //this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
+            // btnIniciarSesion
+            // 
+            //this.btnIniciarSesion.BorderColor = System.Drawing.Color.Silver;
+            //this.btnIniciarSesion.ButtonColor = System.Drawing.Color.Red;
+            //this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            //this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            //this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            //this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            //this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.btnIniciarSesion.Location = new System.Drawing.Point(714, 463);
+            //this.btnIniciarSesion.Name = "btnIniciarSesion";
+            //this.btnIniciarSesion.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            //this.btnIniciarSesion.OnHoverButtonColor = System.Drawing.Color.YellowGreen;
+            //this.btnIniciarSesion.OnHoverTextColor = System.Drawing.Color.White;
+            //this.btnIniciarSesion.Size = new System.Drawing.Size(120, 31);
+            //this.btnIniciarSesion.TabIndex = 19;
+            //this.btnIniciarSesion.Text = "Iniciar Sesión";
+            //this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
+            //this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            //this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+>>>>>>> 91ec748d0911b7f68b554674ebbe857fa77e4358
             // 
             // btnRegistrarse
             // 
@@ -222,8 +271,8 @@ namespace Eventick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1378, 759);
-            this.Controls.Add(this.btnRegistrarse);
-            this.Controls.Add(this.btnIniciarSesion);
+            //this.Controls.Add(this.btnRegistrarse);
+            //this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario_correo);
             this.Controls.Add(this.panelBarranav);
@@ -269,8 +318,6 @@ namespace Eventick
         private System.Windows.Forms.Panel panelBarranav;
         private System.Windows.Forms.Label lblusuario_correo;
         private System.Windows.Forms.Label lblcontraseña;
-        private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.Button btnRegistrarse;
     }
 }
 
