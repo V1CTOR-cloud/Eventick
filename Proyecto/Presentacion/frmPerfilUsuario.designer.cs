@@ -57,6 +57,10 @@ namespace Eventick
             this.picEditarFotoPerfil = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblListaElementos = new System.Windows.Forms.Label();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnMiLista = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBorde.SuspendLayout();
@@ -71,6 +75,7 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,6 +107,7 @@ namespace Eventick
             this.lblEditarDatosAdmin.TabIndex = 62;
             this.lblEditarDatosAdmin.Text = "EDITAR";
             this.lblEditarDatosAdmin.UseVisualStyleBackColor = true;
+            this.lblEditarDatosAdmin.Click += new System.EventHandler(this.lblEditarDatosAdmin_Click);
             // 
             // pictureBox1
             // 
@@ -312,6 +318,7 @@ namespace Eventick
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUser.TabIndex = 6;
             this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
             // 
             // picBuscar
             // 
@@ -400,11 +407,79 @@ namespace Eventick
             this.lblListaElementos.TabIndex = 78;
             this.lblListaElementos.Text = "MI LISTA";
             // 
+            // panelUser
+            // 
+            this.panelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUser.Controls.Add(this.btnLogOut);
+            this.panelUser.Controls.Add(this.btnMiLista);
+            this.panelUser.Controls.Add(this.btnSettings);
+            this.panelUser.Location = new System.Drawing.Point(988, 131);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(161, 97);
+            this.panelUser.TabIndex = 79;
+            this.panelUser.Visible = false;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 60);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(159, 30);
+            this.btnLogOut.TabIndex = 32;
+            this.btnLogOut.Text = "Cerrar sesión";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            // 
+            // btnMiLista
+            // 
+            this.btnMiLista.BackColor = System.Drawing.Color.Transparent;
+            this.btnMiLista.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMiLista.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMiLista.FlatAppearance.BorderSize = 0;
+            this.btnMiLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiLista.Image = ((System.Drawing.Image)(resources.GetObject("btnMiLista.Image")));
+            this.btnMiLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMiLista.Location = new System.Drawing.Point(0, 30);
+            this.btnMiLista.Name = "btnMiLista";
+            this.btnMiLista.Size = new System.Drawing.Size(159, 30);
+            this.btnMiLista.TabIndex = 31;
+            this.btnMiLista.Text = "       Mi lista";
+            this.btnMiLista.UseVisualStyleBackColor = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 0);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(159, 30);
+            this.btnSettings.TabIndex = 28;
+            this.btnSettings.Text = "Configuración";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            // 
             // frmPerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 673);
+            this.Controls.Add(this.panelUser);
             this.Controls.Add(this.lblListaElementos);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picEditarFotoPerfil);
@@ -418,6 +493,7 @@ namespace Eventick
             this.Name = "frmPerfilUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPerfilUsuario";
+            this.Load += new System.EventHandler(this.frmPerfilUsuario_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -436,6 +512,7 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelUser.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +546,9 @@ namespace Eventick
         private System.Windows.Forms.PictureBox picEditarFotoPerfil;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblListaElementos;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnMiLista;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

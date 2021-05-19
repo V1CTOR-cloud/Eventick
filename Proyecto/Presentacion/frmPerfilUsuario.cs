@@ -59,5 +59,27 @@ namespace Eventick
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void picUser_Click(object sender, EventArgs e)
+        {
+            panelUser.Visible = !panelUser.Visible;
+        }
+
+        private void frmPerfilUsuario_Load(object sender, EventArgs e)
+        {
+            string nombre = UserLoginCache.Nombre == "" ? AdminLoginCache.Nombre : UserLoginCache.Nombre + ' ' + UserLoginCache.Apellidos;
+            lblNombreAdm.Text = nombre;
+            string cp = UserLoginCache.Nombre == "" ? AdminLoginCache.CP.ToString() : UserLoginCache.CP.ToString(); ;
+            lblCPAdmin.Text = cp;
+            string localidad = UserLoginCache.Nombre == "" ? AdminLoginCache.Localidad : UserLoginCache.Localidad;
+            lblLocalidadAdm.Text =localidad;
+            string email = UserLoginCache.Nombre =="" ? AdminLoginCache.Email:UserLoginCache.Email;
+            lblCorreoAdmin.Text = email;
+        }
+
+        private void lblEditarDatosAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

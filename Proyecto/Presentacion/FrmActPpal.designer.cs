@@ -59,10 +59,9 @@ namespace Eventick
             this.panelUser = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMiLista = new System.Windows.Forms.Button();
-            this.btnMessages = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnCargarAct = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbDistancia)).BeginInit();
@@ -446,12 +445,11 @@ namespace Eventick
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.btnLogOut);
             this.panelUser.Controls.Add(this.btnMiLista);
-            this.panelUser.Controls.Add(this.btnMessages);
             this.panelUser.Controls.Add(this.btnSettings);
             this.panelUser.Controls.Add(this.btnPerfil);
             this.panelUser.Location = new System.Drawing.Point(1062, 103);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(161, 151);
+            this.panelUser.Size = new System.Drawing.Size(161, 127);
             this.panelUser.TabIndex = 26;
             this.panelUser.Visible = false;
             // 
@@ -465,7 +463,7 @@ namespace Eventick
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 120);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 90);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(159, 30);
             this.btnLogOut.TabIndex = 32;
@@ -483,29 +481,12 @@ namespace Eventick
             this.btnMiLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMiLista.Image = ((System.Drawing.Image)(resources.GetObject("btnMiLista.Image")));
             this.btnMiLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiLista.Location = new System.Drawing.Point(0, 90);
+            this.btnMiLista.Location = new System.Drawing.Point(0, 60);
             this.btnMiLista.Name = "btnMiLista";
             this.btnMiLista.Size = new System.Drawing.Size(159, 30);
             this.btnMiLista.TabIndex = 31;
             this.btnMiLista.Text = "       Mi lista";
             this.btnMiLista.UseVisualStyleBackColor = false;
-            // 
-            // btnMessages
-            // 
-            this.btnMessages.BackColor = System.Drawing.Color.Transparent;
-            this.btnMessages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMessages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMessages.FlatAppearance.BorderSize = 0;
-            this.btnMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMessages.Image = ((System.Drawing.Image)(resources.GetObject("btnMessages.Image")));
-            this.btnMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMessages.Location = new System.Drawing.Point(0, 60);
-            this.btnMessages.Name = "btnMessages";
-            this.btnMessages.Size = new System.Drawing.Size(159, 30);
-            this.btnMessages.TabIndex = 29;
-            this.btnMessages.Text = "          Mensajes";
-            this.btnMessages.UseVisualStyleBackColor = false;
             // 
             // btnSettings
             // 
@@ -525,6 +506,16 @@ namespace Eventick
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
             // 
+            // btnCargarAct
+            // 
+            this.btnCargarAct.Location = new System.Drawing.Point(912, 134);
+            this.btnCargarAct.Name = "btnCargarAct";
+            this.btnCargarAct.Size = new System.Drawing.Size(75, 23);
+            this.btnCargarAct.TabIndex = 27;
+            this.btnCargarAct.Text = "Cargar Act";
+            this.btnCargarAct.UseVisualStyleBackColor = true;
+            this.btnCargarAct.Click += new System.EventHandler(this.toggPruebaPaneles_CheckedChanged);
+            // 
             // btnPerfil
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
@@ -542,16 +533,6 @@ namespace Eventick
             this.btnPerfil.Text = "    Perfil";
             this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnCargarAct
-            // 
-            this.btnCargarAct.Location = new System.Drawing.Point(912, 134);
-            this.btnCargarAct.Name = "btnCargarAct";
-            this.btnCargarAct.Size = new System.Drawing.Size(75, 23);
-            this.btnCargarAct.TabIndex = 27;
-            this.btnCargarAct.Text = "Cargar Act";
-            this.btnCargarAct.UseVisualStyleBackColor = true;
-            this.btnCargarAct.Click += new System.EventHandler(this.toggPruebaPaneles_CheckedChanged);
             // 
             // FrmActPpal
             // 
@@ -625,10 +606,9 @@ namespace Eventick
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnMiLista;
-        private System.Windows.Forms.Button btnMessages;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnCargarAct;
+        private System.Windows.Forms.Button btnPerfil;
     }
 }
 

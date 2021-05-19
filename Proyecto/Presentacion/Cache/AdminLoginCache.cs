@@ -11,6 +11,6 @@ namespace Eventick
         public static string Nombre { get; set; }
         public static string Email { get; set; }
         public static int CP { get; set; }
-
+        public static string Localidad { get; set; }
     }
 }

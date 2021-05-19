@@ -2784,28 +2784,6 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="btnMessages.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH5QUMDikCqL3DlAAAA3VJREFUSEutVl1IU2EYfjd0oFgEYYjdeNNFYHRXEN10058N3NxvajPUG7Vk
-        pZvb3NZEI/qzP6iLKDLddjbnBmoKUWQ3/UE/RBcR3SQFgZEkISm5nvfsGLKdzTPrgWcf5+x9n/f73u/9
-        3u+QEkw8+YBfI3VcmaRaX5QsngjVeoep9ewY0XYPXY08TRn+K8wQZtY4Q3SgfQBv6qnj0rhatcNHVfa7
-        VNMV/muzZli6MXt/lAxdAlm90WJDV7gSAXV6Z6gNdPCIZz3eb8P/RQaXQPW+GFm7o5KCApjcgjhLHq3e
-        iAZiu/SO0EWdI/hM1xn8XN0ZnAPnecTzF7x/jsAXYLcTqS00u1OrNCJ4TvBeWLGiGmeYTB5hHcYmnSP0
-        BsILYDIHFxD0JextmGQJAiMzqb3NisbeBNIGQ0+kGI6tEOCVyInLEiud1jvDLVgd/EN0tCcuKcsA6aLm
-        0wmVwRmuguNHOcHVyH7w1zb2xtWslxXJZJJMLqFc7wiOwnEpXUghl+A/hj0rZz1Z2AJxqvMNc4lb4DCT
-        JpAvZ6Bj5LPYAN0McCBQg6Vfg/FqBbEaF6DTD71C1s2AmUveLWxEUYzDeK0pXOYSqjiBQtnARyEDfK7A
-        zQj2SMY5b6JQHqCyy7i6MyAFK8WMJuWc8yXrGF3hUlCKsAKHvVFuS0XI9S0YL6Y758lF1mE9UIqwAlw1
-        tlMjKhzmNhhzS5ITUcofqMbWI4GYyhaISRFWoN4fE2lEw8W+vZIRUEz4v4DO1jo/KhyURXXnEPdGDWZl
-        h9NsuohCfof/sVpvtLC6Y0hSlgFfD/tabnPHLkPOb8CRu7ucYDb+5HOKLrRp//EBsQ6ygq8GsVNXuvlS
-        PIR0fJURzMZvCHQZ91rF3rYB8T7M2fU5GN+8fE3gjgpA4Fea4G+JfOh55E4zizJ/jMJqxopKD7YPikH4
-        KGVFQ8+ISKSwCI51EPgEoeUg8zik7/EugtkLGEcxRjChc7A1w6fC5IkUaE8MivdhzkAMKZgKJ74KYm8h
-        Poc0ToNTEO3D+91IzXqwhNsQ9rcE9gXYF9WZmw/JgMOr+LNACqaG6B5cgC5UVDtSqsWst+C8aLA6fFkN
-        i5vOaeIGa++fgKeF7oy/TokohRSM/Nfvq+zn76n5LtKeHMKMxQ8eik+9E///b+BZi0QqeOZNfQmR/wdE
-        fwCsP8wk8M2qPgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
