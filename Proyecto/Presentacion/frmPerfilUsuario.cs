@@ -67,18 +67,41 @@ namespace Eventick
 
         private void frmPerfilUsuario_Load(object sender, EventArgs e)
         {
-            string nombre = UserLoginCache.Nombre == "" ? AdminLoginCache.Nombre : UserLoginCache.Nombre + ' ' + UserLoginCache.Apellidos;
-            lblNombreAdm.Text = nombre;
-            string cp = UserLoginCache.Nombre == "" ? AdminLoginCache.CP.ToString() : UserLoginCache.CP.ToString(); ;
-            lblCPAdmin.Text = cp;
-            string localidad = UserLoginCache.Nombre == "" ? AdminLoginCache.Localidad : UserLoginCache.Localidad;
-            lblLocalidadAdm.Text =localidad;
-            string email = UserLoginCache.Nombre =="" ? AdminLoginCache.Email:UserLoginCache.Email;
-            lblCorreoAdmin.Text = email;
+            lblNombreAdm.Text = UserLoginCache.Nombre;
+            lblApellidosAdm.Text = UserLoginCache.Apellidos;
+            lblCPAdmin.Text = UserLoginCache.CP.ToString();
+            lblLocalidadAdm.Text =UserLoginCache.Localidad;
+            lblCorreoAdmin.Text = UserLoginCache.Email;
         }
 
         private void lblEditarDatosAdmin_Click(object sender, EventArgs e)
         {
+            lblNombreAdm.Visible = lblApellidos.Visible= lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+            txtNombre.Visible = txtApellidos.Visible=txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
+            lblEditarDatosAdmin.Visible = !lblEditarDatosAdmin.Visible;
+            btnAceptar.Visible = true;
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("¿Estás seguro de guardar los cambios?","¿Seguro?",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                lblNombreAdm.Visible=lblApellidos.Visible=lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+                txtNombre.Visible=txtApellidos.Visible=txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
+                lblEditarDatosAdmin.Visible = true;
+                btnAceptar.Visible = false;
+                Usuarios usu = new Usuarios();
+
+                usu.Nombre = txtNombre.Text;
+                usu.Apellidos = txtApellidos.Text;
+                usu.Cp = int.Parse(txtCP.Text);
+                usu.Localidad = txtLocalidad.Text;
+                usu.Email = txtEmail.Text;
+                usu.Contraseña = txtPass.Text;
+            }
+
 
         }
     }

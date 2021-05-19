@@ -31,8 +31,13 @@ namespace Eventick
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.MaskedTextBox();
             this.lblEditarDatosAdmin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picSeguridad = new System.Windows.Forms.PictureBox();
             this.lblCorreoAdmin = new System.Windows.Forms.Label();
             this.lblLocalidadAdm = new System.Windows.Forms.Label();
             this.lblCPAdmin = new System.Windows.Forms.Label();
@@ -61,8 +66,12 @@ namespace Eventick
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMiLista = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.lblApellidos = new System.Windows.Forms.Label();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblApellidosAdm = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSeguridad)).BeginInit();
             this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
@@ -80,8 +89,17 @@ namespace Eventick
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtApellidos);
+            this.panel1.Controls.Add(this.lblApellidosAdm);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.lblApellidos);
+            this.panel1.Controls.Add(this.btnAceptar);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtPass);
+            this.panel1.Controls.Add(this.txtLocalidad);
+            this.panel1.Controls.Add(this.txtCP);
             this.panel1.Controls.Add(this.lblEditarDatosAdmin);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picSeguridad);
             this.panel1.Controls.Add(this.lblCorreoAdmin);
             this.panel1.Controls.Add(this.lblLocalidadAdm);
             this.panel1.Controls.Add(this.lblCPAdmin);
@@ -97,10 +115,57 @@ namespace Eventick
             this.panel1.Size = new System.Drawing.Size(778, 172);
             this.panel1.TabIndex = 69;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(680, 146);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(96, 24);
+            this.btnAceptar.TabIndex = 68;
+            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(599, 69);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(117, 20);
+            this.txtEmail.TabIndex = 67;
+            this.txtEmail.Visible = false;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(599, 118);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(117, 20);
+            this.txtPass.TabIndex = 66;
+            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.Visible = false;
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(223, 121);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(117, 20);
+            this.txtLocalidad.TabIndex = 65;
+            this.txtLocalidad.Visible = false;
+            // 
+            // txtCP
+            // 
+            this.txtCP.Location = new System.Drawing.Point(223, 70);
+            this.txtCP.Mask = "00000";
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(117, 20);
+            this.txtCP.TabIndex = 64;
+            this.txtCP.Visible = false;
+            // 
             // lblEditarDatosAdmin
             // 
             this.lblEditarDatosAdmin.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditarDatosAdmin.Location = new System.Drawing.Point(658, 134);
+            this.lblEditarDatosAdmin.Location = new System.Drawing.Point(680, 146);
             this.lblEditarDatosAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.lblEditarDatosAdmin.Name = "lblEditarDatosAdmin";
             this.lblEditarDatosAdmin.Size = new System.Drawing.Size(96, 24);
@@ -109,21 +174,21 @@ namespace Eventick
             this.lblEditarDatosAdmin.UseVisualStyleBackColor = true;
             this.lblEditarDatosAdmin.Click += new System.EventHandler(this.lblEditarDatosAdmin_Click);
             // 
-            // pictureBox1
+            // picSeguridad
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(614, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
+            this.picSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("picSeguridad.Image")));
+            this.picSeguridad.Location = new System.Drawing.Point(621, 106);
+            this.picSeguridad.Name = "picSeguridad";
+            this.picSeguridad.Size = new System.Drawing.Size(34, 32);
+            this.picSeguridad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSeguridad.TabIndex = 52;
+            this.picSeguridad.TabStop = false;
             // 
             // lblCorreoAdmin
             // 
             this.lblCorreoAdmin.AutoSize = true;
             this.lblCorreoAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoAdmin.Location = new System.Drawing.Point(596, 23);
+            this.lblCorreoAdmin.Location = new System.Drawing.Point(596, 68);
             this.lblCorreoAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreoAdmin.Name = "lblCorreoAdmin";
             this.lblCorreoAdmin.Size = new System.Drawing.Size(115, 17);
@@ -167,7 +232,7 @@ namespace Eventick
             // 
             this.lblSeguridad.AutoSize = true;
             this.lblSeguridad.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeguridad.Location = new System.Drawing.Point(504, 67);
+            this.lblSeguridad.Location = new System.Drawing.Point(479, 119);
             this.lblSeguridad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSeguridad.Name = "lblSeguridad";
             this.lblSeguridad.Size = new System.Drawing.Size(101, 19);
@@ -178,7 +243,7 @@ namespace Eventick
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(508, 23);
+            this.lblCorreo.Location = new System.Drawing.Point(508, 71);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(72, 19);
@@ -200,7 +265,7 @@ namespace Eventick
             // 
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCP.Location = new System.Drawing.Point(175, 70);
+            this.lblCP.Location = new System.Drawing.Point(175, 71);
             this.lblCP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(30, 19);
@@ -474,6 +539,44 @@ namespace Eventick
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
             // 
+            // lblApellidos
+            // 
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos.Location = new System.Drawing.Point(485, 23);
+            this.lblApellidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(95, 19);
+            this.lblApellidos.TabIndex = 69;
+            this.lblApellidos.Text = "APELLIDOS";
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Location = new System.Drawing.Point(599, 23);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(117, 20);
+            this.txtApellidos.TabIndex = 70;
+            this.txtApellidos.Visible = false;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(223, 22);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(117, 20);
+            this.txtNombre.TabIndex = 71;
+            this.txtNombre.Visible = false;
+            // 
+            // lblApellidosAdm
+            // 
+            this.lblApellidosAdm.AutoSize = true;
+            this.lblApellidosAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidosAdm.Location = new System.Drawing.Point(596, 23);
+            this.lblApellidosAdm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidosAdm.Name = "lblApellidosAdm";
+            this.lblApellidosAdm.Size = new System.Drawing.Size(93, 17);
+            this.lblApellidosAdm.TabIndex = 72;
+            this.lblApellidosAdm.Text = "Ayto. Llombai";
+            // 
             // frmPerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,7 +600,7 @@ namespace Eventick
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSeguridad)).EndInit();
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -521,7 +624,7 @@ namespace Eventick
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button lblEditarDatosAdmin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picSeguridad;
         private System.Windows.Forms.Label lblCorreoAdmin;
         private System.Windows.Forms.Label lblLocalidadAdm;
         private System.Windows.Forms.Label lblCPAdmin;
@@ -550,5 +653,14 @@ namespace Eventick
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnMiLista;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.MaskedTextBox txtCP;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.Label lblApellidos;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblApellidosAdm;
     }
 }

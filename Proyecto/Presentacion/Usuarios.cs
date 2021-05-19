@@ -18,6 +18,7 @@ namespace Eventick
         private int edad;
         private int cp;
         private string contraseña;
+        private string localidad;
 
         public string Nick { get { return nick; } set { nick = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
@@ -25,7 +26,8 @@ namespace Eventick
         public string Email { get { return email; } set { email = value; } }
         public int Edad { get { return edad; } set { edad = value; } }
         public int Cp { get { return cp; } set { cp = value; } }
-        
+        public string Localidad { get { return localidad; } set { localidad = value; } }
+
         public string Contraseña { get { return contraseña; } set { contraseña = value; } }
 
         public Usuarios()
@@ -175,5 +177,10 @@ namespace Eventick
             reader.Close();
             return usuarios;
         }       
+
+        public void ModificarUsuario()
+        {
+            string consulta = "UPDATE usuario SET nombre='{0}', apellidos='{1}'";
+        }
     }
 }
