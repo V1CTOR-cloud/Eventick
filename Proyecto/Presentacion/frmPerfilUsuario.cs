@@ -100,6 +100,7 @@ namespace Eventick
                 usu.Localidad = txtLocalidad.Text;
                 usu.Email = txtEmail.Text;
                 usu.Contraseña = txtPass.Text;
+                usu.ModificarUsuario();
             }
 
 

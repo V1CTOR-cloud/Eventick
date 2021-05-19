@@ -180,7 +180,7 @@ namespace Eventick
 
         public void ModificarUsuario()
         {
-            string consulta = "UPDATE usuario SET nombre='{0}', apellidos='{1}'";
+            string consulta = String.Format("UPDATE usuario SET nombre='{0}', apellidos='{1}',email='{2}',cp='{3}',contrasenia='{4},localidad='{5}''");
         }
     }
 }
