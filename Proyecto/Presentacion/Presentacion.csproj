@@ -50,6 +50,12 @@
   <ItemGroup>
     <Compile Include="Actividad.cs" />
     <Compile Include="Administradores.cs" />
+    <Compile Include="FrmFichaActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFichaActividad.designer.cs">
+      <DependentUpon>FrmFichaActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +89,6 @@
     <Compile Include="FrmActPpal.designer.cs">
       <DependentUpon>FrmActPpal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Herramientas.cs" />
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmActPpal.resx">
       <DependentUpon>FrmActPpal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFichaActividad.resx">
+      <DependentUpon>FrmFichaActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilUsuario.resx">
       <DependentUpon>frmPerfilUsuario.cs</DependentUpon>
