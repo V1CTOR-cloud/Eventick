@@ -60,7 +60,6 @@ namespace Eventick
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMiLista = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnCargarAct = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
@@ -506,16 +505,6 @@ namespace Eventick
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
             // 
-            // btnCargarAct
-            // 
-            this.btnCargarAct.Location = new System.Drawing.Point(912, 134);
-            this.btnCargarAct.Name = "btnCargarAct";
-            this.btnCargarAct.Size = new System.Drawing.Size(75, 23);
-            this.btnCargarAct.TabIndex = 27;
-            this.btnCargarAct.Text = "Cargar Act";
-            this.btnCargarAct.UseVisualStyleBackColor = true;
-            this.btnCargarAct.Click += new System.EventHandler(this.toggPruebaPaneles_CheckedChanged);
-            // 
             // btnPerfil
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
@@ -540,7 +529,6 @@ namespace Eventick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(1235, 673);
-            this.Controls.Add(this.btnCargarAct);
             this.Controls.Add(this.btnEvento);
             this.Controls.Add(this.panelUser);
             this.Controls.Add(this.btnActividad);
@@ -607,7 +595,6 @@ namespace Eventick
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnMiLista;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnCargarAct;
         private System.Windows.Forms.Button btnPerfil;
     }
 }
