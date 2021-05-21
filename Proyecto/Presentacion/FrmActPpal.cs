@@ -70,7 +70,7 @@ namespace Eventick
                 flpNoticias.Controls.Add(panelNoticia);
                 PictureBox picNoticia = new PictureBox() { /*Name = "picNoticia",*/ Image = Image.FromFile(@"..\..\..\Iconos\yo.jpg"), Size = new Size(241, 135), SizeMode = PictureBoxSizeMode.Normal };
                 panelNoticia.Controls.Add(picNoticia);
-                LinkLabel llblTitulo = new LinkLabel() { /*Name = "llblTitulo",*/ Location = new Point(261, 2), Text = act.Titulo, AutoSize=true };
+                LinkLabel llblTitulo = new LinkLabel() { Name = act.Id, Location = new Point(261, 2), Text = act.Titulo, AutoSize=true };
                 panelNoticia.Controls.Add(llblTitulo);
                 Label lblLocalidad = new Label() { /*Name = "lblLocalidad",*/ Location = new Point(264, 24), Text = act.Localidad, Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold) };
                 panelNoticia.Controls.Add(lblLocalidad);
@@ -95,7 +95,7 @@ namespace Eventick
                 PictureBox picCompartir = new PictureBox() { /*Name = "picCompartir",*/ Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
                 panelNoticia.Controls.Add(picCompartir);
                 picFavorito.Click += new EventHandler(picFavorito_Click);
-
+                llblTitulo.Click += new EventHandler(llblTitulo_Click);
             }
 
         }
@@ -257,6 +257,14 @@ namespace Eventick
             this.Hide();
             frmPerfilUsuario perfilusu = new frmPerfilUsuario();
             perfilusu.Show();
+        }
+
+        private void llblTitulo_Click(object sender, EventArgs e)
+        {
+            LinkLabel titulo = sender as LinkLabel;
+            FrmFichaActividad fichaact = new FrmFichaActividad(titulo.Name);
+            fichaact.Show();
+            this.Hide();
         }
     }
 }

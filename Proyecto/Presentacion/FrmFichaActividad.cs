@@ -14,14 +14,16 @@ namespace Eventick
 {
     public partial class FrmFichaActividad : Form
     {
-
+        private string id;
         ConexionBD conexion = new ConexionBD();
 
-        public FrmFichaActividad()
+        public FrmFichaActividad( string id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
+        
         Image favoritovacio = Image.FromFile(@"..\..\..\Iconos\corazonvacio.png");
         Image favoritolleno = Image.FromFile(@"..\..\..\Iconos\corazonrojo.png");
 
@@ -55,7 +57,7 @@ namespace Eventick
         {
 
             Actividad act = new Actividad();
-
+            act.Id = id;
             act.CargarFichaAct(conexion.Conexion);
 
 
