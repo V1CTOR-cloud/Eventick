@@ -50,11 +50,53 @@
   <ItemGroup>
     <Compile Include="Actividad.cs" />
     <Compile Include="Administradores.cs" />
+    <Compile Include="FrmActividadAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActividadAdmin.designer.cs">
+      <DependentUpon>FrmActividadAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarActividad.designer.cs">
+      <DependentUpon>frmAgregarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnyadirEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnyadirEvento.designer.cs">
+      <DependentUpon>FrmAnyadirEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEventoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEventoAdmin.designer.cs">
+      <DependentUpon>FrmEventoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEventoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEventoUsuario.designer.cs">
+      <DependentUpon>FrmEventoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFichaActividad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmFichaActividad.designer.cs">
       <DependentUpon>FrmFichaActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFichaEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFichaEvento.designer.cs">
+      <DependentUpon>FrmFichaEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerfilAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfilAdmin.designer.cs">
+      <DependentUpon>FrmPerfilAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPerfilUsuario.cs">
       <SubType>Form</SubType>
@@ -125,11 +167,32 @@
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmActividadAdmin.resx">
+      <DependentUpon>FrmActividadAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmActPpal.resx">
       <DependentUpon>FrmActPpal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarActividad.resx">
+      <DependentUpon>frmAgregarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnyadirEvento.resx">
+      <DependentUpon>FrmAnyadirEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEventoAdmin.resx">
+      <DependentUpon>FrmEventoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEventoUsuario.resx">
+      <DependentUpon>FrmEventoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFichaActividad.resx">
       <DependentUpon>FrmFichaActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFichaEvento.resx">
+      <DependentUpon>FrmFichaEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerfilAdmin.resx">
+      <DependentUpon>FrmPerfilAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilUsuario.resx">
       <DependentUpon>frmPerfilUsuario.cs</DependentUpon>

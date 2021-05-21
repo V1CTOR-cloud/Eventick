@@ -1,5 +1,5 @@
 ﻿
-namespace PruebaEventick
+namespace Eventick
 {
     partial class FrmEventoAdmin
     {
@@ -32,31 +32,16 @@ namespace PruebaEventick
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEventoAdmin));
             this.panelUser = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnMessages = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.toggPruebaPaneles = new JCS.ToggleSwitch();
             this.flpNoticias = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBorde = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
-            this.picSalir = new System.Windows.Forms.PictureBox();
             this.panelNavegacion = new System.Windows.Forms.Panel();
-            this.picUser = new System.Windows.Forms.PictureBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbTipoEvento = new System.Windows.Forms.ComboBox();
             this.cbbTipo = new System.Windows.Forms.ComboBox();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
-            this.picInfo = new System.Windows.Forms.PictureBox();
             this.nupCuentaHoras = new System.Windows.Forms.NumericUpDown();
-            this.picDistancia = new System.Windows.Forms.PictureBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.cbbPrecioMax = new System.Windows.Forms.ComboBox();
             this.cbbPrecioMin = new System.Windows.Forms.ComboBox();
@@ -65,20 +50,34 @@ namespace PruebaEventick
             this.ttInfoCuentaHoras = new System.Windows.Forms.ToolTip(this.components);
             this.btnEvento = new System.Windows.Forms.Button();
             this.btnActividad = new System.Windows.Forms.Button();
+            this.picInfo = new System.Windows.Forms.PictureBox();
+            this.picDistancia = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnMessages = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picMaximizar = new System.Windows.Forms.PictureBox();
+            this.picSalir = new System.Windows.Forms.PictureBox();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelUser.SuspendLayout();
             this.panelBorde.SuspendLayout();
+            this.panelNavegacion.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupCuentaHoras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
-            this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCuentaHoras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUser
@@ -91,111 +90,11 @@ namespace PruebaEventick
             this.panelUser.Controls.Add(this.btnMessages);
             this.panelUser.Controls.Add(this.button3);
             this.panelUser.Controls.Add(this.button2);
-            this.panelUser.Location = new System.Drawing.Point(1013, 109);
+            this.panelUser.Location = new System.Drawing.Point(1062, 109);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(161, 151);
             this.panelUser.TabIndex = 34;
             this.panelUser.Visible = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 120);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(159, 30);
-            this.button7.TabIndex = 32;
-            this.button7.Text = "Cerrar sesión";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 90);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 30);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "       Mi lista";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // btnMessages
-            // 
-            this.btnMessages.BackColor = System.Drawing.Color.Transparent;
-            this.btnMessages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMessages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMessages.FlatAppearance.BorderSize = 0;
-            this.btnMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMessages.Image = ((System.Drawing.Image)(resources.GetObject("btnMessages.Image")));
-            this.btnMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMessages.Location = new System.Drawing.Point(0, 60);
-            this.btnMessages.Name = "btnMessages";
-            this.btnMessages.Size = new System.Drawing.Size(159, 30);
-            this.btnMessages.TabIndex = 29;
-            this.btnMessages.Text = "          Mensajes";
-            this.btnMessages.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 30);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Configuración";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 30);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "    Perfil";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // toggPruebaPaneles
-            // 
-            this.toggPruebaPaneles.AnimationStep = 1;
-            this.toggPruebaPaneles.BackColor = System.Drawing.Color.Transparent;
-            this.toggPruebaPaneles.Location = new System.Drawing.Point(950, 125);
-            this.toggPruebaPaneles.Name = "toggPruebaPaneles";
-            this.toggPruebaPaneles.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggPruebaPaneles.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggPruebaPaneles.Size = new System.Drawing.Size(50, 19);
-            this.toggPruebaPaneles.Style = JCS.ToggleSwitch.ToggleSwitchStyle.IOS5;
-            this.toggPruebaPaneles.TabIndex = 31;
-            this.toggPruebaPaneles.CheckedChanged += new JCS.ToggleSwitch.CheckedChangedDelegate(this.toggPruebaPaneles_CheckedChanged);
             // 
             // flpNoticias
             // 
@@ -205,7 +104,7 @@ namespace PruebaEventick
             this.flpNoticias.AutoScroll = true;
             this.flpNoticias.Location = new System.Drawing.Point(246, 176);
             this.flpNoticias.Name = "flpNoticias";
-            this.flpNoticias.Size = new System.Drawing.Size(916, 516);
+            this.flpNoticias.Size = new System.Drawing.Size(965, 491);
             this.flpNoticias.TabIndex = 30;
             // 
             // panelBorde
@@ -220,7 +119,7 @@ namespace PruebaEventick
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
             this.panelBorde.Margin = new System.Windows.Forms.Padding(2);
             this.panelBorde.Name = "panelBorde";
-            this.panelBorde.Size = new System.Drawing.Size(1186, 29);
+            this.panelBorde.Size = new System.Drawing.Size(1235, 29);
             this.panelBorde.TabIndex = 29;
             // 
             // label1
@@ -234,64 +133,6 @@ namespace PruebaEventick
             this.label1.TabIndex = 4;
             this.label1.Text = "Eventick";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1120, 2);
-            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 2;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
-            this.picMaximizar.Location = new System.Drawing.Point(1143, 2);
-            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 1;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
-            // 
-            // picSalir
-            // 
-            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picSalir.BackColor = System.Drawing.Color.Transparent;
-            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
-            this.picSalir.Location = new System.Drawing.Point(1166, 2);
-            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.picSalir.Name = "picSalir";
-            this.picSalir.Size = new System.Drawing.Size(19, 20);
-            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalir.TabIndex = 0;
-            this.picSalir.TabStop = false;
-            this.picSalir.Click += new System.EventHandler(this.picSalir_Click);
-            // 
             // panelNavegacion
             // 
             this.panelNavegacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -304,34 +145,8 @@ namespace PruebaEventick
             this.panelNavegacion.Location = new System.Drawing.Point(2, 39);
             this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2);
             this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(1294, 65);
+            this.panelNavegacion.Size = new System.Drawing.Size(1343, 65);
             this.panelNavegacion.TabIndex = 28;
-            // 
-            // picUser
-            // 
-            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(1098, 12);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(62, 50);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 6;
-            this.picUser.TabStop = false;
-            this.picUser.Click += new System.EventHandler(this.picUser_Click_1);
-            // 
-            // picBuscar
-            // 
-            this.picBuscar.BackColor = System.Drawing.Color.White;
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
-            this.picBuscar.Location = new System.Drawing.Point(968, 17);
-            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(28, 25);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBuscar.TabIndex = 5;
-            this.picBuscar.TabStop = false;
             // 
             // txtBuscar
             // 
@@ -341,17 +156,6 @@ namespace PruebaEventick
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(660, 29);
             this.txtBuscar.TabIndex = 0;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(35, 8);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(214, 39);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
             // 
             // panel2
             // 
@@ -418,18 +222,6 @@ namespace PruebaEventick
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
             // 
-            // picInfo
-            // 
-            this.picInfo.BackColor = System.Drawing.Color.Transparent;
-            this.picInfo.Image = ((System.Drawing.Image)(resources.GetObject("picInfo.Image")));
-            this.picInfo.Location = new System.Drawing.Point(158, 394);
-            this.picInfo.Name = "picInfo";
-            this.picInfo.Size = new System.Drawing.Size(15, 15);
-            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInfo.TabIndex = 30;
-            this.picInfo.TabStop = false;
-            this.picInfo.MouseEnter += new System.EventHandler(this.picInfo_MouseEnter);
-            // 
             // nupCuentaHoras
             // 
             this.nupCuentaHoras.BackColor = System.Drawing.Color.White;
@@ -455,17 +247,6 @@ namespace PruebaEventick
             0,
             65536});
             this.nupCuentaHoras.Enter += new System.EventHandler(this.nupCuentaHoras_Enter);
-            // 
-            // picDistancia
-            // 
-            this.picDistancia.BackColor = System.Drawing.Color.Transparent;
-            this.picDistancia.Image = ((System.Drawing.Image)(resources.GetObject("picDistancia.Image")));
-            this.picDistancia.Location = new System.Drawing.Point(32, 378);
-            this.picDistancia.Name = "picDistancia";
-            this.picDistancia.Size = new System.Drawing.Size(44, 38);
-            this.picDistancia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDistancia.TabIndex = 29;
-            this.picDistancia.TabStop = false;
             // 
             // lblPrecio
             // 
@@ -569,17 +350,221 @@ namespace PruebaEventick
             this.btnActividad.UseVisualStyleBackColor = false;
             this.btnActividad.Click += new System.EventHandler(this.btnActividad_Click);
             // 
+            // picInfo
+            // 
+            this.picInfo.BackColor = System.Drawing.Color.Transparent;
+            this.picInfo.Image = ((System.Drawing.Image)(resources.GetObject("picInfo.Image")));
+            this.picInfo.Location = new System.Drawing.Point(158, 394);
+            this.picInfo.Name = "picInfo";
+            this.picInfo.Size = new System.Drawing.Size(15, 15);
+            this.picInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInfo.TabIndex = 30;
+            this.picInfo.TabStop = false;
+            this.picInfo.MouseEnter += new System.EventHandler(this.picInfo_MouseEnter);
+            // 
+            // picDistancia
+            // 
+            this.picDistancia.BackColor = System.Drawing.Color.Transparent;
+            this.picDistancia.Image = ((System.Drawing.Image)(resources.GetObject("picDistancia.Image")));
+            this.picDistancia.Location = new System.Drawing.Point(32, 378);
+            this.picDistancia.Name = "picDistancia";
+            this.picDistancia.Size = new System.Drawing.Size(44, 38);
+            this.picDistancia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDistancia.TabIndex = 29;
+            this.picDistancia.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 120);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(159, 30);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Cerrar sesión";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 90);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(159, 30);
+            this.button6.TabIndex = 31;
+            this.button6.Text = "       Mi lista";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // btnMessages
+            // 
+            this.btnMessages.BackColor = System.Drawing.Color.Transparent;
+            this.btnMessages.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMessages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMessages.FlatAppearance.BorderSize = 0;
+            this.btnMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessages.Image = ((System.Drawing.Image)(resources.GetObject("btnMessages.Image")));
+            this.btnMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMessages.Location = new System.Drawing.Point(0, 60);
+            this.btnMessages.Name = "btnMessages";
+            this.btnMessages.Size = new System.Drawing.Size(159, 30);
+            this.btnMessages.TabIndex = 29;
+            this.btnMessages.Text = "          Mensajes";
+            this.btnMessages.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(159, 30);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Configuración";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 30);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "    Perfil";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
+            this.picMinimizar.Location = new System.Drawing.Point(1169, 2);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 2;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            // 
+            // picMaximizar
+            // 
+            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
+            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
+            this.picMaximizar.Location = new System.Drawing.Point(1192, 2);
+            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMaximizar.Name = "picMaximizar";
+            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
+            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximizar.TabIndex = 1;
+            this.picMaximizar.TabStop = false;
+            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
+            // 
+            // picSalir
+            // 
+            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picSalir.BackColor = System.Drawing.Color.Transparent;
+            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
+            this.picSalir.Location = new System.Drawing.Point(1215, 2);
+            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.picSalir.Name = "picSalir";
+            this.picSalir.Size = new System.Drawing.Size(19, 20);
+            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalir.TabIndex = 0;
+            this.picSalir.TabStop = false;
+            this.picSalir.Click += new System.EventHandler(this.picSalir_Click);
+            // 
+            // picUser
+            // 
+            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+            this.picUser.Location = new System.Drawing.Point(1147, 12);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(62, 50);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 6;
+            this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click_1);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.BackColor = System.Drawing.Color.White;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
+            this.picBuscar.Location = new System.Drawing.Point(968, 17);
+            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(28, 25);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 5;
+            this.picBuscar.TabStop = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(35, 8);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(214, 39);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
+            // 
             // FrmEventoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(1186, 698);
+            this.ClientSize = new System.Drawing.Size(1235, 673);
             this.Controls.Add(this.btnEvento);
             this.Controls.Add(this.btnActividad);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelUser);
-            this.Controls.Add(this.toggPruebaPaneles);
             this.Controls.Add(this.flpNoticias);
             this.Controls.Add(this.panelBorde);
             this.Controls.Add(this.panelNavegacion);
@@ -590,20 +575,20 @@ namespace PruebaEventick
             this.panelUser.ResumeLayout(false);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
+            this.panelNavegacion.ResumeLayout(false);
+            this.panelNavegacion.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupCuentaHoras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
-            this.panelNavegacion.ResumeLayout(false);
-            this.panelNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCuentaHoras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,7 +600,6 @@ namespace PruebaEventick
         private System.Windows.Forms.Button btnMessages;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private JCS.ToggleSwitch toggPruebaPaneles;
         private System.Windows.Forms.FlowLayoutPanel flpNoticias;
         private System.Windows.Forms.Panel panelBorde;
         private System.Windows.Forms.Label label1;

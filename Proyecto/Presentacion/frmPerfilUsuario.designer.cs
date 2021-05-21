@@ -31,6 +31,10 @@ namespace Eventick
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfilUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.lblApellidosAdm = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblApellidos = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -66,10 +70,6 @@ namespace Eventick
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMiLista = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.lblApellidos = new System.Windows.Forms.Label();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblApellidosAdm = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSeguridad)).BeginInit();
             this.panelBorde.SuspendLayout();
@@ -114,6 +114,44 @@ namespace Eventick
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(778, 172);
             this.panel1.TabIndex = 69;
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Location = new System.Drawing.Point(599, 23);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(117, 20);
+            this.txtApellidos.TabIndex = 70;
+            this.txtApellidos.Visible = false;
+            // 
+            // lblApellidosAdm
+            // 
+            this.lblApellidosAdm.AutoSize = true;
+            this.lblApellidosAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidosAdm.Location = new System.Drawing.Point(596, 23);
+            this.lblApellidosAdm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidosAdm.Name = "lblApellidosAdm";
+            this.lblApellidosAdm.Size = new System.Drawing.Size(93, 17);
+            this.lblApellidosAdm.TabIndex = 72;
+            this.lblApellidosAdm.Text = "Ayto. Llombai";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(223, 22);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(117, 20);
+            this.txtNombre.TabIndex = 71;
+            this.txtNombre.Visible = false;
+            // 
+            // lblApellidos
+            // 
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos.Location = new System.Drawing.Point(485, 23);
+            this.lblApellidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(95, 19);
+            this.lblApellidos.TabIndex = 69;
+            this.lblApellidos.Text = "APELLIDOS";
             // 
             // btnAceptar
             // 
@@ -294,7 +332,7 @@ namespace Eventick
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
             this.panelBorde.Margin = new System.Windows.Forms.Padding(2);
             this.panelBorde.Name = "panelBorde";
-            this.panelBorde.Size = new System.Drawing.Size(1167, 29);
+            this.panelBorde.Size = new System.Drawing.Size(1235, 29);
             this.panelBorde.TabIndex = 66;
             this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             this.panelBorde.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseMove);
@@ -330,7 +368,7 @@ namespace Eventick
             this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1123, 2);
+            this.picMinimizar.Location = new System.Drawing.Point(1191, 2);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(19, 20);
@@ -345,7 +383,7 @@ namespace Eventick
             this.picSalir.BackColor = System.Drawing.Color.Transparent;
             this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
-            this.picSalir.Location = new System.Drawing.Point(1146, 2);
+            this.picSalir.Location = new System.Drawing.Point(1214, 2);
             this.picSalir.Margin = new System.Windows.Forms.Padding(2);
             this.picSalir.Name = "picSalir";
             this.picSalir.Size = new System.Drawing.Size(19, 20);
@@ -366,7 +404,7 @@ namespace Eventick
             this.panelNavegacion.Location = new System.Drawing.Point(-34, 61);
             this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2);
             this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(1234, 65);
+            this.panelNavegacion.Size = new System.Drawing.Size(1302, 65);
             this.panelNavegacion.TabIndex = 65;
             this.panelNavegacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNavegacion_Paint);
             this.panelNavegacion.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseMove);
@@ -377,7 +415,7 @@ namespace Eventick
             this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(1121, 8);
+            this.picUser.Location = new System.Drawing.Point(1189, 8);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(62, 50);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -480,7 +518,7 @@ namespace Eventick
             this.panelUser.Controls.Add(this.btnLogOut);
             this.panelUser.Controls.Add(this.btnMiLista);
             this.panelUser.Controls.Add(this.btnSettings);
-            this.panelUser.Location = new System.Drawing.Point(988, 131);
+            this.panelUser.Location = new System.Drawing.Point(1056, 131);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(161, 97);
             this.panelUser.TabIndex = 79;
@@ -539,49 +577,11 @@ namespace Eventick
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSettings.UseVisualStyleBackColor = false;
             // 
-            // lblApellidos
-            // 
-            this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Font = new System.Drawing.Font("Yu Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(485, 23);
-            this.lblApellidos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(95, 19);
-            this.lblApellidos.TabIndex = 69;
-            this.lblApellidos.Text = "APELLIDOS";
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.Location = new System.Drawing.Point(599, 23);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(117, 20);
-            this.txtApellidos.TabIndex = 70;
-            this.txtApellidos.Visible = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(223, 22);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(117, 20);
-            this.txtNombre.TabIndex = 71;
-            this.txtNombre.Visible = false;
-            // 
-            // lblApellidosAdm
-            // 
-            this.lblApellidosAdm.AutoSize = true;
-            this.lblApellidosAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidosAdm.Location = new System.Drawing.Point(596, 23);
-            this.lblApellidosAdm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblApellidosAdm.Name = "lblApellidosAdm";
-            this.lblApellidosAdm.Size = new System.Drawing.Size(93, 17);
-            this.lblApellidosAdm.TabIndex = 72;
-            this.lblApellidosAdm.Text = "Ayto. Llombai";
-            // 
             // frmPerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 673);
+            this.ClientSize = new System.Drawing.Size(1235, 673);
             this.Controls.Add(this.panelUser);
             this.Controls.Add(this.lblListaElementos);
             this.Controls.Add(this.dataGridView1);
