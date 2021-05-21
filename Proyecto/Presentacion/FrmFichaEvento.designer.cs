@@ -33,40 +33,40 @@ namespace Eventick
             this.panelFichaActividad = new System.Windows.Forms.Panel();
             this.lblTipoEvento = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.picDuracionEvento = new System.Windows.Forms.PictureBox();
+            this.picPrecioEvento = new System.Windows.Forms.PictureBox();
             this.lblPrecioEvento = new System.Windows.Forms.Label();
+            this.picCompartirEvento = new System.Windows.Forms.PictureBox();
+            this.picFavorito = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.llblNombreEvento = new System.Windows.Forms.LinkLabel();
-            this.panelBorde = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelNavegacion = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.picDuracionEvento = new System.Windows.Forms.PictureBox();
-            this.picPrecioEvento = new System.Windows.Forms.PictureBox();
-            this.picCompartirEvento = new System.Windows.Forms.PictureBox();
-            this.picFavorito = new System.Windows.Forms.PictureBox();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelBorde = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picSalir = new System.Windows.Forms.PictureBox();
+            this.panelNavegacion = new System.Windows.Forms.Panel();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.picBuscar = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelFichaActividad.SuspendLayout();
-            this.panelBorde.SuspendLayout();
-            this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDuracionEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPrecioEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompartirEvento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFavorito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
+            this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -112,6 +112,28 @@ namespace Eventick
             this.label2.TabIndex = 29;
             this.label2.Text = "45 min";
             // 
+            // picDuracionEvento
+            // 
+            this.picDuracionEvento.ErrorImage = null;
+            this.picDuracionEvento.Image = ((System.Drawing.Image)(resources.GetObject("picDuracionEvento.Image")));
+            this.picDuracionEvento.Location = new System.Drawing.Point(62, 345);
+            this.picDuracionEvento.Name = "picDuracionEvento";
+            this.picDuracionEvento.Size = new System.Drawing.Size(37, 33);
+            this.picDuracionEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDuracionEvento.TabIndex = 28;
+            this.picDuracionEvento.TabStop = false;
+            // 
+            // picPrecioEvento
+            // 
+            this.picPrecioEvento.ErrorImage = null;
+            this.picPrecioEvento.Image = ((System.Drawing.Image)(resources.GetObject("picPrecioEvento.Image")));
+            this.picPrecioEvento.Location = new System.Drawing.Point(66, 313);
+            this.picPrecioEvento.Name = "picPrecioEvento";
+            this.picPrecioEvento.Size = new System.Drawing.Size(28, 26);
+            this.picPrecioEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPrecioEvento.TabIndex = 26;
+            this.picPrecioEvento.TabStop = false;
+            // 
             // lblPrecioEvento
             // 
             this.lblPrecioEvento.AutoSize = true;
@@ -121,6 +143,28 @@ namespace Eventick
             this.lblPrecioEvento.Size = new System.Drawing.Size(22, 16);
             this.lblPrecioEvento.TabIndex = 20;
             this.lblPrecioEvento.Text = "5€";
+            // 
+            // picCompartirEvento
+            // 
+            this.picCompartirEvento.ErrorImage = null;
+            this.picCompartirEvento.Image = ((System.Drawing.Image)(resources.GetObject("picCompartirEvento.Image")));
+            this.picCompartirEvento.Location = new System.Drawing.Point(988, 110);
+            this.picCompartirEvento.Name = "picCompartirEvento";
+            this.picCompartirEvento.Size = new System.Drawing.Size(32, 29);
+            this.picCompartirEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCompartirEvento.TabIndex = 16;
+            this.picCompartirEvento.TabStop = false;
+            // 
+            // picFavorito
+            // 
+            this.picFavorito.ErrorImage = null;
+            this.picFavorito.Image = ((System.Drawing.Image)(resources.GetObject("picFavorito.Image")));
+            this.picFavorito.Location = new System.Drawing.Point(1027, 110);
+            this.picFavorito.Name = "picFavorito";
+            this.picFavorito.Size = new System.Drawing.Size(32, 29);
+            this.picFavorito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFavorito.TabIndex = 15;
+            this.picFavorito.TabStop = false;
             // 
             // textBox1
             // 
@@ -151,100 +195,6 @@ namespace Eventick
             this.llblNombreEvento.TabStop = true;
             this.llblNombreEvento.Text = "Autocine Pinedo";
             // 
-            // panelBorde
-            // 
-            this.panelBorde.BackColor = System.Drawing.Color.White;
-            this.panelBorde.Controls.Add(this.label1);
-            this.panelBorde.Controls.Add(this.pictureBox5);
-            this.panelBorde.Controls.Add(this.picMinimizar);
-            this.panelBorde.Controls.Add(this.picMaximizar);
-            this.panelBorde.Controls.Add(this.picSalir);
-            this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBorde.Location = new System.Drawing.Point(0, 0);
-            this.panelBorde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelBorde.Name = "panelBorde";
-            this.panelBorde.Size = new System.Drawing.Size(1235, 29);
-            this.panelBorde.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Eventick";
-            // 
-            // panelNavegacion
-            // 
-            this.panelNavegacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelNavegacion.BackColor = System.Drawing.Color.Transparent;
-            this.panelNavegacion.Controls.Add(this.picUser);
-            this.panelNavegacion.Controls.Add(this.picBuscar);
-            this.panelNavegacion.Controls.Add(this.txtBuscar);
-            this.panelNavegacion.Controls.Add(this.picLogo);
-            this.panelNavegacion.Location = new System.Drawing.Point(-38, 37);
-            this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(1314, 65);
-            this.panelNavegacion.TabIndex = 7;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(338, 15);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(750, 29);
-            this.txtBuscar.TabIndex = 0;
-            // 
-            // picDuracionEvento
-            // 
-            this.picDuracionEvento.ErrorImage = null;
-            this.picDuracionEvento.Image = ((System.Drawing.Image)(resources.GetObject("picDuracionEvento.Image")));
-            this.picDuracionEvento.Location = new System.Drawing.Point(62, 345);
-            this.picDuracionEvento.Name = "picDuracionEvento";
-            this.picDuracionEvento.Size = new System.Drawing.Size(37, 33);
-            this.picDuracionEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDuracionEvento.TabIndex = 28;
-            this.picDuracionEvento.TabStop = false;
-            // 
-            // picPrecioEvento
-            // 
-            this.picPrecioEvento.ErrorImage = null;
-            this.picPrecioEvento.Image = ((System.Drawing.Image)(resources.GetObject("picPrecioEvento.Image")));
-            this.picPrecioEvento.Location = new System.Drawing.Point(66, 313);
-            this.picPrecioEvento.Name = "picPrecioEvento";
-            this.picPrecioEvento.Size = new System.Drawing.Size(28, 26);
-            this.picPrecioEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPrecioEvento.TabIndex = 26;
-            this.picPrecioEvento.TabStop = false;
-            // 
-            // picCompartirEvento
-            // 
-            this.picCompartirEvento.ErrorImage = null;
-            this.picCompartirEvento.Image = ((System.Drawing.Image)(resources.GetObject("picCompartirEvento.Image")));
-            this.picCompartirEvento.Location = new System.Drawing.Point(988, 110);
-            this.picCompartirEvento.Name = "picCompartirEvento";
-            this.picCompartirEvento.Size = new System.Drawing.Size(32, 29);
-            this.picCompartirEvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCompartirEvento.TabIndex = 16;
-            this.picCompartirEvento.TabStop = false;
-            // 
-            // picFavorito
-            // 
-            this.picFavorito.ErrorImage = null;
-            this.picFavorito.Image = ((System.Drawing.Image)(resources.GetObject("picFavorito.Image")));
-            this.picFavorito.Location = new System.Drawing.Point(1027, 110);
-            this.picFavorito.Name = "picFavorito";
-            this.picFavorito.Size = new System.Drawing.Size(32, 29);
-            this.picFavorito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFavorito.TabIndex = 15;
-            this.picFavorito.TabStop = false;
-            // 
             // picAtras
             // 
             this.picAtras.Image = ((System.Drawing.Image)(resources.GetObject("picAtras.Image")));
@@ -265,6 +215,32 @@ namespace Eventick
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelBorde
+            // 
+            this.panelBorde.BackColor = System.Drawing.Color.White;
+            this.panelBorde.Controls.Add(this.label1);
+            this.panelBorde.Controls.Add(this.pictureBox5);
+            this.panelBorde.Controls.Add(this.picMinimizar);
+            this.panelBorde.Controls.Add(this.picMaximizar);
+            this.panelBorde.Controls.Add(this.picSalir);
+            this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBorde.Location = new System.Drawing.Point(0, 0);
+            this.panelBorde.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBorde.Name = "panelBorde";
+            this.panelBorde.Size = new System.Drawing.Size(1235, 29);
+            this.panelBorde.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Eventick";
             // 
             // pictureBox5
             // 
@@ -321,6 +297,21 @@ namespace Eventick
             this.picSalir.TabIndex = 0;
             this.picSalir.TabStop = false;
             // 
+            // panelNavegacion
+            // 
+            this.panelNavegacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelNavegacion.BackColor = System.Drawing.Color.Transparent;
+            this.panelNavegacion.Controls.Add(this.picUser);
+            this.panelNavegacion.Controls.Add(this.picBuscar);
+            this.panelNavegacion.Controls.Add(this.txtBuscar);
+            this.panelNavegacion.Controls.Add(this.picLogo);
+            this.panelNavegacion.Location = new System.Drawing.Point(-38, 37);
+            this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNavegacion.Name = "panelNavegacion";
+            this.panelNavegacion.Size = new System.Drawing.Size(1314, 65);
+            this.panelNavegacion.TabIndex = 7;
+            // 
             // picUser
             // 
             this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -346,6 +337,15 @@ namespace Eventick
             this.picBuscar.TabIndex = 5;
             this.picBuscar.TabStop = false;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(338, 15);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(750, 29);
+            this.txtBuscar.TabIndex = 0;
+            // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
@@ -366,26 +366,27 @@ namespace Eventick
             this.Controls.Add(this.panelBorde);
             this.Controls.Add(this.panelNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmFichaEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFichaEvento";
             this.Load += new System.EventHandler(this.FrmFichaEvento_Load);
             this.panelFichaActividad.ResumeLayout(false);
             this.panelFichaActividad.PerformLayout();
-            this.panelBorde.ResumeLayout(false);
-            this.panelBorde.PerformLayout();
-            this.panelNavegacion.ResumeLayout(false);
-            this.panelNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDuracionEvento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPrecioEvento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompartirEvento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFavorito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelBorde.ResumeLayout(false);
+            this.panelBorde.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
+            this.panelNavegacion.ResumeLayout(false);
+            this.panelNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

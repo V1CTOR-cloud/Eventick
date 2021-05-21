@@ -189,6 +189,9 @@ namespace Eventick
                 btnEvento.BackColor = Color.FromArgb(230, 240, 229);
                 btnActividad.BackColor = Color.Transparent;
             }
+            FrmEventoUsuario eventos = new FrmEventoUsuario();
+            eventos.Show();
+            this.Hide();
         }
 
         private void trbDistancia_Scroll(object sender, EventArgs e)

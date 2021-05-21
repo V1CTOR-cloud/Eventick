@@ -33,6 +33,7 @@ namespace Eventick
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lblDistancia = new System.Windows.Forms.Label();
+            this.picDistancia = new System.Windows.Forms.PictureBox();
             this.chkCircular = new System.Windows.Forms.CheckBox();
             this.cbbDificultad = new System.Windows.Forms.ComboBox();
             this.cbbTiempo = new System.Windows.Forms.ComboBox();
@@ -40,41 +41,40 @@ namespace Eventick
             this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.txtPalabraClave = new System.Windows.Forms.TextBox();
             this.cbbTipo = new System.Windows.Forms.ComboBox();
+            this.picAPie = new System.Windows.Forms.PictureBox();
+            this.picEnBici = new System.Windows.Forms.PictureBox();
             this.panelNavegacion = new System.Windows.Forms.Panel();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelBorde = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picSalir = new System.Windows.Forms.PictureBox();
             this.flpNoticias = new System.Windows.Forms.FlowLayoutPanel();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.btnEvento = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnMiLista = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnEvento = new System.Windows.Forms.Button();
             this.btnActividad = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picSalir = new System.Windows.Forms.PictureBox();
-            this.picUser = new System.Windows.Forms.PictureBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.picDistancia = new System.Windows.Forms.PictureBox();
-            this.picAPie = new System.Windows.Forms.PictureBox();
-            this.picEnBici = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbDistancia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAPie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnBici)).BeginInit();
             this.panelNavegacion.SuspendLayout();
-            this.panelBorde.SuspendLayout();
-            this.panelUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAPie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEnBici)).BeginInit();
+            this.panelBorde.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
+            this.panelUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -122,6 +122,17 @@ namespace Eventick
             this.lblDistancia.Size = new System.Drawing.Size(29, 13);
             this.lblDistancia.TabIndex = 20;
             this.lblDistancia.Text = "x km";
+            // 
+            // picDistancia
+            // 
+            this.picDistancia.BackColor = System.Drawing.Color.Transparent;
+            this.picDistancia.Image = ((System.Drawing.Image)(resources.GetObject("picDistancia.Image")));
+            this.picDistancia.Location = new System.Drawing.Point(13, 183);
+            this.picDistancia.Name = "picDistancia";
+            this.picDistancia.Size = new System.Drawing.Size(45, 42);
+            this.picDistancia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDistancia.TabIndex = 19;
+            this.picDistancia.TabStop = false;
             // 
             // chkCircular
             // 
@@ -224,6 +235,28 @@ namespace Eventick
             this.cbbTipo.TabIndex = 10;
             this.cbbTipo.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox1_DrawItem);
             // 
+            // picAPie
+            // 
+            this.picAPie.BackColor = System.Drawing.Color.Transparent;
+            this.picAPie.Image = ((System.Drawing.Image)(resources.GetObject("picAPie.Image")));
+            this.picAPie.Location = new System.Drawing.Point(34, 9);
+            this.picAPie.Name = "picAPie";
+            this.picAPie.Size = new System.Drawing.Size(32, 30);
+            this.picAPie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAPie.TabIndex = 9;
+            this.picAPie.TabStop = false;
+            // 
+            // picEnBici
+            // 
+            this.picEnBici.BackColor = System.Drawing.Color.Transparent;
+            this.picEnBici.Image = ((System.Drawing.Image)(resources.GetObject("picEnBici.Image")));
+            this.picEnBici.Location = new System.Drawing.Point(135, 9);
+            this.picEnBici.Name = "picEnBici";
+            this.picEnBici.Size = new System.Drawing.Size(32, 30);
+            this.picEnBici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEnBici.TabIndex = 8;
+            this.picEnBici.TabStop = false;
+            // 
             // panelNavegacion
             // 
             this.panelNavegacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -240,6 +273,32 @@ namespace Eventick
             this.panelNavegacion.TabIndex = 4;
             this.panelNavegacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // picUser
+            // 
+            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+            this.picUser.Location = new System.Drawing.Point(1159, 8);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(62, 50);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 6;
+            this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.BackColor = System.Drawing.Color.White;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
+            this.picBuscar.Location = new System.Drawing.Point(968, 17);
+            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(28, 25);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 5;
+            this.picBuscar.TabStop = false;
+            // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,6 +307,17 @@ namespace Eventick
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(660, 29);
             this.txtBuscar.TabIndex = 0;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(35, 8);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(214, 39);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // panelBorde
             // 
@@ -277,15 +347,58 @@ namespace Eventick
             this.label1.TabIndex = 4;
             this.label1.Text = "Eventick";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
+            this.picMinimizar.Location = new System.Drawing.Point(1191, 2);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 2;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // picSalir
+            // 
+            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picSalir.BackColor = System.Drawing.Color.Transparent;
+            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
+            this.picSalir.Location = new System.Drawing.Point(1214, 2);
+            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.picSalir.Name = "picSalir";
+            this.picSalir.Size = new System.Drawing.Size(19, 20);
+            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalir.TabIndex = 0;
+            this.picSalir.TabStop = false;
+            this.picSalir.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // flpNoticias
             // 
             this.flpNoticias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpNoticias.AutoScroll = true;
-            this.flpNoticias.Location = new System.Drawing.Point(246, 170);
+            this.flpNoticias.Location = new System.Drawing.Point(252, 170);
             this.flpNoticias.Name = "flpNoticias";
-            this.flpNoticias.Size = new System.Drawing.Size(1235, 644);
+            this.flpNoticias.Size = new System.Drawing.Size(971, 491);
             this.flpNoticias.TabIndex = 6;
             // 
             // panelUser
@@ -302,24 +415,6 @@ namespace Eventick
             this.panelUser.Size = new System.Drawing.Size(161, 127);
             this.panelUser.TabIndex = 26;
             this.panelUser.Visible = false;
-            // 
-            // btnEvento
-            // 
-            this.btnEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.btnEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEvento.FlatAppearance.BorderSize = 2;
-            this.btnEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnEvento.Image")));
-            this.btnEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvento.Location = new System.Drawing.Point(722, 103);
-            this.btnEvento.Name = "btnEvento";
-            this.btnEvento.Size = new System.Drawing.Size(149, 41);
-            this.btnEvento.TabIndex = 25;
-            this.btnEvento.Text = "EVENTO";
-            this.btnEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEvento.UseVisualStyleBackColor = false;
-            this.btnEvento.Click += new System.EventHandler(this.btnEvento_Click);
             // 
             // btnLogOut
             // 
@@ -392,6 +487,24 @@ namespace Eventick
             this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
+            // btnEvento
+            // 
+            this.btnEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.btnEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEvento.FlatAppearance.BorderSize = 2;
+            this.btnEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnEvento.Image")));
+            this.btnEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEvento.Location = new System.Drawing.Point(722, 103);
+            this.btnEvento.Name = "btnEvento";
+            this.btnEvento.Size = new System.Drawing.Size(149, 41);
+            this.btnEvento.TabIndex = 25;
+            this.btnEvento.Text = "EVENTO";
+            this.btnEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEvento.UseVisualStyleBackColor = false;
+            this.btnEvento.Click += new System.EventHandler(this.btnEvento_Click);
+            // 
             // btnActividad
             // 
             this.btnActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
@@ -409,119 +522,6 @@ namespace Eventick
             this.btnActividad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActividad.UseVisualStyleBackColor = false;
             this.btnActividad.Click += new System.EventHandler(this.btnActividad_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1191, 2);
-            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 2;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // picSalir
-            // 
-            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picSalir.BackColor = System.Drawing.Color.Transparent;
-            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
-            this.picSalir.Location = new System.Drawing.Point(1214, 2);
-            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.picSalir.Name = "picSalir";
-            this.picSalir.Size = new System.Drawing.Size(19, 20);
-            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalir.TabIndex = 0;
-            this.picSalir.TabStop = false;
-            this.picSalir.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // picUser
-            // 
-            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(1159, 8);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(62, 50);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 6;
-            this.picUser.TabStop = false;
-            this.picUser.Click += new System.EventHandler(this.picUser_Click);
-            // 
-            // picBuscar
-            // 
-            this.picBuscar.BackColor = System.Drawing.Color.White;
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
-            this.picBuscar.Location = new System.Drawing.Point(968, 17);
-            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(28, 25);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBuscar.TabIndex = 5;
-            this.picBuscar.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(35, 8);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(214, 39);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
-            // 
-            // picDistancia
-            // 
-            this.picDistancia.BackColor = System.Drawing.Color.Transparent;
-            this.picDistancia.Image = ((System.Drawing.Image)(resources.GetObject("picDistancia.Image")));
-            this.picDistancia.Location = new System.Drawing.Point(13, 183);
-            this.picDistancia.Name = "picDistancia";
-            this.picDistancia.Size = new System.Drawing.Size(45, 42);
-            this.picDistancia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDistancia.TabIndex = 19;
-            this.picDistancia.TabStop = false;
-            // 
-            // picAPie
-            // 
-            this.picAPie.BackColor = System.Drawing.Color.Transparent;
-            this.picAPie.Image = ((System.Drawing.Image)(resources.GetObject("picAPie.Image")));
-            this.picAPie.Location = new System.Drawing.Point(34, 9);
-            this.picAPie.Name = "picAPie";
-            this.picAPie.Size = new System.Drawing.Size(32, 30);
-            this.picAPie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAPie.TabIndex = 9;
-            this.picAPie.TabStop = false;
-            // 
-            // picEnBici
-            // 
-            this.picEnBici.BackColor = System.Drawing.Color.Transparent;
-            this.picEnBici.Image = ((System.Drawing.Image)(resources.GetObject("picEnBici.Image")));
-            this.picEnBici.Location = new System.Drawing.Point(135, 9);
-            this.picEnBici.Name = "picEnBici";
-            this.picEnBici.Size = new System.Drawing.Size(32, 30);
-            this.picEnBici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEnBici.TabIndex = 8;
-            this.picEnBici.TabStop = false;
             // 
             // FrmActPpal
             // 
@@ -545,21 +545,21 @@ namespace Eventick
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbDistancia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAPie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnBici)).EndInit();
             this.panelNavegacion.ResumeLayout(false);
             this.panelNavegacion.PerformLayout();
-            this.panelBorde.ResumeLayout(false);
-            this.panelBorde.PerformLayout();
-            this.panelUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAPie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEnBici)).EndInit();
+            this.panelBorde.ResumeLayout(false);
+            this.panelBorde.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
+            this.panelUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

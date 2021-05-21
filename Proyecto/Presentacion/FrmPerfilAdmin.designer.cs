@@ -32,13 +32,21 @@ namespace Eventick
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfilAdmin));
             this.panelBorde = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picMaximizar = new System.Windows.Forms.PictureBox();
+            this.picSalir = new System.Windows.Forms.PictureBox();
             this.panelNavegacion = new System.Windows.Forms.Panel();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAceptarCambios = new System.Windows.Forms.Button();
             this.txtCambiarContrasenya = new System.Windows.Forms.TextBox();
             this.txtCambiarCorreo = new System.Windows.Forms.TextBox();
             this.btnEditarDatosAdmin = new System.Windows.Forms.Button();
+            this.picCandadoContraseña = new System.Windows.Forms.PictureBox();
             this.lblCorreoAdmin = new System.Windows.Forms.Label();
             this.lblLocalidadAdm = new System.Windows.Forms.Label();
             this.lblCPAdmin = new System.Windows.Forms.Label();
@@ -54,58 +62,50 @@ namespace Eventick
             this.lblCantEventosAdmin = new System.Windows.Forms.Label();
             this.btnVerListaElementos = new System.Windows.Forms.Button();
             this.panelAñadirElementos = new System.Windows.Forms.Panel();
+            this.btnAñadirActividad = new System.Windows.Forms.Button();
+            this.btnAñadirEvento = new System.Windows.Forms.Button();
             this.panelEliminarElemento = new System.Windows.Forms.Panel();
+            this.btnEliminarActividad = new System.Windows.Forms.Button();
+            this.btnEliminarEvento = new System.Windows.Forms.Button();
             this.panelEliminarEventos = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lblEventos = new System.Windows.Forms.Label();
+            this.picCerrarEliminarEventos = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelUser = new System.Windows.Forms.Panel();
-            this.panelEliminarActividades = new System.Windows.Forms.Panel();
-            this.btnEliminarAct = new System.Windows.Forms.Button();
-            this.lblTituloPanelEliminarAct = new System.Windows.Forms.Label();
-            this.gtvActividadesEliminar = new System.Windows.Forms.DataGridView();
-            this.picCerrarPanelEliminarActividades = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnEliminarActividad = new System.Windows.Forms.Button();
-            this.btnEliminarEvento = new System.Windows.Forms.Button();
-            this.picCerrarEliminarEventos = new System.Windows.Forms.PictureBox();
-            this.btnAñadirActividad = new System.Windows.Forms.Button();
-            this.btnAñadirEvento = new System.Windows.Forms.Button();
-            this.picCandadoContraseña = new System.Windows.Forms.PictureBox();
+            this.panelEliminarActividades = new System.Windows.Forms.Panel();
+            this.btnEliminarAct = new System.Windows.Forms.Button();
+            this.lblTituloPanelEliminarAct = new System.Windows.Forms.Label();
+            this.picCerrarPanelEliminarActividades = new System.Windows.Forms.PictureBox();
+            this.gtvActividadesEliminar = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.picAtras = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
-            this.picSalir = new System.Windows.Forms.PictureBox();
-            this.picUser = new System.Windows.Forms.PictureBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelBorde.SuspendLayout();
-            this.panelNavegacion.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelAñadirElementos.SuspendLayout();
-            this.panelEliminarElemento.SuspendLayout();
-            this.panelEliminarEventos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelUser.SuspendLayout();
-            this.panelEliminarActividades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gtvActividadesEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarPanelEliminarActividades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarEliminarEventos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCandadoContraseña)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
+            this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCandadoContraseña)).BeginInit();
+            this.panelAñadirElementos.SuspendLayout();
+            this.panelEliminarElemento.SuspendLayout();
+            this.panelEliminarEventos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarEliminarEventos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelUser.SuspendLayout();
+            this.panelEliminarActividades.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarPanelEliminarActividades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gtvActividadesEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBorde
@@ -134,6 +134,61 @@ namespace Eventick
             this.label1.TabIndex = 4;
             this.label1.Text = "Eventick";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
+            this.picMinimizar.Location = new System.Drawing.Point(1168, 2);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 2;
+            this.picMinimizar.TabStop = false;
+            // 
+            // picMaximizar
+            // 
+            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
+            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
+            this.picMaximizar.Location = new System.Drawing.Point(1191, 2);
+            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMaximizar.Name = "picMaximizar";
+            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
+            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximizar.TabIndex = 1;
+            this.picMaximizar.TabStop = false;
+            // 
+            // picSalir
+            // 
+            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picSalir.BackColor = System.Drawing.Color.Transparent;
+            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
+            this.picSalir.Location = new System.Drawing.Point(1214, 2);
+            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.picSalir.Name = "picSalir";
+            this.picSalir.Size = new System.Drawing.Size(19, 20);
+            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalir.TabIndex = 0;
+            this.picSalir.TabStop = false;
+            // 
             // panelNavegacion
             // 
             this.panelNavegacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -149,6 +204,32 @@ namespace Eventick
             this.panelNavegacion.Size = new System.Drawing.Size(1302, 65);
             this.panelNavegacion.TabIndex = 10;
             // 
+            // picUser
+            // 
+            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+            this.picUser.Location = new System.Drawing.Point(1189, 8);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(62, 50);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 6;
+            this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.BackColor = System.Drawing.Color.White;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
+            this.picBuscar.Location = new System.Drawing.Point(1058, 17);
+            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(28, 25);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 5;
+            this.picBuscar.TabStop = false;
+            // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +238,17 @@ namespace Eventick
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(750, 29);
             this.txtBuscar.TabIndex = 0;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(35, 8);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(214, 39);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // panel1
             // 
@@ -217,6 +309,16 @@ namespace Eventick
             this.btnEditarDatosAdmin.Text = "EDITAR";
             this.btnEditarDatosAdmin.UseVisualStyleBackColor = true;
             this.btnEditarDatosAdmin.Click += new System.EventHandler(this.lblEditarDatosAdmin_Click);
+            // 
+            // picCandadoContraseña
+            // 
+            this.picCandadoContraseña.Image = ((System.Drawing.Image)(resources.GetObject("picCandadoContraseña.Image")));
+            this.picCandadoContraseña.Location = new System.Drawing.Point(618, 73);
+            this.picCandadoContraseña.Name = "picCandadoContraseña";
+            this.picCandadoContraseña.Size = new System.Drawing.Size(36, 29);
+            this.picCandadoContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCandadoContraseña.TabIndex = 52;
+            this.picCandadoContraseña.TabStop = false;
             // 
             // lblCorreoAdmin
             // 
@@ -382,6 +484,44 @@ namespace Eventick
             this.panelAñadirElementos.Size = new System.Drawing.Size(414, 100);
             this.panelAñadirElementos.TabIndex = 64;
             // 
+            // btnAñadirActividad
+            // 
+            this.btnAñadirActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.btnAñadirActividad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAñadirActividad.FlatAppearance.BorderSize = 2;
+            this.btnAñadirActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirActividad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnAñadirActividad.Image")));
+            this.btnAñadirActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAñadirActividad.Location = new System.Drawing.Point(51, 25);
+            this.btnAñadirActividad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAñadirActividad.Name = "btnAñadirActividad";
+            this.btnAñadirActividad.Size = new System.Drawing.Size(138, 44);
+            this.btnAñadirActividad.TabIndex = 65;
+            this.btnAñadirActividad.Text = "ACTIVIDAD";
+            this.btnAñadirActividad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirActividad.UseVisualStyleBackColor = false;
+            this.btnAñadirActividad.Click += new System.EventHandler(this.btnAñadirActividad_Click);
+            // 
+            // btnAñadirEvento
+            // 
+            this.btnAñadirEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.btnAñadirEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnAñadirEvento.FlatAppearance.BorderSize = 2;
+            this.btnAñadirEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirEvento.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnAñadirEvento.Image")));
+            this.btnAñadirEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAñadirEvento.Location = new System.Drawing.Point(242, 25);
+            this.btnAñadirEvento.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAñadirEvento.Name = "btnAñadirEvento";
+            this.btnAñadirEvento.Size = new System.Drawing.Size(138, 46);
+            this.btnAñadirEvento.TabIndex = 66;
+            this.btnAñadirEvento.Text = "EVENTO";
+            this.btnAñadirEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAñadirEvento.UseVisualStyleBackColor = false;
+            this.btnAñadirEvento.Click += new System.EventHandler(this.btnAñadirEvento_Click);
+            // 
             // panelEliminarElemento
             // 
             this.panelEliminarElemento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
@@ -391,6 +531,44 @@ namespace Eventick
             this.panelEliminarElemento.Name = "panelEliminarElemento";
             this.panelEliminarElemento.Size = new System.Drawing.Size(414, 100);
             this.panelEliminarElemento.TabIndex = 67;
+            // 
+            // btnEliminarActividad
+            // 
+            this.btnEliminarActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.btnEliminarActividad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEliminarActividad.FlatAppearance.BorderSize = 2;
+            this.btnEliminarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarActividad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarActividad.Image")));
+            this.btnEliminarActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarActividad.Location = new System.Drawing.Point(41, 25);
+            this.btnEliminarActividad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarActividad.Name = "btnEliminarActividad";
+            this.btnEliminarActividad.Size = new System.Drawing.Size(138, 44);
+            this.btnEliminarActividad.TabIndex = 67;
+            this.btnEliminarActividad.Text = "ACTIVIDAD";
+            this.btnEliminarActividad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarActividad.UseVisualStyleBackColor = false;
+            this.btnEliminarActividad.Click += new System.EventHandler(this.btnEliminarActividad_Click);
+            // 
+            // btnEliminarEvento
+            // 
+            this.btnEliminarEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.btnEliminarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEliminarEvento.FlatAppearance.BorderSize = 2;
+            this.btnEliminarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEvento.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarEvento.Image")));
+            this.btnEliminarEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarEvento.Location = new System.Drawing.Point(228, 25);
+            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarEvento.Name = "btnEliminarEvento";
+            this.btnEliminarEvento.Size = new System.Drawing.Size(138, 46);
+            this.btnEliminarEvento.TabIndex = 68;
+            this.btnEliminarEvento.Text = "EVENTO";
+            this.btnEliminarEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarEvento.UseVisualStyleBackColor = false;
+            this.btnEliminarEvento.Click += new System.EventHandler(this.btnEliminarEvento_Click);
             // 
             // panelEliminarEventos
             // 
@@ -425,6 +603,17 @@ namespace Eventick
             this.lblEventos.TabIndex = 70;
             this.lblEventos.Text = "EVENTOS";
             // 
+            // picCerrarEliminarEventos
+            // 
+            this.picCerrarEliminarEventos.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarEliminarEventos.Image")));
+            this.picCerrarEliminarEventos.Location = new System.Drawing.Point(664, 3);
+            this.picCerrarEliminarEventos.Name = "picCerrarEliminarEventos";
+            this.picCerrarEliminarEventos.Size = new System.Drawing.Size(27, 25);
+            this.picCerrarEliminarEventos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrarEliminarEventos.TabIndex = 69;
+            this.picCerrarEliminarEventos.TabStop = false;
+            this.picCerrarEliminarEventos.Click += new System.EventHandler(this.picCerrarEliminarEventos_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -448,58 +637,6 @@ namespace Eventick
             this.panelUser.Size = new System.Drawing.Size(161, 126);
             this.panelUser.TabIndex = 27;
             this.panelUser.Visible = false;
-            // 
-            // panelEliminarActividades
-            // 
-            this.panelEliminarActividades.Controls.Add(this.btnEliminarAct);
-            this.panelEliminarActividades.Controls.Add(this.lblTituloPanelEliminarAct);
-            this.panelEliminarActividades.Controls.Add(this.picCerrarPanelEliminarActividades);
-            this.panelEliminarActividades.Controls.Add(this.gtvActividadesEliminar);
-            this.panelEliminarActividades.Location = new System.Drawing.Point(247, 111);
-            this.panelEliminarActividades.Name = "panelEliminarActividades";
-            this.panelEliminarActividades.Size = new System.Drawing.Size(695, 357);
-            this.panelEliminarActividades.TabIndex = 72;
-            // 
-            // btnEliminarAct
-            // 
-            this.btnEliminarAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
-            this.btnEliminarAct.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarAct.Location = new System.Drawing.Point(573, 316);
-            this.btnEliminarAct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarAct.Name = "btnEliminarAct";
-            this.btnEliminarAct.Size = new System.Drawing.Size(96, 24);
-            this.btnEliminarAct.TabIndex = 66;
-            this.btnEliminarAct.Text = "ELIMINAR";
-            this.btnEliminarAct.UseVisualStyleBackColor = false;
-            // 
-            // lblTituloPanelEliminarAct
-            // 
-            this.lblTituloPanelEliminarAct.AutoSize = true;
-            this.lblTituloPanelEliminarAct.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloPanelEliminarAct.Location = new System.Drawing.Point(29, 20);
-            this.lblTituloPanelEliminarAct.Name = "lblTituloPanelEliminarAct";
-            this.lblTituloPanelEliminarAct.Size = new System.Drawing.Size(115, 21);
-            this.lblTituloPanelEliminarAct.TabIndex = 70;
-            this.lblTituloPanelEliminarAct.Text = "ACTIVIDADES";
-            // 
-            // gtvActividadesEliminar
-            // 
-            this.gtvActividadesEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gtvActividadesEliminar.Location = new System.Drawing.Point(33, 51);
-            this.gtvActividadesEliminar.Name = "gtvActividadesEliminar";
-            this.gtvActividadesEliminar.RowHeadersWidth = 51;
-            this.gtvActividadesEliminar.Size = new System.Drawing.Size(622, 241);
-            this.gtvActividadesEliminar.TabIndex = 0;
-            // 
-            // picCerrarPanelEliminarActividades
-            // 
-            this.picCerrarPanelEliminarActividades.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarPanelEliminarActividades.Image")));
-            this.picCerrarPanelEliminarActividades.Location = new System.Drawing.Point(664, 3);
-            this.picCerrarPanelEliminarActividades.Name = "picCerrarPanelEliminarActividades";
-            this.picCerrarPanelEliminarActividades.Size = new System.Drawing.Size(27, 25);
-            this.picCerrarPanelEliminarActividades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrarPanelEliminarActividades.TabIndex = 69;
-            this.picCerrarPanelEliminarActividades.TabStop = false;
             // 
             // button7
             // 
@@ -571,102 +708,57 @@ namespace Eventick
             this.button2.Text = "    Perfil";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnEliminarActividad
+            // panelEliminarActividades
             // 
-            this.btnEliminarActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.btnEliminarActividad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEliminarActividad.FlatAppearance.BorderSize = 2;
-            this.btnEliminarActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarActividad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarActividad.Image")));
-            this.btnEliminarActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarActividad.Location = new System.Drawing.Point(41, 25);
-            this.btnEliminarActividad.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminarActividad.Name = "btnEliminarActividad";
-            this.btnEliminarActividad.Size = new System.Drawing.Size(138, 44);
-            this.btnEliminarActividad.TabIndex = 67;
-            this.btnEliminarActividad.Text = "ACTIVIDAD";
-            this.btnEliminarActividad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarActividad.UseVisualStyleBackColor = false;
-            this.btnEliminarActividad.Click += new System.EventHandler(this.btnEliminarActividad_Click);
+            this.panelEliminarActividades.Controls.Add(this.btnEliminarAct);
+            this.panelEliminarActividades.Controls.Add(this.lblTituloPanelEliminarAct);
+            this.panelEliminarActividades.Controls.Add(this.picCerrarPanelEliminarActividades);
+            this.panelEliminarActividades.Controls.Add(this.gtvActividadesEliminar);
+            this.panelEliminarActividades.Location = new System.Drawing.Point(247, 111);
+            this.panelEliminarActividades.Name = "panelEliminarActividades";
+            this.panelEliminarActividades.Size = new System.Drawing.Size(695, 357);
+            this.panelEliminarActividades.TabIndex = 72;
             // 
-            // btnEliminarEvento
+            // btnEliminarAct
             // 
-            this.btnEliminarEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.btnEliminarEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEliminarEvento.FlatAppearance.BorderSize = 2;
-            this.btnEliminarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarEvento.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarEvento.Image")));
-            this.btnEliminarEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarEvento.Location = new System.Drawing.Point(228, 25);
-            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminarEvento.Name = "btnEliminarEvento";
-            this.btnEliminarEvento.Size = new System.Drawing.Size(138, 46);
-            this.btnEliminarEvento.TabIndex = 68;
-            this.btnEliminarEvento.Text = "EVENTO";
-            this.btnEliminarEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarEvento.UseVisualStyleBackColor = false;
-            this.btnEliminarEvento.Click += new System.EventHandler(this.btnEliminarEvento_Click);
+            this.btnEliminarAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(218)))), ((int)(((byte)(218)))));
+            this.btnEliminarAct.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarAct.Location = new System.Drawing.Point(573, 316);
+            this.btnEliminarAct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarAct.Name = "btnEliminarAct";
+            this.btnEliminarAct.Size = new System.Drawing.Size(96, 24);
+            this.btnEliminarAct.TabIndex = 66;
+            this.btnEliminarAct.Text = "ELIMINAR";
+            this.btnEliminarAct.UseVisualStyleBackColor = false;
             // 
-            // picCerrarEliminarEventos
+            // lblTituloPanelEliminarAct
             // 
-            this.picCerrarEliminarEventos.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarEliminarEventos.Image")));
-            this.picCerrarEliminarEventos.Location = new System.Drawing.Point(664, 3);
-            this.picCerrarEliminarEventos.Name = "picCerrarEliminarEventos";
-            this.picCerrarEliminarEventos.Size = new System.Drawing.Size(27, 25);
-            this.picCerrarEliminarEventos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrarEliminarEventos.TabIndex = 69;
-            this.picCerrarEliminarEventos.TabStop = false;
-            this.picCerrarEliminarEventos.Click += new System.EventHandler(this.picCerrarEliminarEventos_Click);
+            this.lblTituloPanelEliminarAct.AutoSize = true;
+            this.lblTituloPanelEliminarAct.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPanelEliminarAct.Location = new System.Drawing.Point(29, 20);
+            this.lblTituloPanelEliminarAct.Name = "lblTituloPanelEliminarAct";
+            this.lblTituloPanelEliminarAct.Size = new System.Drawing.Size(115, 21);
+            this.lblTituloPanelEliminarAct.TabIndex = 70;
+            this.lblTituloPanelEliminarAct.Text = "ACTIVIDADES";
             // 
-            // btnAñadirActividad
+            // picCerrarPanelEliminarActividades
             // 
-            this.btnAñadirActividad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.btnAñadirActividad.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAñadirActividad.FlatAppearance.BorderSize = 2;
-            this.btnAñadirActividad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadirActividad.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirActividad.Image = ((System.Drawing.Image)(resources.GetObject("btnAñadirActividad.Image")));
-            this.btnAñadirActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAñadirActividad.Location = new System.Drawing.Point(51, 25);
-            this.btnAñadirActividad.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAñadirActividad.Name = "btnAñadirActividad";
-            this.btnAñadirActividad.Size = new System.Drawing.Size(138, 44);
-            this.btnAñadirActividad.TabIndex = 65;
-            this.btnAñadirActividad.Text = "ACTIVIDAD";
-            this.btnAñadirActividad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAñadirActividad.UseVisualStyleBackColor = false;
-            this.btnAñadirActividad.Click += new System.EventHandler(this.btnAñadirActividad_Click);
+            this.picCerrarPanelEliminarActividades.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarPanelEliminarActividades.Image")));
+            this.picCerrarPanelEliminarActividades.Location = new System.Drawing.Point(664, 3);
+            this.picCerrarPanelEliminarActividades.Name = "picCerrarPanelEliminarActividades";
+            this.picCerrarPanelEliminarActividades.Size = new System.Drawing.Size(27, 25);
+            this.picCerrarPanelEliminarActividades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrarPanelEliminarActividades.TabIndex = 69;
+            this.picCerrarPanelEliminarActividades.TabStop = false;
             // 
-            // btnAñadirEvento
+            // gtvActividadesEliminar
             // 
-            this.btnAñadirEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.btnAñadirEvento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAñadirEvento.FlatAppearance.BorderSize = 2;
-            this.btnAñadirEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadirEvento.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirEvento.Image = ((System.Drawing.Image)(resources.GetObject("btnAñadirEvento.Image")));
-            this.btnAñadirEvento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAñadirEvento.Location = new System.Drawing.Point(242, 25);
-            this.btnAñadirEvento.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAñadirEvento.Name = "btnAñadirEvento";
-            this.btnAñadirEvento.Size = new System.Drawing.Size(138, 46);
-            this.btnAñadirEvento.TabIndex = 66;
-            this.btnAñadirEvento.Text = "EVENTO";
-            this.btnAñadirEvento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAñadirEvento.UseVisualStyleBackColor = false;
-            this.btnAñadirEvento.Click += new System.EventHandler(this.btnAñadirEvento_Click);
-            // 
-            // picCandadoContraseña
-            // 
-            this.picCandadoContraseña.Image = ((System.Drawing.Image)(resources.GetObject("picCandadoContraseña.Image")));
-            this.picCandadoContraseña.Location = new System.Drawing.Point(618, 73);
-            this.picCandadoContraseña.Name = "picCandadoContraseña";
-            this.picCandadoContraseña.Size = new System.Drawing.Size(36, 29);
-            this.picCandadoContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCandadoContraseña.TabIndex = 52;
-            this.picCandadoContraseña.TabStop = false;
+            this.gtvActividadesEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gtvActividadesEliminar.Location = new System.Drawing.Point(33, 51);
+            this.gtvActividadesEliminar.Name = "gtvActividadesEliminar";
+            this.gtvActividadesEliminar.RowHeadersWidth = 51;
+            this.gtvActividadesEliminar.Size = new System.Drawing.Size(622, 241);
+            this.gtvActividadesEliminar.TabIndex = 0;
             // 
             // btnEliminar
             // 
@@ -714,98 +806,6 @@ namespace Eventick
             this.picAtras.TabIndex = 9;
             this.picAtras.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(19, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1168, 2);
-            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(19, 20);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 2;
-            this.picMinimizar.TabStop = false;
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
-            this.picMaximizar.Location = new System.Drawing.Point(1191, 2);
-            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 1;
-            this.picMaximizar.TabStop = false;
-            // 
-            // picSalir
-            // 
-            this.picSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picSalir.BackColor = System.Drawing.Color.Transparent;
-            this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
-            this.picSalir.Location = new System.Drawing.Point(1214, 2);
-            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.picSalir.Name = "picSalir";
-            this.picSalir.Size = new System.Drawing.Size(19, 20);
-            this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalir.TabIndex = 0;
-            this.picSalir.TabStop = false;
-            // 
-            // picUser
-            // 
-            this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(1189, 8);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(62, 50);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 6;
-            this.picUser.TabStop = false;
-            this.picUser.Click += new System.EventHandler(this.picUser_Click);
-            // 
-            // picBuscar
-            // 
-            this.picBuscar.BackColor = System.Drawing.Color.White;
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
-            this.picBuscar.Location = new System.Drawing.Point(1058, 17);
-            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(28, 25);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBuscar.TabIndex = 5;
-            this.picBuscar.TabStop = false;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(35, 8);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(214, 39);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
-            // 
             // FrmPerfilAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,34 +830,35 @@ namespace Eventick
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPerfilAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmPerfilAdmin_Load);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
-            this.panelNavegacion.ResumeLayout(false);
-            this.panelNavegacion.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panelAñadirElementos.ResumeLayout(false);
-            this.panelEliminarElemento.ResumeLayout(false);
-            this.panelEliminarEventos.ResumeLayout(false);
-            this.panelEliminarEventos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelUser.ResumeLayout(false);
-            this.panelEliminarActividades.ResumeLayout(false);
-            this.panelEliminarActividades.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gtvActividadesEliminar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarPanelEliminarActividades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarEliminarEventos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCandadoContraseña)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
+            this.panelNavegacion.ResumeLayout(false);
+            this.panelNavegacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCandadoContraseña)).EndInit();
+            this.panelAñadirElementos.ResumeLayout(false);
+            this.panelEliminarElemento.ResumeLayout(false);
+            this.panelEliminarEventos.ResumeLayout(false);
+            this.panelEliminarEventos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarEliminarEventos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelUser.ResumeLayout(false);
+            this.panelEliminarActividades.ResumeLayout(false);
+            this.panelEliminarActividades.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrarPanelEliminarActividades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gtvActividadesEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

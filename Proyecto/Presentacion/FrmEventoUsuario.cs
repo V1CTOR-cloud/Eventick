@@ -18,13 +18,13 @@ namespace Eventick
         {
             btnEvento.BackColor = Color.FromArgb(230, 240, 229);
             btnActividad.BackColor = Color.Transparent;
-            picMaximizar.Image = Image.FromFile(@"..\..\Iconos\maximizar.png");
+            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
 
         }
 
 
-        Image favoritovacio = Image.FromFile(@"..\..\Iconos\corazonvacio.png");
-        Image favoritolleno = Image.FromFile(@"..\..\Iconos\corazonrojo.png");
+        Image favoritovacio = Image.FromFile(@"..\..\..\Iconos\corazonvacio.png");
+        Image favoritolleno = Image.FromFile(@"..\..\..\Iconos\corazonrojo.png");
 
         public FrmEventoUsuario()
         {
@@ -36,7 +36,7 @@ namespace Eventick
             cbbPrecioMin.SelectedIndex = 0;
             cbbPrecioMax.SelectedIndex = 0;
 
-            picMaximizar.Image = Image.FromFile(@"..\..\Iconos\maximizar2.png");
+            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
 
             txtPalabraClave.Text = "PALABRA CLAVE";
             txtPalabraClave.Font = new Font(txtPalabraClave.Font, FontStyle.Bold);
@@ -117,7 +117,7 @@ namespace Eventick
             panelInfo.Controls.Add(lblInfo9);
             PictureBox picFavorito = new PictureBox() { Name = "picFavorito", Cursor = Cursors.Hand, Image = favoritovacio, Size = new Size(35, 35), Location = new Point(261, 100), SizeMode = PictureBoxSizeMode.Zoom };
             panelNoticia.Controls.Add(picFavorito);
-            PictureBox picCompartir = new PictureBox() { Name = "picCompartir", Image = Image.FromFile(@"..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
+            PictureBox picCompartir = new PictureBox() { Name = "picCompartir", Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
             panelNoticia.Controls.Add(picCompartir);
             picFavorito.Click += new EventHandler(picFavorito_Click);
 
@@ -226,7 +226,7 @@ namespace Eventick
 
         private void btnActividad_Click_1(object sender, EventArgs e)
         {
-            FrmActividadUusario formulario = new FrmActividadUusario();
+            FrmActPpal formulario = new FrmActPpal();
             formulario.Visible = true;
             Visible = false;
         }
@@ -236,12 +236,12 @@ namespace Eventick
 
             if (this.WindowState == FormWindowState.Normal)
             {
-                picMaximizar.Image = Image.FromFile(@"..\..\Iconos\maximizar2.png");
+                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
                 this.WindowState = FormWindowState.Maximized;
             }
             else
             {
-                picMaximizar.Image = Image.FromFile(@"..\..\Iconos\maximizar.png");
+                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
 
                 this.WindowState = FormWindowState.Normal;
             }

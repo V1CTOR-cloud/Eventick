@@ -17,8 +17,8 @@ namespace Eventick
             InitializeComponent();
         }
 
-        Image favoritovacio = Image.FromFile(@"..\..\Iconos\corazonvacio.png");
-        Image favoritolleno = Image.FromFile(@"..\..\Iconos\corazonrojo.png");
+        Image favoritovacio = Image.FromFile(@"..\..\..\Iconos\corazonvacio.png");
+        Image favoritolleno = Image.FromFile(@"..\..\..\Iconos\corazonrojo.png");
 
         private void picSalir_Click(object sender, EventArgs e)
         {

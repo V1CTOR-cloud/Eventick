@@ -58,9 +58,9 @@ namespace Eventick
                     ev.Precio = double.Parse(txtPrecio.Text);
                     ev.Localidad = txtLocalidad.Text;
                     ev.Duracion = DateTime.Parse(nupCuentaHoras.Value.ToString());
-                    ev.Fecha = dtpFechaEvento.Value;
+                    //ev.Fecha = dtpFechaEvento.Value;
 
-                    admin.AgregarEvento(conexion.Conexion, ev);
+                    //admin.AgregarEvento(conexion.Conexion, ev);
 
                 }
 

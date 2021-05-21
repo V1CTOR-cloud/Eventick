@@ -88,7 +88,7 @@ namespace Eventick
             DialogResult r = MessageBox.Show("¿Estás seguro de guardar los cambios?","¿Seguro?",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (r == DialogResult.Yes)
             {
-                lblNombreAdm.Visible=lblApellidos.Visible=lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+                lblNombreAdm.Visible=lblApellidosAdm.Visible=lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
                 txtNombre.Visible=txtApellidos.Visible=txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
                 lblEditarDatosAdmin.Visible = true;
                 btnAceptar.Visible = false;

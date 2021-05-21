@@ -48,7 +48,7 @@ namespace Eventick
                 lblCorreoAdmin.Text = txtCambiarContrasenya.Text;
                 lblCorreoAdmin.Visible = true;
                 picCandadoContraseña.Visible = true;
-                Administradores.CambiarContrasenya(conexion.Conexion, txtCambiarContrasenya.Text, AdminLoginCache.Email);
+                //Administradores.CambiarContrasenya(conexion.Conexion, txtCambiarContrasenya.Text, AdminLoginCache.Email);
             }
         }
 
@@ -84,7 +84,7 @@ namespace Eventick
         {
          
             panelEliminarActividades.Visible = true;
-            gtvActividadesEliminar.DataSource = Administradores.VerActividadesTotales(conexion.Conexion, AdminLoginCache.Nombre);
+            //gtvActividadesEliminar.DataSource = Administradores.VerActividadesTotales(conexion.Conexion, AdminLoginCache.Nombre);
             gtvActividadesEliminar.ForeColor = Color.Black;
         }
 
@@ -97,7 +97,7 @@ namespace Eventick
         private void btnEliminarEvento_Click(object sender, EventArgs e)
         {
             panelEliminarEventos.Visible = true;
-            gtvActividadesEliminar.DataSource = Administradores.VerEventosTotales(conexion.Conexion, AdminLoginCache.Nombre);
+            //gtvActividadesEliminar.DataSource = Administradores.VerEventosTotales(conexion.Conexion, AdminLoginCache.Nombre);
             gtvActividadesEliminar.ForeColor = Color.Black;
         }
 

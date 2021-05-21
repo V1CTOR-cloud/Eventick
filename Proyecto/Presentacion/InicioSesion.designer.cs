@@ -101,7 +101,7 @@ namespace Eventick
             // 
             this.picLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(516, 145);
+            this.picLogo.Location = new System.Drawing.Point(497, 125);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(214, 39);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

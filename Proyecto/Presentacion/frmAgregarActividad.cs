@@ -56,7 +56,7 @@ namespace Eventick
                         act.Distancia = double.Parse(lblDistancia.Text);
                         act.Duracion = DateTime.Parse(nupCuentaHoras.Value.ToString());
                         act.Dificultad = cmbDificultad.SelectedItem.ToString();
-                        admin.AgregarActividad(conexion.Conexion, act);                    
+                        //admin.AgregarActividad(conexion.Conexion, act);                    
 
                 } 
 
