@@ -112,6 +112,12 @@ namespace Eventick
             panelEliminarElemento.Visible = false;
             panelEliminarElemento.Visible = false;
             panelAñadirElementos.Visible = false;
+
+            Administradores admin = new Administradores();
+
+            lblCantActAdmin.Text = admin.TotalActAdmin(conexion.Conexion).ToString();
+            lblCantEventosAdmin.Text = admin.TotalEvAdmin(conexion.Conexion).ToString();
+
         }
 
         private void picUser_Click(object sender, EventArgs e)
