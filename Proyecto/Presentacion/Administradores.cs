@@ -161,5 +161,43 @@ namespace Eventick
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+
+
+
+        public int TotalActAdmin(MySqlConnection conexion)
+        {
+            int contador;
+
+            String consulta = String.Format("SELECT COUNT(*) FROM adminactividad WHERE idAdmin = '{0}'", usuario);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            reader.Read();
+            contador = reader.GetInt32(0);
+
+            return contador;
+
+        }
+
+
+
+        public int TotalEvAdmin(MySqlConnection conexion)
+        {
+            int contador;
+
+            String consulta = String.Format("SELECT COUNT(*) FROM adminevento WHERE idAdmin = '{0}'", usuario);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            reader.Read();
+            contador = reader.GetInt32(0);
+
+            return contador;
+
+        }
+
+
+
+
     }
 }
