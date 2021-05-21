@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace Eventick
 {
     public partial class FrmFichaActividad : Form
     {
+
+        ConexionBD conexion = new ConexionBD();
+
         public FrmFichaActividad()
         {
             InitializeComponent();
@@ -47,7 +52,13 @@ namespace Eventick
         }
 
         private void FrmFichaActividad_Load(object sender, EventArgs e)
-        { 
+        {
+
+            Actividad act = new Actividad();
+
+            act.CargarFichaAct(conexion.Conexion);
+
+
         }
     }
 }

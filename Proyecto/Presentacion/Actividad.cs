@@ -88,9 +88,6 @@ namespace Eventick
 
             }
 
-
-
-
         }
 
         public static List<Actividad> CargarActividades(MySqlConnection conexion)
@@ -123,5 +120,37 @@ namespace Eventick
 
             return lista;
         }
+
+
+        public void CargarFichaAct(MySqlConnection conexion)
+        {
+            string consulta = String.Format("SELECT * FROM actividad WHERE id='{0}'", Id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+       
+                    Actividad act = new Actividad();
+
+                    act.Titulo = reader.GetString(1);
+                    act.Descripcion = reader.GetString(2);
+                    act.Localidad = reader.GetString(3);
+                    act.Distancia = reader.GetDouble(4);
+                    act.Circular = reader.GetInt16(5);
+                    act.Dificultad = reader.GetString(6);
+                    act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                    act.Tipo = reader.GetInt32(8);
+
+                
+            }
+
+
+        }
+
+            
+
     }
 }
