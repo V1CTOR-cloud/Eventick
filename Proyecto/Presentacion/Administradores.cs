@@ -175,7 +175,7 @@ namespace Eventick
 
             reader.Read();
             contador = reader.GetInt32(0);
-
+            reader.Close();
             return contador;
 
         }
@@ -192,7 +192,7 @@ namespace Eventick
 
             reader.Read();
             contador = reader.GetInt32(0);
-
+            reader.Close();
             return contador;
 
         }

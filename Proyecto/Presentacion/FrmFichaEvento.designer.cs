@@ -31,7 +31,6 @@ namespace Eventick
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichaEvento));
             this.panelFichaActividad = new System.Windows.Forms.Panel();
-            this.lblTipoEvento = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.picDuracionEvento = new System.Windows.Forms.PictureBox();
             this.picPrecioEvento = new System.Windows.Forms.PictureBox();
@@ -75,7 +74,6 @@ namespace Eventick
             // panelFichaActividad
             // 
             this.panelFichaActividad.AutoScroll = true;
-            this.panelFichaActividad.Controls.Add(this.lblTipoEvento);
             this.panelFichaActividad.Controls.Add(this.label2);
             this.panelFichaActividad.Controls.Add(this.picDuracionEvento);
             this.panelFichaActividad.Controls.Add(this.picPrecioEvento);
@@ -91,16 +89,6 @@ namespace Eventick
             this.panelFichaActividad.Name = "panelFichaActividad";
             this.panelFichaActividad.Size = new System.Drawing.Size(1116, 502);
             this.panelFichaActividad.TabIndex = 9;
-            // 
-            // lblTipoEvento
-            // 
-            this.lblTipoEvento.AutoSize = true;
-            this.lblTipoEvento.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoEvento.Location = new System.Drawing.Point(745, 47);
-            this.lblTipoEvento.Name = "lblTipoEvento";
-            this.lblTipoEvento.Size = new System.Drawing.Size(58, 25);
-            this.lblTipoEvento.TabIndex = 30;
-            this.lblTipoEvento.Text = "OCIO";
             // 
             // label2
             // 
@@ -397,7 +385,6 @@ namespace Eventick
         #endregion
 
         private System.Windows.Forms.Panel panelFichaActividad;
-        private System.Windows.Forms.Label lblTipoEvento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picDuracionEvento;
         private System.Windows.Forms.PictureBox picPrecioEvento;

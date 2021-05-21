@@ -211,5 +211,12 @@ namespace Eventick
             panelUser.Visible = !panelUser.Visible;
 
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfilAdmin perfil = new FrmPerfilAdmin();
+            perfil.Show();
+            this.Hide();
+        }
     }
 }

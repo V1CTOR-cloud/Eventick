@@ -32,10 +32,7 @@ namespace Eventick
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActividadAdmin));
             this.panelUser = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnMessages = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.flpNoticias = new System.Windows.Forms.FlowLayoutPanel();
             this.panelBorde = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,13 +83,10 @@ namespace Eventick
             this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.button7);
-            this.panelUser.Controls.Add(this.button6);
-            this.panelUser.Controls.Add(this.btnMessages);
-            this.panelUser.Controls.Add(this.button3);
-            this.panelUser.Controls.Add(this.button2);
+            this.panelUser.Controls.Add(this.btnPerfil);
             this.panelUser.Location = new System.Drawing.Point(1062, 109);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(161, 151);
+            this.panelUser.Size = new System.Drawing.Size(161, 69);
             this.panelUser.TabIndex = 34;
             this.panelUser.Visible = false;
             // 
@@ -106,7 +100,7 @@ namespace Eventick
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 120);
+            this.button7.Location = new System.Drawing.Point(0, 30);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(159, 30);
             this.button7.TabIndex = 32;
@@ -114,74 +108,23 @@ namespace Eventick
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnPerfil
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 90);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 30);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "       Mi lista";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // btnMessages
-            // 
-            this.btnMessages.BackColor = System.Drawing.Color.Transparent;
-            this.btnMessages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMessages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMessages.FlatAppearance.BorderSize = 0;
-            this.btnMessages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMessages.Image = ((System.Drawing.Image)(resources.GetObject("btnMessages.Image")));
-            this.btnMessages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMessages.Location = new System.Drawing.Point(0, 60);
-            this.btnMessages.Name = "btnMessages";
-            this.btnMessages.Size = new System.Drawing.Size(159, 30);
-            this.btnMessages.TabIndex = 29;
-            this.btnMessages.Text = "          Mensajes";
-            this.btnMessages.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 30);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Configuración";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 30);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "    Perfil";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(159, 30);
+            this.btnPerfil.TabIndex = 27;
+            this.btnPerfil.Text = "    Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // flpNoticias
             // 
@@ -191,7 +134,7 @@ namespace Eventick
             this.flpNoticias.AutoScroll = true;
             this.flpNoticias.Location = new System.Drawing.Point(219, 176);
             this.flpNoticias.Name = "flpNoticias";
-            this.flpNoticias.Size = new System.Drawing.Size(948, 491);
+            this.flpNoticias.Size = new System.Drawing.Size(1016, 491);
             this.flpNoticias.TabIndex = 30;
             // 
             // panelBorde
@@ -204,7 +147,7 @@ namespace Eventick
             this.panelBorde.Controls.Add(this.picSalir);
             this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
-            this.panelBorde.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBorde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBorde.Name = "panelBorde";
             this.panelBorde.Size = new System.Drawing.Size(1235, 29);
             this.panelBorde.TabIndex = 29;
@@ -226,7 +169,7 @@ namespace Eventick
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(19, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +183,7 @@ namespace Eventick
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
             this.picMinimizar.Location = new System.Drawing.Point(1168, 2);
-            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(19, 20);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,7 +198,7 @@ namespace Eventick
             this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
             this.picMaximizar.Location = new System.Drawing.Point(1191, 2);
-            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picMaximizar.Name = "picMaximizar";
             this.picMaximizar.Size = new System.Drawing.Size(19, 20);
             this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -270,7 +213,7 @@ namespace Eventick
             this.picSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSalir.Image = ((System.Drawing.Image)(resources.GetObject("picSalir.Image")));
             this.picSalir.Location = new System.Drawing.Point(1214, 2);
-            this.picSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.picSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picSalir.Name = "picSalir";
             this.picSalir.Size = new System.Drawing.Size(19, 20);
             this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,9 +231,9 @@ namespace Eventick
             this.panelNavegacion.Controls.Add(this.txtBuscar);
             this.panelNavegacion.Controls.Add(this.picLogo);
             this.panelNavegacion.Location = new System.Drawing.Point(-25, 39);
-            this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2);
+            this.panelNavegacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(1260, 65);
+            this.panelNavegacion.Size = new System.Drawing.Size(1328, 65);
             this.panelNavegacion.TabIndex = 28;
             // 
             // picUser
@@ -298,7 +241,7 @@ namespace Eventick
             this.picUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(1185, 8);
+            this.picUser.Location = new System.Drawing.Point(1186, 8);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(62, 50);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,7 +255,7 @@ namespace Eventick
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = ((System.Drawing.Image)(resources.GetObject("picBuscar.Image")));
             this.picBuscar.Location = new System.Drawing.Point(968, 17);
-            this.picBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.picBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(28, 25);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,7 +266,7 @@ namespace Eventick
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(338, 15);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(660, 29);
             this.txtBuscar.TabIndex = 0;
@@ -332,7 +275,7 @@ namespace Eventick
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.Location = new System.Drawing.Point(35, 8);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(214, 39);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -356,7 +299,7 @@ namespace Eventick
             this.panel2.Controls.Add(this.picAPie);
             this.panel2.Controls.Add(this.picEnBici);
             this.panel2.Location = new System.Drawing.Point(-9, 104);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 563);
             this.panel2.TabIndex = 27;
@@ -589,10 +532,7 @@ namespace Eventick
         private System.Windows.Forms.Button btnEvento;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnMessages;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnActividad;
         private System.Windows.Forms.FlowLayoutPanel flpNoticias;
         private System.Windows.Forms.Panel panelBorde;
