@@ -68,7 +68,7 @@ namespace Eventick
             {
                 if (bdatos.AbrirConexion())
                 {
-                    if (txtUsuario.Text.StartsWith("ayto"))
+                    if (txtUsuario.Text.Contains("Ayto"))
                     {
                         if (Administradores.ComprobarAdmin(bdatos.Conexion, txtUsuario.Text).Count > 0)
                         {

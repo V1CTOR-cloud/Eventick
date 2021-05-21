@@ -53,6 +53,7 @@ namespace Eventick
                     admin.email = AdminLoginCache.Email = reader.GetString(1);
                     admin.cp = AdminLoginCache.CP = reader.GetInt32(2);
                     admin.contraseña = reader.GetString(3);
+                    admins.Add(admin);
                 }
             }
             reader.Close();

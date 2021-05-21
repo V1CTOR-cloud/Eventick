@@ -48,7 +48,15 @@ namespace Eventick
             {
                 tmr2.Stop();
                 Visible = false;
-                FrmActPpal home = new FrmActPpal();
+                Form home;
+                if (UserLoginCache.Nombre=="")
+                {
+                    home = new FrmActPpal();
+                }
+                else
+                {
+                    home = new FrmActividadAdmin();
+                }
                 home.Show();
             }
         }

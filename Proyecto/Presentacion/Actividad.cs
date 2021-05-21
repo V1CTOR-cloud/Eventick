@@ -103,7 +103,7 @@ namespace Eventick
             while (reader.Read())
             {
                 Actividad act = new Actividad();
-
+                act.Id = reader.GetString(0);
                 act.Titulo = reader.GetString(1);
                 act.Descripcion = reader.GetString(2);
                 act.Localidad = reader.GetString(3);
@@ -132,19 +132,17 @@ namespace Eventick
 
             if (reader.HasRows)
             {
-       
-                    Actividad act = new Actividad();
+                reader.Read();
 
-                    act.Titulo = reader.GetString(1);
-                    act.Descripcion = reader.GetString(2);
-                    act.Localidad = reader.GetString(3);
-                    act.Distancia = reader.GetDouble(4);
-                    act.Circular = reader.GetInt16(5);
-                    act.Dificultad = reader.GetString(6);
-                    act.Duracion = Convert.ToDateTime(reader.GetString(7));
-                    act.Tipo = reader.GetInt32(8);
+                    Titulo = reader.GetString(1);
+                    Descripcion = reader.GetString(2);
+                    Localidad = reader.GetString(3);
+                    Distancia = reader.GetDouble(4);
+                    Circular = reader.GetInt16(5);
+                    Dificultad = reader.GetString(6);
+                    Duracion = Convert.ToDateTime(reader.GetString(7));
+                    Tipo = reader.GetInt32(8);
 
-                
             }
 
 

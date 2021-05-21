@@ -63,13 +63,11 @@ namespace Eventick
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.picEditarFotoPerfil = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblListaElementos = new System.Windows.Forms.Label();
             this.panelUser = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnMiLista = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
+            this.picEditarFotoPerfil = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSeguridad)).BeginInit();
             this.panelBorde.SuspendLayout();
@@ -82,9 +80,9 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -477,17 +475,6 @@ namespace Eventick
             this.pictureBox2.TabIndex = 75;
             this.pictureBox2.TabStop = false;
             // 
-            // picEditarFotoPerfil
-            // 
-            this.picEditarFotoPerfil.ErrorImage = null;
-            this.picEditarFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("picEditarFotoPerfil.Image")));
-            this.picEditarFotoPerfil.Location = new System.Drawing.Point(255, 183);
-            this.picEditarFotoPerfil.Name = "picEditarFotoPerfil";
-            this.picEditarFotoPerfil.Size = new System.Drawing.Size(32, 29);
-            this.picEditarFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEditarFotoPerfil.TabIndex = 76;
-            this.picEditarFotoPerfil.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -516,11 +503,9 @@ namespace Eventick
             this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.btnLogOut);
-            this.panelUser.Controls.Add(this.btnMiLista);
-            this.panelUser.Controls.Add(this.btnSettings);
             this.panelUser.Location = new System.Drawing.Point(1056, 131);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(161, 97);
+            this.panelUser.Size = new System.Drawing.Size(161, 36);
             this.panelUser.TabIndex = 79;
             this.panelUser.Visible = false;
             // 
@@ -534,7 +519,7 @@ namespace Eventick
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 60);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 0);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(159, 30);
             this.btnLogOut.TabIndex = 32;
@@ -542,40 +527,16 @@ namespace Eventick
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // btnMiLista
+            // picEditarFotoPerfil
             // 
-            this.btnMiLista.BackColor = System.Drawing.Color.Transparent;
-            this.btnMiLista.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMiLista.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMiLista.FlatAppearance.BorderSize = 0;
-            this.btnMiLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMiLista.Image = ((System.Drawing.Image)(resources.GetObject("btnMiLista.Image")));
-            this.btnMiLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiLista.Location = new System.Drawing.Point(0, 30);
-            this.btnMiLista.Name = "btnMiLista";
-            this.btnMiLista.Size = new System.Drawing.Size(159, 30);
-            this.btnMiLista.TabIndex = 31;
-            this.btnMiLista.Text = "       Mi lista";
-            this.btnMiLista.UseVisualStyleBackColor = false;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 0);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(159, 30);
-            this.btnSettings.TabIndex = 28;
-            this.btnSettings.Text = "Configuración";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.UseVisualStyleBackColor = false;
+            this.picEditarFotoPerfil.ErrorImage = null;
+            this.picEditarFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("picEditarFotoPerfil.Image")));
+            this.picEditarFotoPerfil.Location = new System.Drawing.Point(255, 183);
+            this.picEditarFotoPerfil.Name = "picEditarFotoPerfil";
+            this.picEditarFotoPerfil.Size = new System.Drawing.Size(32, 29);
+            this.picEditarFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEditarFotoPerfil.TabIndex = 76;
+            this.picEditarFotoPerfil.TabStop = false;
             // 
             // frmPerfilUsuario
             // 
@@ -613,9 +574,9 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,13 +607,10 @@ namespace Eventick
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox picEditarFotoPerfil;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblListaElementos;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnMiLista;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtLocalidad;
@@ -662,5 +620,6 @@ namespace Eventick
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblApellidosAdm;
+        private System.Windows.Forms.PictureBox picEditarFotoPerfil;
     }
 }

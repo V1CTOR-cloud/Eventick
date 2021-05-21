@@ -70,6 +70,7 @@ namespace Eventick
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(326, 27);
             this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // lblEntrarComoInvitado
             // 

@@ -72,7 +72,7 @@ namespace Eventick
                 panelNoticia.Controls.Add(picNoticia);
                 LinkLabel llblTitulo = new LinkLabel() { Name = act.Id, Location = new Point(261, 2), Text = act.Titulo, AutoSize=true };
                 panelNoticia.Controls.Add(llblTitulo);
-                Label lblLocalidad = new Label() { /*Name = "lblLocalidad",*/ Location = new Point(264, 24), Text = act.Localidad, Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold) };
+                Label lblLocalidad = new Label() { /*Name = "lblLocalidad",*/ AutoSize=true, Location = new Point(264, 24), Text = act.Localidad, Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold) };
                 panelNoticia.Controls.Add(lblLocalidad);
                 Panel panelInfo = new Panel() { /*Name = "panelInfo",*/ BackColor = Color.Transparent, Size = new Size(588, 25), Location = new Point(276, 46) };
                 panelNoticia.Controls.Add(panelInfo);

@@ -17,10 +17,10 @@ namespace Eventick
         private string id;
         ConexionBD conexion = new ConexionBD();
 
-        public FrmFichaActividad( string id)
+        public FrmFichaActividad(string ident)
         {
             InitializeComponent();
-            this.id = id;
+            id = ident;
         }
 
         
@@ -58,9 +58,20 @@ namespace Eventick
 
             Actividad act = new Actividad();
             act.Id = id;
-            act.CargarFichaAct(conexion.Conexion);
+            if (conexion.AbrirConexion())
+            {
+                act.CargarFichaAct(conexion.Conexion);
+            }
+            conexion.CerrarConexion();
 
-
+            llblTituloActividad.Text = act.Titulo;
+            lblLocalidad.Text = act.Localidad;
+            lblKmDistancia.Text = act.Distancia.ToString();
+            lblCircularSiNo.Text = act.Circular==1?"Si":"No";
+            lblDificultad.Text = act.Dificultad;
+            lblDuracion.Text = act.Duracion.ToString("HH")+" h";
+            txtDescripcion.Text = act.Descripcion;
+            picDificultad.Image = act.Dificultad=="Baja"?Image.FromFile(@"..\..\..\Iconos\difbaja.png"):act.Dificultad=="Media"? Image.FromFile(@"..\..\..\Iconos\difmedia.png"): Image.FromFile(@"..\..\..\Iconos\difalta.png");
         }
     }
 }

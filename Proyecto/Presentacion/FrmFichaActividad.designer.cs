@@ -41,17 +41,17 @@ namespace Eventick
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picSalir = new System.Windows.Forms.PictureBox();
             this.panelFichaActividad = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDuracion = new System.Windows.Forms.Label();
             this.picDuracion = new System.Windows.Forms.PictureBox();
-            this.PicDificultad = new System.Windows.Forms.PictureBox();
+            this.picDificultad = new System.Windows.Forms.PictureBox();
             this.picDistancia = new System.Windows.Forms.PictureBox();
             this.PicCircular = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDificultad = new System.Windows.Forms.Label();
             this.lblCircularSiNo = new System.Windows.Forms.Label();
             this.lblKmDistancia = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.picFavorito = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.llblTituloActividad = new System.Windows.Forms.LinkLabel();
             this.picAtras = new System.Windows.Forms.PictureBox();
@@ -71,7 +71,7 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
             this.panelFichaActividad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDuracion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicDificultad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDificultad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCircular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -211,17 +211,17 @@ namespace Eventick
             // panelFichaActividad
             // 
             this.panelFichaActividad.AutoScroll = true;
-            this.panelFichaActividad.Controls.Add(this.label2);
+            this.panelFichaActividad.Controls.Add(this.lblDuracion);
             this.panelFichaActividad.Controls.Add(this.picDuracion);
-            this.panelFichaActividad.Controls.Add(this.PicDificultad);
+            this.panelFichaActividad.Controls.Add(this.picDificultad);
             this.panelFichaActividad.Controls.Add(this.picDistancia);
             this.panelFichaActividad.Controls.Add(this.PicCircular);
-            this.panelFichaActividad.Controls.Add(this.label4);
+            this.panelFichaActividad.Controls.Add(this.lblDificultad);
             this.panelFichaActividad.Controls.Add(this.lblCircularSiNo);
             this.panelFichaActividad.Controls.Add(this.lblKmDistancia);
             this.panelFichaActividad.Controls.Add(this.pictureBox4);
             this.panelFichaActividad.Controls.Add(this.picFavorito);
-            this.panelFichaActividad.Controls.Add(this.textBox1);
+            this.panelFichaActividad.Controls.Add(this.txtDescripcion);
             this.panelFichaActividad.Controls.Add(this.lblLocalidad);
             this.panelFichaActividad.Controls.Add(this.llblTituloActividad);
             this.panelFichaActividad.Controls.Add(this.picAtras);
@@ -231,15 +231,15 @@ namespace Eventick
             this.panelFichaActividad.Size = new System.Drawing.Size(1116, 502);
             this.panelFichaActividad.TabIndex = 6;
             // 
-            // label2
+            // lblDuracion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(238, 353);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "45 min";
+            this.lblDuracion.AutoSize = true;
+            this.lblDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuracion.Location = new System.Drawing.Point(238, 353);
+            this.lblDuracion.Name = "lblDuracion";
+            this.lblDuracion.Size = new System.Drawing.Size(46, 16);
+            this.lblDuracion.TabIndex = 29;
+            this.lblDuracion.Text = "45 min";
             // 
             // picDuracion
             // 
@@ -252,16 +252,16 @@ namespace Eventick
             this.picDuracion.TabIndex = 28;
             this.picDuracion.TabStop = false;
             // 
-            // PicDificultad
+            // picDificultad
             // 
-            this.PicDificultad.ErrorImage = null;
-            this.PicDificultad.Image = ((System.Drawing.Image)(resources.GetObject("PicDificultad.Image")));
-            this.PicDificultad.Location = new System.Drawing.Point(187, 304);
-            this.PicDificultad.Name = "PicDificultad";
-            this.PicDificultad.Size = new System.Drawing.Size(38, 29);
-            this.PicDificultad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicDificultad.TabIndex = 27;
-            this.PicDificultad.TabStop = false;
+            this.picDificultad.ErrorImage = null;
+            this.picDificultad.Image = ((System.Drawing.Image)(resources.GetObject("picDificultad.Image")));
+            this.picDificultad.Location = new System.Drawing.Point(187, 304);
+            this.picDificultad.Name = "picDificultad";
+            this.picDificultad.Size = new System.Drawing.Size(38, 29);
+            this.picDificultad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDificultad.TabIndex = 27;
+            this.picDificultad.TabStop = false;
             // 
             // picDistancia
             // 
@@ -285,15 +285,15 @@ namespace Eventick
             this.PicCircular.TabIndex = 25;
             this.PicCircular.TabStop = false;
             // 
-            // label4
+            // lblDificultad
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(238, 313);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Baja";
+            this.lblDificultad.AutoSize = true;
+            this.lblDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDificultad.Location = new System.Drawing.Point(238, 313);
+            this.lblDificultad.Name = "lblDificultad";
+            this.lblDificultad.Size = new System.Drawing.Size(36, 16);
+            this.lblDificultad.TabIndex = 24;
+            this.lblDificultad.Text = "Baja";
             // 
             // lblCircularSiNo
             // 
@@ -338,13 +338,13 @@ namespace Eventick
             this.picFavorito.TabStop = false;
             this.picFavorito.Click += new System.EventHandler(this.picFavorito_Click);
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(373, 156);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(689, 248);
-            this.textBox1.TabIndex = 13;
+            this.txtDescripcion.Location = new System.Drawing.Point(373, 156);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(689, 248);
+            this.txtDescripcion.TabIndex = 13;
             // 
             // lblLocalidad
             // 
@@ -503,7 +503,7 @@ namespace Eventick
             this.panelFichaActividad.ResumeLayout(false);
             this.panelFichaActividad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDuracion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicDificultad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDificultad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDistancia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCircular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -527,7 +527,7 @@ namespace Eventick
         private System.Windows.Forms.PictureBox picBuscar;
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Panel panelFichaActividad;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.LinkLabel llblTituloActividad;
         private System.Windows.Forms.PictureBox picAtras;
@@ -536,11 +536,11 @@ namespace Eventick
         private System.Windows.Forms.PictureBox picFavorito;
         private System.Windows.Forms.PictureBox picDistancia;
         private System.Windows.Forms.PictureBox PicCircular;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDificultad;
         private System.Windows.Forms.Label lblCircularSiNo;
         private System.Windows.Forms.Label lblKmDistancia;
-        private System.Windows.Forms.PictureBox PicDificultad;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picDificultad;
+        private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.PictureBox picDuracion;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button button7;

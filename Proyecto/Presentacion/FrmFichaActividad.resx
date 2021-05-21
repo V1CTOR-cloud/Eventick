@@ -1389,7 +1389,7 @@
         AADswf/8z/8BGUG6fMx/rRIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="PicDificultad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picDificultad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATMAAADPCAYAAACZfzaIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAGDNJREFUeF7t3Ql8FNXhB3BbtbX/tiRcHlBsFZWqIHjVoq3aWiwESMKRhMuICCgI
