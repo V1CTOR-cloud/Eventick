@@ -32,7 +32,7 @@ namespace Eventick
         private void btnAñadir_Click(object sender, EventArgs e)
         {
 
-            if (cmbTipoEvento.SelectedItem == null || cmbTipoActividadEvento.SelectedItem == null || String.IsNullOrEmpty(txtTituloEvento.Text)  || String.IsNullOrEmpty(txtDescripcionEvento.Text) || String.IsNullOrEmpty(txtPrecio.Text) || String.IsNullOrEmpty(txtLocalidad.Text) || cambiaHoras == false || dtpFechaEvento.Checked ==  false)
+            if (cmbTipoEvento.SelectedItem == null || cmbTipoActividadEvento.SelectedItem == null || String.IsNullOrEmpty(txtTituloEvento.Text)  || String.IsNullOrEmpty(txtDescripcionEvento.Text) || String.IsNullOrEmpty(txtPrecio.Text) || String.IsNullOrEmpty(txtLocalidad.Text))
             {
 
                 // OJO: CComprobar --> dtpFechaEvento.Checked ==  false
@@ -44,7 +44,7 @@ namespace Eventick
             {
 
                 Administradores admin = new Administradores();
-                Eventos ev = new Eventos();
+                Eventos ev = new Eventos(cmbTipoActividadEvento.SelectedItem.ToString(),AdminLoginCache.CP);
 
                 DialogResult result;
                 result = MessageBox.Show("Crear este evento", "Confirmación", MessageBoxButtons.YesNo);
@@ -57,11 +57,18 @@ namespace Eventick
                     ev.Descripcion = txtDescripcionEvento.Text;
                     ev.Precio = double.Parse(txtPrecio.Text);
                     ev.Localidad = txtLocalidad.Text;
-                    ev.Duracion = DateTime.Parse(nupCuentaHoras.Value.ToString());
+                    DateTime horitas = new DateTime(2021, 01, 01, Convert.ToInt32(nupCuentaHoras.Value), 00, 00);
+
+                    ev.Duracion = Convert.ToDateTime(horitas);
                     //ev.Fecha = dtpFechaEvento.Value;
+                    if (conexion.AbrirConexion()) {
+                        Administradores.AgregarEvento(conexion.Conexion, ev);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-                    //admin.AgregarEvento(conexion.Conexion, ev);
-
+                    }
                 }
 
             }
@@ -70,6 +77,72 @@ namespace Eventick
         private void nupCuentaHoras_ValueChanged(object sender, EventArgs e)
         {
             cambiaHoras = true;
+        }
+
+        private void cmbTipoEvento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoEvento.SelectedIndex == 0)
+            {
+                cmbTipoActividadEvento.Items.Clear();
+                cmbTipoActividadEvento.Items.Add("Concierto");
+                cmbTipoActividadEvento.Items.Add("Escape Room");
+                cmbTipoActividadEvento.Items.Add("Bar con musica en directo");
+
+            }
+            else if (cmbTipoEvento.SelectedIndex == 1)
+            {
+                cmbTipoActividadEvento.Items.Clear();
+                cmbTipoActividadEvento.Items.Add("Teatro - Danza");
+                cmbTipoActividadEvento.Items.Add("Museo - Exposiciones");
+                cmbTipoActividadEvento.Items.Add("Visitas guiadas");
+            }
+            else
+            {
+                cmbTipoActividadEvento.Items.Clear();
+                cmbTipoActividadEvento.Items.Add("Baloncesto");
+                cmbTipoActividadEvento.Items.Add("Tenis");
+                cmbTipoActividadEvento.Items.Add("Futbol");
+                cmbTipoActividadEvento.Items.Add("Otros deportes");
+
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(AdminLoginCache.Nombre))
+            {
+                frmPerfilUsuario perfil = new frmPerfilUsuario();
+                perfil.Show();
+                this.Hide();
+            }
+            else
+            {
+                FrmPerfilAdmin perfil = new FrmPerfilAdmin();
+                perfil.Show();
+                this.Hide();
+
+            }
+        }
+
+        private void picSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = MessageBox.Show("¿Salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private void picAtras_Click(object sender, EventArgs e)
+        {
+            FrmPerfilAdmin perfil = new FrmPerfilAdmin();
+            perfil.Show();
+            this.Hide();
         }
     }
 }

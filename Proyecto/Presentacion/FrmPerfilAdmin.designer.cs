@@ -458,6 +458,7 @@ namespace Eventick
             this.btnVerListaElementos.TabIndex = 63;
             this.btnVerListaElementos.Text = "VER LISTA";
             this.btnVerListaElementos.UseVisualStyleBackColor = true;
+            this.btnVerListaElementos.Click += new System.EventHandler(this.btnVerListaElementos_Click);
             // 
             // panelAñadirElementos
             // 

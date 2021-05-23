@@ -130,8 +130,8 @@ namespace Eventick
         public static int AgregarEvento(MySqlConnection conexion , Eventos ev) // Pasar el evento cargado
         {
             int retorno;
-            string consulta = String.Format("INSERT INTO evento (id, titulo, descripcion, localidad, duracion, tipo, precio) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}')");
+            string consulta = String.Format("INSERT INTO evento (id, titulo, descripcion, localidad, duracion, tipo, precio,cp) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",ev.Id,ev.Titulo,ev.Descripcion,ev.Localidad,ev.Duracion,ev.Tipo,ev.Precio,ev.CP);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -150,8 +150,8 @@ namespace Eventick
         public static int AgregarActividad(MySqlConnection conexion, Actividad act,string name) // Pasar la actividad cargada
         {
             int retorno;
-            string consulta = String.Format("INSERT INTO actividad (id, titulo, descripcion, localidad, distancia, circular, dificultad, duracion, tipo) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", act.Id,act.Titulo, act.Descripcion, act.Localidad, act.Distancia, act.Circular, act.Dificultad, act.Duracion, act.Tipo);
+            string consulta = String.Format("INSERT INTO actividad (id, titulo, descripcion, localidad, distancia, circular, dificultad, duracion, tipo,cp) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", act.Id,act.Titulo, act.Descripcion, act.Localidad, act.Distancia, act.Circular, act.Dificultad, act.Duracion, act.Tipo,act.CP);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
 
@@ -178,7 +178,7 @@ namespace Eventick
         {
             int contador;
 
-            String consulta = String.Format("SELECT COUNT(*) FROM adminactividad WHERE idAdmin = '{0}'", usuario);
+            String consulta = String.Format("SELECT COUNT(*) FROM adminactividad WHERE idadmin = '{0}'", usuario);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -195,7 +195,7 @@ namespace Eventick
         {
             int contador;
 
-            String consulta = String.Format("SELECT COUNT(*) FROM adminevento WHERE idAdmin = '{0}'", usuario);
+            String consulta = String.Format("SELECT COUNT(*) FROM adminevento WHERE idadmin = '{0}'", usuario);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 

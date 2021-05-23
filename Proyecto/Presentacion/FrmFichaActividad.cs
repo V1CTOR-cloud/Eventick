@@ -73,5 +73,12 @@ namespace Eventick
             txtDescripcion.Text = act.Descripcion;
             picDificultad.Image = act.Dificultad=="Baja"?Image.FromFile(@"..\..\..\Iconos\difbaja.png"):act.Dificultad=="Media"? Image.FromFile(@"..\..\..\Iconos\difmedia.png"): Image.FromFile(@"..\..\..\Iconos\difalta.png");
         }
+
+        private void picAtras_Click(object sender, EventArgs e)
+        {
+            FrmActPpal home = new FrmActPpal();
+            home.Show();
+            this.Hide();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Eventick
 {
     public partial class FrmEventoUsuario : Form
     {
-
+        ConexionBD conexion = new ConexionBD();
 
         private void EventosUsuario_Load(object sender, EventArgs e)
         {
@@ -28,6 +28,40 @@ namespace Eventick
             else
             {
                 btnEvento.BackColor = colorBotonesActivos;
+            }
+            List<Eventos> lista = new List<Eventos>();
+            if (conexion.AbrirConexion())
+            {
+                lista = Eventos.CargarEventos(conexion.Conexion);
+                foreach (Eventos act in lista)
+                {
+                    Panel panelNoticia = new Panel() { /*Name = "panelNoticia",*/ BackColor = Color.Transparent, Size = new Size(850, 145) };
+                    flpNoticias.Controls.Add(panelNoticia);
+                    PictureBox picNoticia = new PictureBox() { /*Name = "picNoticia",*/ Image = Image.FromFile(@"..\..\..\Iconos\yo.jpg"), Size = new Size(241, 135), SizeMode = PictureBoxSizeMode.Normal };
+                    panelNoticia.Controls.Add(picNoticia);
+                    LinkLabel llblTitulo = new LinkLabel() { Name = act.Id, Location = new Point(261, 2), Text = act.Titulo, AutoSize = true };
+                    panelNoticia.Controls.Add(llblTitulo);
+                    Label lblLocalidad = new Label() { /*Name = "lblLocalidad",*/ AutoSize = true, Location = new Point(264, 24), Text = act.Localidad, Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold) };
+                    panelNoticia.Controls.Add(lblLocalidad);
+                    Panel panelInfo = new Panel() { /*Name = "panelInfo",*/ BackColor = Color.Transparent, Size = new Size(588, 25), Location = new Point(276, 46) };
+                    panelNoticia.Controls.Add(panelInfo);
+                    Label lblInfo5 = new Label() { /*Name = "lblInfo5",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Precio.ToString() + " €" };
+                    panelInfo.Controls.Add(lblInfo5);
+                    Label lblInfo6 = new Label() { /*Name = "lblInfo6",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
+                    panelInfo.Controls.Add(lblInfo6);
+                    Label lblInfo7 = new Label() { /*Name = "lblInfo7",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Duracion.ToString("t") + " horas" };
+                    panelInfo.Controls.Add(lblInfo7);
+                    Label lblInfo8 = new Label() { /*Name = "lblInfo8",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
+                    panelInfo.Controls.Add(lblInfo8);
+                    Label lblInfo9 = new Label() { /*Name = "lblInfo9",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.TipoActividadEvento };
+                    panelInfo.Controls.Add(lblInfo9);
+                    PictureBox picFavorito = new PictureBox() { /*Name = "picFavorito",*/ Cursor = Cursors.Hand, Image = favoritovacio, Size = new Size(35, 35), Location = new Point(261, 100), SizeMode = PictureBoxSizeMode.Zoom };
+                    panelNoticia.Controls.Add(picFavorito);
+                    PictureBox picCompartir = new PictureBox() { /*Name = "picCompartir",*/ Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
+                    panelNoticia.Controls.Add(picCompartir);
+                    picFavorito.Click += new EventHandler(picFavorito_Click);
+                    llblTitulo.Click += new EventHandler(llblTitulo_Click);
+                }
             }
 
         }
@@ -240,7 +274,55 @@ namespace Eventick
             formulario.Visible = true;
             Visible = false;
         }
-
+        private void llblTitulo_Click(object sender, EventArgs e)
+        {
+            LinkLabel titulo = sender as LinkLabel;
+            FrmFichaEvento fichaact = new FrmFichaEvento(titulo.Name);
+            fichaact.Show();
+            this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(AdminLoginCache.Nombre))
+            {
+                frmPerfilUsuario perfil = new frmPerfilUsuario();
+                perfil.Show();
+                this.Hide();
+            }
+            else
+            {
+                FrmPerfilAdmin perfil = new FrmPerfilAdmin();
+                perfil.Show();
+                this.Hide();
+
+            }
+        }
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void FrmActPpal_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void FrmActPpal_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void FrmActPpal_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
     }
+}
 

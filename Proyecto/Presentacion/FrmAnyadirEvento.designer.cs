@@ -59,8 +59,6 @@ namespace Eventick
             this.txtDescripcionEvento = new System.Windows.Forms.TextBox();
             this.panelUser = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.picAtras = new System.Windows.Forms.PictureBox();
@@ -307,6 +305,7 @@ namespace Eventick
             this.picSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSalir.TabIndex = 0;
             this.picSalir.TabStop = false;
+            this.picSalir.Click += new System.EventHandler(this.picSalir_Click);
             // 
             // panelNavegacion
             // 
@@ -395,6 +394,7 @@ namespace Eventick
             this.cmbTipoEvento.Name = "cmbTipoEvento";
             this.cmbTipoEvento.Size = new System.Drawing.Size(155, 26);
             this.cmbTipoEvento.TabIndex = 105;
+            this.cmbTipoEvento.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEvento_SelectedIndexChanged);
             // 
             // txtDescripcionEvento
             // 
@@ -412,12 +412,10 @@ namespace Eventick
             this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUser.Controls.Add(this.button7);
-            this.panelUser.Controls.Add(this.button6);
-            this.panelUser.Controls.Add(this.button3);
             this.panelUser.Controls.Add(this.button2);
             this.panelUser.Location = new System.Drawing.Point(1062, 150);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(161, 126);
+            this.panelUser.Size = new System.Drawing.Size(161, 64);
             this.panelUser.TabIndex = 107;
             this.panelUser.Visible = false;
             // 
@@ -431,48 +429,13 @@ namespace Eventick
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 90);
+            this.button7.Location = new System.Drawing.Point(0, 30);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(159, 30);
             this.button7.TabIndex = 32;
             this.button7.Text = "Cerrar sesión";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 60);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 30);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "       Mi lista";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 30);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Configuración";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -490,6 +453,7 @@ namespace Eventick
             this.button2.TabIndex = 27;
             this.button2.Text = "    Perfil";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAñadir
             // 
@@ -518,6 +482,7 @@ namespace Eventick
             this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAtras.TabIndex = 92;
             this.picAtras.TabStop = false;
+            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
             // 
             // FrmAñadirEvento
             // 
@@ -592,8 +557,6 @@ namespace Eventick
         private System.Windows.Forms.PictureBox picAñadirImagenEvento;
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblLocalidadAct;
         private System.Windows.Forms.TextBox txtLocalidad;

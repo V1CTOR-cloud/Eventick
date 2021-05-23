@@ -108,7 +108,9 @@ namespace Eventick
         private void btnEliminarEvento_Click(object sender, EventArgs e)
         {
             panelEliminarEventos.Visible = true;
-            //gtvActividadesEliminar.DataSource = Administradores.VerEventosTotales(conexion.Conexion, AdminLoginCache.Nombre);
+            Administradores admin = new Administradores();
+            admin.Usuario = AdminLoginCache.Nombre;
+            //gtvActividadesEliminar.DataSource = admin.TotalEvAdmin(conexion.Conexion);
             gtvActividadesEliminar.ForeColor = Color.Black;
         }
 
@@ -191,6 +193,11 @@ namespace Eventick
             {
                 Application.Exit();
             }
+
+        }
+
+        private void btnVerListaElementos_Click(object sender, EventArgs e)
+        {
 
         }
     }

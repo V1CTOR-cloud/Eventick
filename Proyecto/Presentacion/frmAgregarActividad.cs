@@ -14,7 +14,7 @@ namespace Eventick
     {
         ConexionBD conexion = new ConexionBD();
         bool caminar;
-        bool trackScroll =  false;
+        bool trackScroll = false;
         bool cambiaHoras;
 
         public frmAgregarActividad()
@@ -31,14 +31,16 @@ namespace Eventick
         private void btnAñadir_Click(object sender, EventArgs e)
         {
 
-            if (cbbTipo.SelectedItem == null || String.IsNullOrEmpty(txtTituloActividad.Text) || String.IsNullOrEmpty(txtDescripcionActividad.Text) || String.IsNullOrEmpty(txtLocalidad.Text) || cmbDificultad.SelectedItem == null) {
+            if (cbbTipo.SelectedItem == null || String.IsNullOrEmpty(txtTituloActividad.Text) || String.IsNullOrEmpty(txtDescripcionActividad.Text) || String.IsNullOrEmpty(txtLocalidad.Text) || cmbDificultad.SelectedItem == null)
+            {
 
                 MessageBox.Show("Debes rellenar todos los campos", "Información", MessageBoxButtons.OK);
 
             }
-            else { 
+            else
+            {
 
-            Administradores admin = new Administradores();
+                Administradores admin = new Administradores();
 
 
                 DialogResult result;
@@ -47,17 +49,18 @@ namespace Eventick
 
                 if (result == DialogResult.Yes)
                 {
-                    Actividad act = new Actividad(cbbTipo.SelectedItem.ToString());
+                    Actividad act = new Actividad(cbbTipo.SelectedItem.ToString(), AdminLoginCache.CP);
 
                     act.APie = caminar;
-                        act.TipoActividad = cbbTipo.SelectedItem.ToString();
-                        act.Titulo = txtTituloActividad.Text;
-                        act.Descripcion = txtDescripcionActividad.Text;
-                        act.Localidad = txtLocalidad.Text;
-                        act.Distancia = Convert.ToDouble(trbDistancia.Value);
-                    DateTime horitas = new DateTime(2021,01,01, Convert.ToInt32(nupCuentaHoras.Value),00,00);
-                        act.Duracion = horitas;
-                        act.Dificultad = cmbDificultad.SelectedItem.ToString();
+                    act.TipoActividad = cbbTipo.SelectedItem.ToString();
+                    act.Titulo = txtTituloActividad.Text;
+                    act.Descripcion = txtDescripcionActividad.Text;
+                    act.Localidad = txtLocalidad.Text;
+                    act.Distancia = Convert.ToDouble(trbDistancia.Value);
+                    DateTime horitas = new DateTime(2021, 01, 01, Convert.ToInt32(nupCuentaHoras.Value), 00, 00);
+                    act.Duracion = horitas;
+                    act.Dificultad = cmbDificultad.SelectedItem.ToString();
+                    act.Localidad = AdminLoginCache.Localidad;
                     if (conexion.AbrirConexion())
                     {
                         Administradores.AgregarActividad(conexion.Conexion, act, AdminLoginCache.Nombre);
@@ -67,7 +70,7 @@ namespace Eventick
                         MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                     }
-                } 
+                }
 
             }
         }
@@ -86,7 +89,7 @@ namespace Eventick
 
         private void trbDistancia_Scroll(object sender, EventArgs e)
         {
-            lblDistancia.Text = trbDistancia.Value+" km";
+            lblDistancia.Text = trbDistancia.Value + " km";
         }
 
         private void nupCuentaHoras_ValueChanged(object sender, EventArgs e)
@@ -141,7 +144,7 @@ namespace Eventick
 
         private void frmAgregarActividad_Load(object sender, EventArgs e)
         {
-            lblDistancia.Text = trbDistancia.Value.ToString()+" km";
+            lblDistancia.Text = trbDistancia.Value.ToString() + " km";
         }
     }
 }

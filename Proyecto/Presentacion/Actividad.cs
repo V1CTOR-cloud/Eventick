@@ -18,7 +18,7 @@ namespace Eventick
         static int numActividad = 0;
         private bool aPie;
         private string tipoActividad;
-        private string Cp;
+        private int Cp;
 
 
         public double Distancia { get { return distancia; } set { distancia = value; } }
@@ -29,54 +29,38 @@ namespace Eventick
         public int NumActividad { get { return numActividad; } }
         public bool APie { get { return aPie; } set { aPie = value; } }
         public string TipoActividad { get { return tipoActividad; } set { tipoActividad = value; } }
-        public string CP { get { return CP; } set { CP = value; } }
+        public int CP { get { return Cp; } set { Cp = value; } }
 
 
         public Actividad() { }
-        public Actividad(string tipoact)
+        public Actividad(string tipoact,int codigo)
         {
+            CP = codigo;
             numActividad++;
 
-            if (aPie == true)
-            {
-                if (tipoact == "Senderismo")
+                if (tipoact == "SENDERISMO")
                 {
                     Id = CP + "A" + "01" + numActividad;
 
                 }
-                else if (tipoact == "Andar")
+                else if (tipoact == "ANDAR")
                 {
                     Id = CP + "A" + "02" + numActividad;
 
                 }
-                else if (tipoact == "Correr")
+                else if (tipoact == "CORRER")
                 {
                     Id = CP + "A" + "03" + numActividad;
 
                 }
-                else if (tipoact == "Caminata")
+                else if (tipoact == "CAMINATA")
                 {
                     Id = CP + "A" + "04" + numActividad;
                 }
-            }
-            else
-            {
-                if (tipoact == "Montaña")
-                {
-                    Id = CP + "A" + "05" + numActividad;
-
-                }
-                else if (tipoact == "Carretera")
-                {
-                    Id = CP + "A" + "06" + numActividad;
-
-                }
-
-            }
 
         }
 
-        public Actividad(string identificador, string tittle, string descrip, string local, DateTime tiempo, int tip,double km,  int circulo, string dificil, string CP, string tipoActividad, bool aPie) : base(identificador, tittle, descrip, local, tiempo, tip)
+        public Actividad(string identificador, string tittle, string descrip, string local, DateTime tiempo, int tip,double km,  int circulo, string dificil, int CP, string tipoActividad, bool aPie) : base(identificador, tittle, descrip, local, tiempo, tip)
         {
             distancia = km;
             circular = circulo;
@@ -142,7 +126,7 @@ namespace Eventick
 
             while (reader.Read())
             {
-                Actividad act = new Actividad(reader.GetString(1));
+                Actividad act = new Actividad(reader.GetString(1),reader.GetInt32(10));
                 act.Id = reader.GetString(0);
                 act.Titulo = reader.GetString(1);
                 act.Descripcion = reader.GetString(2);
@@ -152,7 +136,6 @@ namespace Eventick
                 act.Dificultad = reader.GetString(6);
                 act.Duracion = Convert.ToDateTime(reader.GetString(7));
                 act.Tipo = reader.GetInt32(8);
-
                 lista.Add(act);
             }
             reader.Close();

@@ -297,6 +297,7 @@ namespace Eventick
             this.button2.TabIndex = 27;
             this.button2.Text = "    Perfil";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // flpNoticias
             // 
@@ -322,6 +323,9 @@ namespace Eventick
             this.panelBorde.Name = "panelBorde";
             this.panelBorde.Size = new System.Drawing.Size(1235, 29);
             this.panelBorde.TabIndex = 39;
+            this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseDown);
+            this.panelBorde.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseMove);
+            this.panelBorde.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmActPpal_MouseUp);
             // 
             // label1
             // 

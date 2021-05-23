@@ -374,6 +374,7 @@ namespace Eventick
             this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAtras.TabIndex = 8;
             this.picAtras.TabStop = false;
+            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
             // 
             // picFotoActividad
             // 
