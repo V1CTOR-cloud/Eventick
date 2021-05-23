@@ -50,6 +50,8 @@ namespace Eventick
                 picCandadoContraseña.Visible = true;
                 Administradores admin = new Administradores();
                 admin.Usuario = AdminLoginCache.Nombre;
+                admin.Email = txtCambiarCorreo.Text;
+                admin.Contraseña = txtCambiarContrasenya.Text;
                 if (conexion.AbrirConexion())
                 {
                     admin.ModificarAdmin(conexion.Conexion);

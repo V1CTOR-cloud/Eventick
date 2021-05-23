@@ -217,7 +217,7 @@ namespace Eventick
 
         public void ModificarAdmin(MySqlConnection conexion)
         {
-            string consulta = String.Format("UPDATE admin SET email='{0}',contrasenia='{1}' WHERE nombre='{3}'", email,contraseña,usuario);
+            string consulta = String.Format("UPDATE admin SET email='{0}',contrasenia='{1}' WHERE nombre='{2}'", email,contraseña,usuario);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             comando.ExecuteNonQuery();
 
