@@ -186,7 +186,6 @@ namespace Eventick
             int contador;
 
             String consulta = String.Format("SELECT COUNT(*) FROM adminactividad WHERE idadmin = '{0}'", usuario);
-            MessageBox.Show(consulta);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -205,7 +204,6 @@ namespace Eventick
             int contador;
 
             String consulta = String.Format("SELECT COUNT(*) FROM adminevento WHERE idadmin = '{0}'", usuario);
-            MessageBox.Show(consulta);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();

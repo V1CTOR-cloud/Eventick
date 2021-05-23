@@ -334,7 +334,7 @@ namespace Eventick
                     {
                         List<Actividad> lista = new List<Actividad>();
                         lista = Actividad.FiltroTipo(conexion.Conexion, TipoSeleccionado());
-
+                        flpNoticias.Controls.Clear();
                         foreach (Actividad act in lista)
                         {
                             PanelAviso.Visible = false;                            
