@@ -45,7 +45,6 @@ namespace Eventick
 
                 Administradores admin = new Administradores();
                 Eventos ev = new Eventos(cmbTipoActividadEvento.SelectedItem.ToString(),AdminLoginCache.CP);
-
                 DialogResult result;
                 result = MessageBox.Show("Crear este evento", "Confirmación", MessageBoxButtons.YesNo);
 
@@ -62,7 +61,7 @@ namespace Eventick
                     ev.Duracion = Convert.ToDateTime(horitas);
                     //ev.Fecha = dtpFechaEvento.Value;
                     if (conexion.AbrirConexion()) {
-                        Administradores.AgregarEvento(conexion.Conexion, ev);
+                        Administradores.AgregarEvento(conexion.Conexion, ev,AdminLoginCache.Nombre);
                     }
                     else
                     {

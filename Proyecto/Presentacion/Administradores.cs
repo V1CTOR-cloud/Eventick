@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Eventick
 {
@@ -127,13 +128,19 @@ namespace Eventick
         }
 
 
-        public static int AgregarEvento(MySqlConnection conexion , Eventos ev) // Pasar el evento cargado
+        public static int AgregarEvento(MySqlConnection conexion , Eventos ev,string name) // Pasar el evento cargado
         {
             int retorno;
             string consulta = String.Format("INSERT INTO evento (id, titulo, descripcion, localidad, duracion, tipo, precio,cp) VALUES " +
                 "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",ev.Id,ev.Titulo,ev.Descripcion,ev.Localidad,ev.Duracion,ev.Tipo,ev.Precio,ev.CP);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
+
+            consulta = String.Format("INSERT INTO adminevento VALUES ('{0}','{1}')", name, ev.Id);
+            comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+
+
             return retorno;
         }
 
@@ -179,6 +186,8 @@ namespace Eventick
             int contador;
 
             String consulta = String.Format("SELECT COUNT(*) FROM adminactividad WHERE idadmin = '{0}'", usuario);
+            MessageBox.Show(consulta);
+
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -196,6 +205,8 @@ namespace Eventick
             int contador;
 
             String consulta = String.Format("SELECT COUNT(*) FROM adminevento WHERE idadmin = '{0}'", usuario);
+            MessageBox.Show(consulta);
+
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 

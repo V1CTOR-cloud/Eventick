@@ -127,6 +127,7 @@ namespace Eventick
             panelAñadirElementos.Visible = false;
 
             Administradores admin = new Administradores();
+            admin.Usuario = AdminLoginCache.Nombre;
             
             if (conexion.AbrirConexion())
             {
