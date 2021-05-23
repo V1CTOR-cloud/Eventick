@@ -143,6 +143,7 @@ namespace Eventick
             this.txtNuevaContraseña.PasswordChar = '*';
             this.txtNuevaContraseña.Size = new System.Drawing.Size(251, 33);
             this.txtNuevaContraseña.TabIndex = 22;
+            this.txtNuevaContraseña.UseSystemPasswordChar = true;
             // 
             // lblusuario_correo
             // 
@@ -164,9 +165,9 @@ namespace Eventick
             this.lblcontraseña.Location = new System.Drawing.Point(435, 317);
             this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(99, 13);
+            this.lblcontraseña.Size = new System.Drawing.Size(112, 13);
             this.lblcontraseña.TabIndex = 24;
-            this.lblcontraseña.Text = "Contraseña antigua";
+            this.lblcontraseña.Text = "Código de verificación";
             // 
             // lblNuevaContraseña
             // 

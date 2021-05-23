@@ -93,9 +93,9 @@ namespace Eventick
             this.lblCambiarContraseña.Location = new System.Drawing.Point(395, 342);
             this.lblCambiarContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCambiarContraseña.Name = "lblCambiarContraseña";
-            this.lblCambiarContraseña.Size = new System.Drawing.Size(101, 13);
+            this.lblCambiarContraseña.Size = new System.Drawing.Size(149, 13);
             this.lblCambiarContraseña.TabIndex = 10;
-            this.lblCambiarContraseña.Text = "Cambiar contraseña";
+            this.lblCambiarContraseña.Text = "¿Has olvidado tu contraseña?";
             this.lblCambiarContraseña.Click += new System.EventHandler(this.lblCambiarContraseña_Click);
             // 
             // picLogo

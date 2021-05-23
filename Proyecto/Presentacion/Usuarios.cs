@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
+using System.Windows.Forms;
 
 namespace Eventick
 {
@@ -19,6 +22,7 @@ namespace Eventick
         private int cp;
         private string contraseña;
         private string localidad;
+        private Image foto;
 
         public string Nick { get { return nick; } set { nick = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
@@ -27,7 +31,7 @@ namespace Eventick
         public int Edad { get { return edad; } set { edad = value; } }
         public int Cp { get { return cp; } set { cp = value; } }
         public string Localidad { get { return localidad; } set { localidad = value; } }
-
+        public Image Foto { get { return foto; } set { foto = value; } }
         public string Contraseña { get { return contraseña; } set { contraseña = value; } }
 
         public Usuarios()
@@ -50,8 +54,8 @@ namespace Eventick
         {
             int retorno;
 
-            string consulta = String.Format("INSERT INTO usuario (nickname, nombre, apellidos, email, edad, cp, contrasenia ) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", usu.nick, usu.nombre, usu.apellidos, usu.email, usu.edad, usu.cp, usu.contraseña);
+            string consulta = String.Format("INSERT INTO usuario (nickname, nombre, apellidos, email, edad, cp, contrasenia, localidad ) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", usu.nick, usu.nombre, usu.apellidos, usu.email, usu.edad, usu.cp, usu.contraseña,usu.Localidad);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
@@ -130,6 +134,7 @@ namespace Eventick
                     usu.Edad = UserLoginCache.Edad = reader.GetInt32(4);
                     usu.Cp = UserLoginCache.CP = reader.GetInt32(5);
                     usu.Contraseña = reader.GetString(6);
+                    usu.Localidad = UserLoginCache.Localidad = reader.GetString(7);
                     usuarios.Add(usu);
                 }
             }
@@ -164,13 +169,14 @@ namespace Eventick
                 {
                     Usuarios usu = new Usuarios();
 
-                    usu.Nick = reader.GetString(0);
-                    usu.Nombre = reader.GetString(1);
-                    usu.Apellidos = reader.GetString(2);
-                    usu.Email = reader.GetString(3);
-                    usu.Edad = reader.GetInt32(4);
-                    usu.Cp = reader.GetInt32(5);
+                    usu.Nick = UserLoginCache.Nickname = reader.GetString(0);
+                    usu.Nombre = UserLoginCache.Nombre = reader.GetString(1);
+                    usu.Apellidos = UserLoginCache.Apellidos = reader.GetString(2);
+                    usu.Email = UserLoginCache.Email = reader.GetString(3);
+                    usu.Edad = UserLoginCache.Edad = reader.GetInt32(4);
+                    usu.Cp = UserLoginCache.CP = reader.GetInt32(5);
                     usu.Contraseña = reader.GetString(6);
+                    usu.Localidad = UserLoginCache.Localidad = reader.GetString(7);
                     usuarios.Add(usu);
                 }
             }
@@ -178,9 +184,18 @@ namespace Eventick
             return usuarios;
         }       
 
-        public void ModificarUsuario()
+        public void ModificarUsuario(MySqlConnection conexion)
         {
-            string consulta = String.Format("UPDATE usuario SET nombre='{0}', apellidos='{1}',email='{2}',cp='{3}',contrasenia='{4},localidad='{5}''");
+            string consulta = String.Format("UPDATE usuario SET nombre='{0}', apellidos='{1}',email='{2}',cp='{3}',contrasenia='{4}',localidad='{5}' WHERE nickname='{6}'",nombre,apellidos,email,cp,contraseña,localidad,UserLoginCache.Nickname);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+            UserLoginCache.Nombre = nombre;
+            UserLoginCache.Apellidos = apellidos;
+            UserLoginCache.Email = email;
+            UserLoginCache.CP = cp;
+            UserLoginCache.Localidad = localidad;
         }
+
+
     }
 }

@@ -31,8 +31,48 @@ namespace Eventick
         public string TipoActividad { get { return tipoActividad; } set { tipoActividad = value; } }
         public string CP { get { return CP; } set { CP = value; } }
 
-        public Actividad()
+
+        public Actividad() { }
+        public Actividad(string tipoact)
         {
+            numActividad++;
+
+            if (aPie == true)
+            {
+                if (tipoact == "Senderismo")
+                {
+                    Id = CP + "A" + "01" + numActividad;
+
+                }
+                else if (tipoact == "Andar")
+                {
+                    Id = CP + "A" + "02" + numActividad;
+
+                }
+                else if (tipoact == "Correr")
+                {
+                    Id = CP + "A" + "03" + numActividad;
+
+                }
+                else if (tipoact == "Caminata")
+                {
+                    Id = CP + "A" + "04" + numActividad;
+                }
+            }
+            else
+            {
+                if (tipoact == "Montaña")
+                {
+                    Id = CP + "A" + "05" + numActividad;
+
+                }
+                else if (tipoact == "Carretera")
+                {
+                    Id = CP + "A" + "06" + numActividad;
+
+                }
+
+            }
 
         }
 
@@ -55,7 +95,7 @@ namespace Eventick
             {
                 if (tipoActividad == "Senderismo")
                 {
-                   Id = CP + "A" + "01" + numActividad;
+                    Id = CP + "A" + "01" + numActividad;
 
                 }
                 else if (tipoActividad == "Andar")
@@ -102,7 +142,7 @@ namespace Eventick
 
             while (reader.Read())
             {
-                Actividad act = new Actividad();
+                Actividad act = new Actividad(reader.GetString(1));
                 act.Id = reader.GetString(0);
                 act.Titulo = reader.GetString(1);
                 act.Descripcion = reader.GetString(2);

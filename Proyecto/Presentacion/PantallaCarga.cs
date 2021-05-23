@@ -48,16 +48,9 @@ namespace Eventick
             {
                 tmr2.Stop();
                 Visible = false;
-                Form home;
-                if (UserLoginCache.Nombre=="")
-                {
-                    home = new FrmActPpal();
-                }
-                else
-                {
-                    home = new FrmActividadAdmin();
-                }
+                Form home = new FrmActPpal();
                 home.Show();
+
             }
         }
 
@@ -82,7 +75,7 @@ namespace Eventick
 
                 case 3:
 
-                    return frase = "¡Zapatillas listas, ganas a punto, a correr!.";
+                    return frase = "¡Zapatillas listas, ganas a punto, a correr!";
 
                 case 4:
 
@@ -90,15 +83,15 @@ namespace Eventick
 
                 case 5:
 
-                    return frase = "Si estas aburrido no dudes en viasitar nuestra sección de Senderismo";
+                    return frase = "Imprimiendo tickets de entrada...";
 
                 case 6:
 
-                    return frase = "Calentando musculos... ¡es hora de correr!";
+                    return frase = "Calentando músculos... ¡es hora de correr!";
 
                 case 7:
 
-                    return frase = "¡Vamos compañero!, ¡ese sendero no podrá con nosotros!";
+                    return frase = "¡Vamos compañero, ese sendero no podrá con nosotros!";
 
                 case 8:
 

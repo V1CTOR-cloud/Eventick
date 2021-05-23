@@ -45,10 +45,21 @@ namespace Eventick
             {
                 ConexionBD conexion = new ConexionBD();
 
-                lblCorreoAdmin.Text = txtCambiarContrasenya.Text;
+                lblCorreoAdmin.Text = txtCambiarCorreo.Text;
                 lblCorreoAdmin.Visible = true;
                 picCandadoContraseña.Visible = true;
-                //Administradores.CambiarContrasenya(conexion.Conexion, txtCambiarContrasenya.Text, AdminLoginCache.Email);
+                Administradores admin = new Administradores();
+                admin.Usuario = AdminLoginCache.Nombre;
+                if (conexion.AbrirConexion())
+                {
+                    admin.ModificarAdmin(conexion.Conexion);
+                    conexion.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
             }
         }
 
@@ -120,11 +131,67 @@ namespace Eventick
                 lblCantActAdmin.Text = admin.TotalActAdmin(conexion.Conexion).ToString();
                 lblCantEventosAdmin.Text = admin.TotalEvAdmin(conexion.Conexion).ToString();
             }
+
+            lblNombreAdm.Text = AdminLoginCache.Nombre;
+            lblCPAdmin.Text = AdminLoginCache.CP.ToString();
+            lblLocalidadAdm.Text = AdminLoginCache.Localidad;
+            lblCorreoAdmin.Text = AdminLoginCache.Email;
         }
 
         private void picUser_Click(object sender, EventArgs e)
         {
             panelUser.Visible = !panelUser.Visible;
+        }
+
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void panelBorde_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panelBorde_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void panelBorde_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void picAtras_Click(object sender, EventArgs e)
+        {
+            FrmActPpal home = new FrmActPpal();
+            home.Show();
+            this.Hide();
+
+        }
+
+        private void panelNavegacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = MessageBox.Show("¿Salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
     }
 }

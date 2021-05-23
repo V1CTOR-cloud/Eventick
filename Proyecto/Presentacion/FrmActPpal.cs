@@ -16,6 +16,8 @@ namespace Eventick
         Image favoritovacio = Image.FromFile(@"..\..\..\Iconos\corazonvacio.png");
         Image favoritolleno = Image.FromFile(@"..\..\..\Iconos\corazonrojo.png");
         ConexionBD conexion = new ConexionBD();
+        Color colorBotonesActivos = Color.FromArgb(230, 240, 229);
+        Color colorBotonesActivosAdmin = Color.FromArgb(229,232,239);
         public FrmActPpal()
         {
             InitializeComponent();
@@ -33,16 +35,20 @@ namespace Eventick
             txtLocalidad.ForeColor = Color.Gray;
 
 
-            btnActividad.BackColor = colorBotonesActivos;
             btnEvento.BackColor = Color.Transparent;
-
-
         }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result;
+
+            result = MessageBox.Show("¿Salir de la aplicación?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
 
@@ -63,6 +69,18 @@ namespace Eventick
                 MessageBox.Show("Error al conectar con la base de datos");
             }
             conexion.CerrarConexion();
+
+            if (string.IsNullOrEmpty(UserLoginCache.Nombre))
+            {
+                panel2.BackColor = Color.FromArgb(229, 232, 239);
+                cbbTipo.BackColor = Color.FromArgb(70, 130, 180);
+                btnActividad.BackColor = colorBotonesActivosAdmin;
+            }
+            else
+            {
+                btnActividad.BackColor = colorBotonesActivos;
+            }
+
 
             foreach (Actividad act in lista)
             {
@@ -127,37 +145,28 @@ namespace Eventick
 
         private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
-            // By using Sender, one method could handle multiple ComboBoxes
             ComboBox cbx = sender as ComboBox;
             if (cbx != null)
             {
-                // Always draw the background
                 e.DrawBackground();
 
-                // Drawing one of the items?
                 if (e.Index >= 0)
                 {
-                    // Set the string alignment.  Choices are Center, Near and Far
                     StringFormat sf = new StringFormat();
                     sf.LineAlignment = StringAlignment.Center;
                     sf.Alignment = StringAlignment.Center;
 
-                    // Set the Brush to ComboBox ForeColor to maintain any ComboBox color settings
-                    // Assumes Brush is solid
                     Brush brush = new SolidBrush(cbx.ForeColor);
 
-                    // If drawing highlighted selection, change brush
                     if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
                         brush = SystemBrushes.HighlightText;
 
-                    // Draw the string
                     e.Graphics.DrawString(cbx.Items[e.Index].ToString(), cbx.Font, brush, e.Bounds, sf);
                 }
             }
         }
 
 
-        Color colorBotonesActivos = Color.FromArgb(230, 240, 229);
         private void btnActividad_Click(object sender, EventArgs e)
         {
             if (btnActividad.BackColor == Color.Transparent && btnEvento.BackColor == colorBotonesActivos)
@@ -254,9 +263,18 @@ namespace Eventick
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmPerfilUsuario perfilusu = new frmPerfilUsuario();
-            perfilusu.Show();
+            if (string.IsNullOrEmpty(AdminLoginCache.Nombre)) {
+                this.Hide();
+                frmPerfilUsuario perfilusu = new frmPerfilUsuario();
+                perfilusu.Show();
+            }
+            else
+            {
+                this.Hide();
+                FrmPerfilAdmin perfiladm = new FrmPerfilAdmin();
+                perfiladm.Show();
+
+            }
         }
 
         private void llblTitulo_Click(object sender, EventArgs e)

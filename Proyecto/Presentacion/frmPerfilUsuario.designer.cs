@@ -62,7 +62,7 @@ namespace Eventick
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.picAtras = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picFotoPerfil = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblListaElementos = new System.Windows.Forms.Label();
             this.panelUser = new System.Windows.Forms.Panel();
@@ -79,7 +79,7 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).BeginInit();
@@ -456,6 +456,7 @@ namespace Eventick
             // 
             // picAtras
             // 
+            this.picAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAtras.Image = ((System.Drawing.Image)(resources.GetObject("picAtras.Image")));
             this.picAtras.Location = new System.Drawing.Point(10, 131);
             this.picAtras.Name = "picAtras";
@@ -463,17 +464,18 @@ namespace Eventick
             this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAtras.TabIndex = 64;
             this.picAtras.TabStop = false;
+            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
             // 
-            // pictureBox2
+            // picFotoPerfil
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 183);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(278, 254);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 75;
-            this.pictureBox2.TabStop = false;
+            this.picFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("picFotoPerfil.Image")));
+            this.picFotoPerfil.Location = new System.Drawing.Point(10, 183);
+            this.picFotoPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.picFotoPerfil.Name = "picFotoPerfil";
+            this.picFotoPerfil.Size = new System.Drawing.Size(278, 254);
+            this.picFotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFotoPerfil.TabIndex = 75;
+            this.picFotoPerfil.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -529,6 +531,7 @@ namespace Eventick
             // 
             // picEditarFotoPerfil
             // 
+            this.picEditarFotoPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEditarFotoPerfil.ErrorImage = null;
             this.picEditarFotoPerfil.Image = ((System.Drawing.Image)(resources.GetObject("picEditarFotoPerfil.Image")));
             this.picEditarFotoPerfil.Location = new System.Drawing.Point(255, 183);
@@ -547,7 +550,7 @@ namespace Eventick
             this.Controls.Add(this.lblListaElementos);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.picEditarFotoPerfil);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picFotoPerfil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picAtras);
             this.Controls.Add(this.panelBorde);
@@ -573,7 +576,7 @@ namespace Eventick
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picEditarFotoPerfil)).EndInit();
@@ -606,7 +609,7 @@ namespace Eventick
         private System.Windows.Forms.PictureBox picBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picFotoPerfil;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblListaElementos;
         private System.Windows.Forms.Panel panelUser;

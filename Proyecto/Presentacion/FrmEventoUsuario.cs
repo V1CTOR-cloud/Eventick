@@ -18,13 +18,25 @@ namespace Eventick
         {
             btnEvento.BackColor = Color.FromArgb(230, 240, 229);
             btnActividad.BackColor = Color.Transparent;
-            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
+            if (string.IsNullOrEmpty(UserLoginCache.Nombre))
+            {
+                panel2.BackColor = Color.FromArgb(229, 232, 239);
+                cbbTipo.BackColor = Color.FromArgb(70, 130, 180);
+                cmbTipoEvento.BackColor = Color.FromArgb(70, 130, 180);
+                btnEvento.BackColor = colorBotonesActivosAdmin;
+            }
+            else
+            {
+                btnEvento.BackColor = colorBotonesActivos;
+            }
 
         }
 
 
         Image favoritovacio = Image.FromFile(@"..\..\..\Iconos\corazonvacio.png");
         Image favoritolleno = Image.FromFile(@"..\..\..\Iconos\corazonrojo.png");
+        Color colorBotonesActivosAdmin = Color.FromArgb(229, 232, 239);
+
 
         public FrmEventoUsuario()
         {
@@ -36,7 +48,6 @@ namespace Eventick
             cbbPrecioMin.SelectedIndex = 0;
             cbbPrecioMax.SelectedIndex = 0;
 
-            picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
 
             txtPalabraClave.Text = "PALABRA CLAVE";
             txtPalabraClave.Font = new Font(txtPalabraClave.Font, FontStyle.Bold);
@@ -47,8 +58,7 @@ namespace Eventick
             txtLocalidad.ForeColor = Color.Gray;
 
 
-            btnActividad.BackColor = colorBotonesActivos;
-            btnEvento.BackColor = Color.Transparent;
+            btnActividad.BackColor = Color.Transparent;
 
 
 
@@ -231,20 +241,6 @@ namespace Eventick
             Visible = false;
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar2.png");
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                picMaximizar.Image = Image.FromFile(@"..\..\..\Iconos\maximizar.png");
-
-                this.WindowState = FormWindowState.Normal;
-            }
         }
     }
-}
+

@@ -14,12 +14,13 @@ namespace Eventick
         private string email;        
         private int cp;
         private string contraseña;
+        private string localidad;
 
         public string Usuario { get { return usuario;} set { usuario = value; } }
         public string Email { get { return usuario; } set { usuario = value; } }
         public int Cp { get { return cp; } set { cp = value; } }
         public string Contraseña { get { return contraseña; } set { contraseña = value; } }
-
+        public string Localidad { get { return localidad; }set { localidad = value; } }
         public Administradores()
         {
 
@@ -53,6 +54,7 @@ namespace Eventick
                     admin.email = AdminLoginCache.Email = reader.GetString(1);
                     admin.cp = AdminLoginCache.CP = reader.GetInt32(2);
                     admin.contraseña = reader.GetString(3);
+                    admin.localidad = AdminLoginCache.Localidad = reader.GetString(4);
                     admins.Add(admin);
                 }
             }
@@ -87,10 +89,11 @@ namespace Eventick
                 {
                     Administradores admin = new Administradores();
 
-                    admin.usuario = reader.GetString(0);
-                    admin.email = reader.GetString(1);
-                    admin.cp = reader.GetInt32(2);
+                    admin.usuario = AdminLoginCache.Nombre = reader.GetString(0);
+                    admin.email = AdminLoginCache.Email = reader.GetString(1);
+                    admin.cp = AdminLoginCache.CP = reader.GetInt32(2);
                     admin.contraseña = reader.GetString(3);
+                    admin.localidad = AdminLoginCache.Localidad = reader.GetString(4);
                     admins.Add(admin);
                 }
             }
@@ -144,13 +147,19 @@ namespace Eventick
         }
 
 
-        public static int AgregarActividad(MySqlConnection conexion, Actividad act) // Pasar la actividad cargada
+        public static int AgregarActividad(MySqlConnection conexion, Actividad act,string name) // Pasar la actividad cargada
         {
             int retorno;
             string consulta = String.Format("INSERT INTO actividad (id, titulo, descripcion, localidad, distancia, circular, dificultad, duracion, tipo) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", act.Id, act.Titulo, act.Descripcion, act.Localidad, act.Distancia, act.Circular, act.Dificultad, act.Duracion, act.Tipo);
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", act.Id,act.Titulo, act.Descripcion, act.Localidad, act.Distancia, act.Circular, act.Dificultad, act.Duracion, act.Tipo);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
+
+            consulta = String.Format("INSERT INTO adminactividad VALUES ('{0}','{1}')", name, act.Id);
+            comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+
+
             return retorno;
         }
 
@@ -197,6 +206,13 @@ namespace Eventick
 
         }
 
+        public void ModificarAdmin(MySqlConnection conexion)
+        {
+            string consulta = String.Format("UPDATE admin SET email='{0}',contrasenia='{1}' WHERE nombre='{3}'", email,contraseña,usuario);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+
+        }
 
 
 

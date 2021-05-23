@@ -48,6 +48,13 @@ namespace Eventick
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblNickname = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.lblCP = new System.Windows.Forms.Label();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.txtCP = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFondo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
@@ -119,6 +126,7 @@ namespace Eventick
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(199, 23);
             this.txtConfirmarContraseña.TabIndex = 6;
+            this.txtConfirmarContraseña.UseSystemPasswordChar = true;
             // 
             // picCerrar
             // 
@@ -229,6 +237,7 @@ namespace Eventick
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(199, 23);
             this.txtContraseña.TabIndex = 5;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -260,12 +269,99 @@ namespace Eventick
             this.btnRegistrarse.TabIndex = 27;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(408, 540);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(199, 23);
+            this.txtCodigo.TabIndex = 28;
+            this.txtCodigo.Visible = false;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(185)))), ((int)(((byte)(186)))));
+            this.lblCodigo.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblCodigo.Location = new System.Drawing.Point(405, 525);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(112, 13);
+            this.lblCodigo.TabIndex = 29;
+            this.lblCodigo.Text = "Código de verificación";
+            this.lblCodigo.Visible = false;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(612, 540);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(137, 23);
+            this.btnAceptar.TabIndex = 30;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Visible = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtLocalidad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalidad.Location = new System.Drawing.Point(628, 494);
+            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(199, 23);
+            this.txtLocalidad.TabIndex = 32;
+            // 
+            // lblCP
+            // 
+            this.lblCP.AutoSize = true;
+            this.lblCP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(185)))), ((int)(((byte)(186)))));
+            this.lblCP.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblCP.Location = new System.Drawing.Point(405, 479);
+            this.lblCP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCP.Name = "lblCP";
+            this.lblCP.Size = new System.Drawing.Size(72, 13);
+            this.lblCP.TabIndex = 33;
+            this.lblCP.Text = "Código Postal";
+            // 
+            // lblLocalidad
+            // 
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(185)))), ((int)(((byte)(186)))));
+            this.lblLocalidad.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.lblLocalidad.Location = new System.Drawing.Point(625, 479);
+            this.lblLocalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(53, 13);
+            this.lblLocalidad.TabIndex = 34;
+            this.lblLocalidad.Text = "Localidad";
+            // 
+            // txtCP
+            // 
+            this.txtCP.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtCP.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCP.Location = new System.Drawing.Point(407, 494);
+            this.txtCP.Mask = "00000";
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(200, 23);
+            this.txtCP.TabIndex = 35;
             // 
             // CrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 673);
+            this.Controls.Add(this.txtCP);
+            this.Controls.Add(this.lblLocalidad);
+            this.Controls.Add(this.lblCP);
+            this.Controls.Add(this.txtLocalidad);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.lblNickname);
             this.Controls.Add(this.txtUsuario);
@@ -319,5 +415,12 @@ namespace Eventick
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblNickname;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.Label lblCP;
+        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.MaskedTextBox txtCP;
     }
 }

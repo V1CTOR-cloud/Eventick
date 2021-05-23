@@ -16,6 +16,5 @@ namespace Eventick
         public static int CP { get; set; }
         public static string Localidad { get; set; }
 
-
     }
 }

@@ -48,7 +48,6 @@ namespace Eventick
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picSalir = new System.Windows.Forms.PictureBox();
             this.panelNavegacion = new System.Windows.Forms.Panel();
             this.picUser = new System.Windows.Forms.PictureBox();
@@ -72,7 +71,6 @@ namespace Eventick
             this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).BeginInit();
             this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
@@ -250,7 +248,6 @@ namespace Eventick
             this.panelBorde.Controls.Add(this.label1);
             this.panelBorde.Controls.Add(this.pictureBox5);
             this.panelBorde.Controls.Add(this.picMinimizar);
-            this.panelBorde.Controls.Add(this.picMaximizar);
             this.panelBorde.Controls.Add(this.picSalir);
             this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
@@ -289,27 +286,13 @@ namespace Eventick
             this.picMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("picMinimizar.Image")));
-            this.picMinimizar.Location = new System.Drawing.Point(1168, 2);
+            this.picMinimizar.Location = new System.Drawing.Point(1191, 2);
             this.picMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(19, 20);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMinimizar.TabIndex = 2;
             this.picMinimizar.TabStop = false;
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.BackColor = System.Drawing.Color.Transparent;
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("picMaximizar.Image")));
-            this.picMaximizar.Location = new System.Drawing.Point(1191, 2);
-            this.picMaximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(19, 20);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 1;
-            this.picMaximizar.TabStop = false;
             // 
             // picSalir
             // 
@@ -524,6 +507,7 @@ namespace Eventick
             this.btnAñadir.Text = "AÑADIR";
             this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAñadir.UseVisualStyleBackColor = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // picAtras
             // 
@@ -566,7 +550,6 @@ namespace Eventick
             this.panelBorde.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalir)).EndInit();
             this.panelNavegacion.ResumeLayout(false);
             this.panelNavegacion.PerformLayout();
@@ -592,7 +575,6 @@ namespace Eventick
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox picMinimizar;
-        private System.Windows.Forms.PictureBox picMaximizar;
         private System.Windows.Forms.PictureBox picSalir;
         private System.Windows.Forms.Panel panelNavegacion;
         private System.Windows.Forms.PictureBox picUser;

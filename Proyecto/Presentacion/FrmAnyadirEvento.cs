@@ -71,6 +71,5 @@ namespace Eventick
         {
             cambiaHoras = true;
         }
-
     }
 }

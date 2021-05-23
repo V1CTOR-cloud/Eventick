@@ -155,6 +155,155 @@ namespace Eventick
         {
             mouseDown = false;
         }
+        string codigo;
+        Usuarios usu = new Usuarios();
 
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+
+            switch (Cajasvacias())
+            {
+                case 0:
+
+                    if (bdatos.AbrirConexion())
+                    {
+                        if (NohaynombreAyuntamiento() == true)
+                        {
+                            if (Usuarios.ComprobarUsuario(bdatos.Conexion, txtUsuario.Text).Count == 0)
+                            {
+                                if (Usuarios.ComprobarPorEmail(bdatos.Conexion, txtEmail.Text).Count == 0)
+                                {
+                                    usu.Nick = txtUsuario.Text;
+                                    usu.Nombre = txtUsuario_Nombre.Text;
+                                    usu.Apellidos = txtApellido.Text;
+                                    usu.Email = txtEmail.Text;
+                                    usu.Cp = int.Parse(txtCP.Text);
+                                    usu.Localidad = txtLocalidad.Text;
+                                    if (ContraseñaConfirmada() == true)
+                                    {
+                                        usu.Contraseña = txtConfirmarContraseña.Text;
+                                        Correo correo = new Correo();
+                                        codigo = correo.EnviarCodigo(txtEmail.Text, bdatos.Conexion);
+                                        bdatos.CerrarConexion();
+                                        lblCodigo.Visible = true;
+                                        txtCodigo.Visible = true;
+                                        btnAceptar.Visible = true;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Las contraseñas no coinciden", "Error - Contraseña incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                        txtContraseña.Clear();
+                                        txtConfirmarContraseña.Clear();
+                                        bdatos.CerrarConexion();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("El email introducido ya está registrado", "Error - Email incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                    Limpiacajas();
+                                    bdatos.CerrarConexion();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Este usuario ya está registrado, debe iniciar sesión", "Error - Usuario ya existe", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                Limpiacajas();
+                                bdatos.CerrarConexion();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No te puedes registrar como administrador", "Error - Registro de la palabra 'ayto' en el usuario", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            Limpiacajas();
+                            bdatos.CerrarConexion();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Limpiacajas();
+                        bdatos.CerrarConexion();
+                    }
+
+                    break;
+
+                case 1:
+                    MessageBox.Show("Todos los campos están vacíos", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 2:
+                    MessageBox.Show("El campo nombre está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 3:
+                    MessageBox.Show("El campo apellidos está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 4:
+                    MessageBox.Show("El campo usuario está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 5:
+                    MessageBox.Show("El campo email está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 6:
+                    MessageBox.Show("El campo contraseña está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+
+                case 7:
+                    MessageBox.Show("El campo confirmar contraseña está vacío", "Error - Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Limpiacajas();
+                    bdatos.CerrarConexion();
+                    break;
+            }
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == codigo)
+            {
+                if (bdatos.AbrirConexion())
+                {
+                    if (Usuarios.AgregarUsuario(bdatos.Conexion, usu) == 1)
+                    {
+                        MessageBox.Show("El usuario se ha registrado con exito", "¡Usuario registrado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiacajas();
+                        bdatos.CerrarConexion();
+                        frmLogIn inicio_sesion = new frmLogIn();
+                        inicio_sesion.Visible = true;
+                        Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario no ha sido registrado", "Error - registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Limpiacajas();
+                        bdatos.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("El código introducido no es correcto");
+            }
+        }
     }
 }

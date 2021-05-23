@@ -12,6 +12,7 @@ namespace Eventick
 {
     public partial class frmPerfilUsuario : Form
     {
+        ConexionBD conexion = new ConexionBD();
         public frmPerfilUsuario()
         {
             InitializeComponent();
@@ -67,19 +68,20 @@ namespace Eventick
 
         private void frmPerfilUsuario_Load(object sender, EventArgs e)
         {
-            lblNombreAdm.Text = UserLoginCache.Nombre;
-            lblApellidosAdm.Text = UserLoginCache.Apellidos;
-            lblCPAdmin.Text = UserLoginCache.CP.ToString();
-            lblLocalidadAdm.Text =UserLoginCache.Localidad;
-            lblCorreoAdmin.Text = UserLoginCache.Email;
+            CargarLabels();
         }
 
         private void lblEditarDatosAdmin_Click(object sender, EventArgs e)
         {
-            lblNombreAdm.Visible = lblApellidos.Visible= lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+            lblNombreAdm.Visible = lblApellidosAdm.Visible= lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
             txtNombre.Visible = txtApellidos.Visible=txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
             lblEditarDatosAdmin.Visible = !lblEditarDatosAdmin.Visible;
             btnAceptar.Visible = true;
+            txtNombre.Text = lblNombreAdm.Text;
+            txtApellidos.Text = lblApellidos.Text;
+            txtCP.Text = lblCPAdmin.Text;
+            txtLocalidad.Text = lblLocalidadAdm.Text;
+            txtEmail.Text = lblCorreoAdmin.Text;
 
         }
 
@@ -88,8 +90,8 @@ namespace Eventick
             DialogResult r = MessageBox.Show("¿Estás seguro de guardar los cambios?","¿Seguro?",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (r == DialogResult.Yes)
             {
-                lblNombreAdm.Visible=lblApellidosAdm.Visible=lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
-                txtNombre.Visible=txtApellidos.Visible=txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
+                lblNombreAdm.Visible = lblApellidosAdm.Visible = lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+                txtNombre.Visible = txtApellidos.Visible = txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
                 lblEditarDatosAdmin.Visible = true;
                 btnAceptar.Visible = false;
                 Usuarios usu = new Usuarios();
@@ -100,10 +102,43 @@ namespace Eventick
                 usu.Localidad = txtLocalidad.Text;
                 usu.Email = txtEmail.Text;
                 usu.Contraseña = txtPass.Text;
-                usu.ModificarUsuario();
+                if (conexion.AbrirConexion())
+                {
+                    usu.ModificarUsuario(conexion.Conexion);
+                    conexion.CerrarConexion();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
             }
+            else
+            {
+                lblNombreAdm.Visible = lblApellidosAdm.Visible = lblCPAdmin.Visible = lblLocalidadAdm.Visible = lblCorreoAdmin.Visible = picSeguridad.Visible = !lblNombreAdm.Visible;
+                txtNombre.Visible = txtApellidos.Visible = txtCP.Visible = txtLocalidad.Visible = txtEmail.Visible = txtPass.Visible = !txtCP.Visible;
+                lblEditarDatosAdmin.Visible = true;
+                btnAceptar.Visible = false;
+            }
+            CargarLabels();
+            
 
+        }
+        private void CargarLabels()
+        {
+            lblNombreAdm.Text = UserLoginCache.Nombre;
+            lblApellidosAdm.Text = UserLoginCache.Apellidos;
+            lblCPAdmin.Text = UserLoginCache.CP.ToString();
+            lblLocalidadAdm.Text = UserLoginCache.Localidad;
+            lblCorreoAdmin.Text = UserLoginCache.Email;
 
+        }
+
+        private void picAtras_Click(object sender, EventArgs e)
+        {
+            FrmActPpal home = new FrmActPpal();
+            home.Show();
+            this.Hide();
         }
     }
 }

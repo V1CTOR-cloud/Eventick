@@ -68,7 +68,7 @@ namespace Eventick
             {
                 if (bdatos.AbrirConexion())
                 {
-                    if (txtUsuario.Text.Contains("Ayto"))
+                    if (txtUsuario.Text.StartsWith("Ayto"))
                     {
                         if (Administradores.ComprobarAdmin(bdatos.Conexion, txtUsuario.Text).Count > 0)
                         {
@@ -209,9 +209,28 @@ namespace Eventick
 
         private void lblCambiarContraseña_Click(object sender, EventArgs e)
         {
-            CambiarContraseña cambiar_contraseña = new CambiarContraseña();
-            cambiar_contraseña.Visible = true;
-            Visible = false;
+            //CambiarContraseña cambiar_contraseña = new CambiarContraseña();
+            //cambiar_contraseña.Visible = true;
+            //Visible = false;
+            if (!string.IsNullOrEmpty(txtUsuario.Text)) {
+                Correo correo = new Correo();
+                if (bdatos.AbrirConexion())
+                {
+                    correo.RecuperarContraseña(txtUsuario.Text,bdatos.Conexion);
+                    bdatos.CerrarConexion();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido conectar con la base de datos", "Error - Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debes introducir el nombre de usuario o el correo");
+            }
+
         }
 
 
