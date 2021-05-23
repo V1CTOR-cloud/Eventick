@@ -167,11 +167,206 @@ namespace Eventick
                     Tipo = reader.GetInt32(8);
 
             }
-
-
         }
 
-            
+        public static List<Actividad> FiltroTipo(MySqlConnection conexion, int tipo)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE tipo='{0}'", tipo);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+        //AÑADIDO VM
+        public static List<Actividad> FiltroPalabraClave(MySqlConnection conexion, string palabraclave)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE titulo='{0}' OR localidad='{0}'", palabraclave);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+        //AÑADIDO POR VM
+        public static List<Actividad> FiltroLocalidad(MySqlConnection conexion, string localidad)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE localidad='{0}'", localidad);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+
+        //AÑADIDO VM
+        public static List<Actividad> FiltroKm(MySqlConnection conexion, double distancia)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE distancia='{0}'", distancia);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+
+        //AÑADIDO VM
+
+        public static List<Actividad> FiltroTiempo(MySqlConnection conexion, DateTime tiempo)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE tiempo='{0}'", tiempo);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+        //AÑADIDO VM
+        public static List<Actividad> FiltroDificultad(MySqlConnection conexion, string dificultad)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE dificultad='{0}'", dificultad);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
+        //AÑADIDO VM
+        public static List<Actividad> FiltroCircular(MySqlConnection conexion, int circular)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            string consulta = String.Format("SELECT * FROM actividad WHERE circular='{0}'", circular);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Actividad act = new Actividad();
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+        }
 
     }
 }

@@ -59,6 +59,7 @@ namespace Eventick
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PanelAviso.Visible = false;
             List<Actividad> lista = new List<Actividad>();
             if (conexion.AbrirConexion())
             {
@@ -283,6 +284,161 @@ namespace Eventick
             FrmFichaActividad fichaact = new FrmFichaActividad(titulo.Name);
             fichaact.Show();
             this.Hide();
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text != string.Empty)
+            {
+                if (conexion.AbrirConexion())
+                {
+                    if (Actividad.FiltroPalabraClave(conexion.Conexion, txtBuscar.Text).Count > 0)
+                    {
+                        // INSERTAR CARGA
+                        conexion.CerrarConexion();
+                    }
+                    else
+                    {
+                        picAviso.Image = Image.FromFile(@"..\..\..\Iconos\error404.png");
+                        lblAvisoTitulo.Text = "Error 404";
+                        lblSubtitulo.Text = "¡Vaya! No se ha podido encontrar el evento deseado";
+                        PanelAviso.Visible = true;
+                        conexion.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    picAviso.Image = Image.FromFile(@"..\..\..\Iconos\aviso_bbdd.png");
+                    lblAvisoTitulo.Text = "Servidor desconectado";
+                    lblSubtitulo.Text = "¡Ups! El servidor se encuentra apagado";
+                    conexion.CerrarConexion();
+                }
+            }
+            else
+            {
+                picAviso.Image = Image.FromFile(@"..\..\..\Iconos\confusion.png");
+                lblAvisoTitulo.Text = "No has buscado nada";
+                lblSubtitulo.Text = "¡Repampanos! Al menos podrías haber buscado algo";
+                PanelAviso.Visible = true;
+                conexion.CerrarConexion();
+            }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (conexion.AbrirConexion())
+            {
+                if (cbbTipo.Text != string.Empty)
+                {
+                    if (Actividad.FiltroTipo(conexion.Conexion, TipoSeleccionado()).Count > 0)
+                    {
+                        List<Actividad> lista = new List<Actividad>();
+                        lista = Actividad.FiltroTipo(conexion.Conexion, TipoSeleccionado());
+
+                        foreach (Actividad act in lista)
+                        {
+                            PanelAviso.Visible = false;                            
+                            Panel panelNoticia = new Panel() { /*Name = "panelNoticia",*/ BackColor = Color.Transparent, Size = new Size(850, 145) };
+                            flpNoticias.Controls.Add(panelNoticia);
+                            PictureBox picNoticia = new PictureBox() { /*Name = "picNoticia",*/ Image = Image.FromFile(@"..\..\..\Iconos\yo.jpg"), Size = new Size(241, 135), SizeMode = PictureBoxSizeMode.Normal };
+                            panelNoticia.Controls.Add(picNoticia);
+                            LinkLabel llblTitulo = new LinkLabel() { Name = act.Id, Location = new Point(261, 2), Text = act.Titulo, AutoSize = true };
+                            panelNoticia.Controls.Add(llblTitulo);
+                            Label lblLocalidad = new Label() { /*Name = "lblLocalidad",*/ AutoSize = true, Location = new Point(264, 24), Text = act.Localidad, Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold) };
+                            panelNoticia.Controls.Add(lblLocalidad);
+                            Panel panelInfo = new Panel() { /*Name = "panelInfo",*/ BackColor = Color.Transparent, Size = new Size(588, 25), Location = new Point(276, 46) };
+                            panelNoticia.Controls.Add(panelInfo);
+                            Label lblInfo3 = new Label() { /*Name = "lblInfo3",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Circular == 1 ? "Circular" : "No circular" };
+                            panelInfo.Controls.Add(lblInfo3);
+                            Label lblInfo4 = new Label() { /*Name = "lblInfo4",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
+                            panelInfo.Controls.Add(lblInfo4);
+                            Label lblInfo5 = new Label() { /*Name = "lblInfo5",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Dificultad };
+                            panelInfo.Controls.Add(lblInfo5);
+                            Label lblInfo6 = new Label() { /*Name = "lblInfo6",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
+                            panelInfo.Controls.Add(lblInfo6);
+                            Label lblInfo7 = new Label() { /*Name = "lblInfo7",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Duracion.ToString("t") + " horas" };
+                            panelInfo.Controls.Add(lblInfo7);
+                            Label lblInfo8 = new Label() { /*Name = "lblInfo8",*/ AutoSize = true, Dock = DockStyle.Left, Text = "|" };
+                            panelInfo.Controls.Add(lblInfo8);
+                            Label lblInfo9 = new Label() { /*Name = "lblInfo9",*/ AutoSize = true, Dock = DockStyle.Left, Text = act.Distancia.ToString() + " km" };
+                            panelInfo.Controls.Add(lblInfo9);
+                            PictureBox picFavorito = new PictureBox() { /*Name = "picFavorito",*/ Cursor = Cursors.Hand, Image = favoritovacio, Size = new Size(35, 35), Location = new Point(261, 100), SizeMode = PictureBoxSizeMode.Zoom };
+                            panelNoticia.Controls.Add(picFavorito);
+                            PictureBox picCompartir = new PictureBox() { /*Name = "picCompartir",*/ Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
+                            panelNoticia.Controls.Add(picCompartir);
+                            picFavorito.Click += new EventHandler(picFavorito_Click);
+                            llblTitulo.Click += new EventHandler(llblTitulo_Click);
+                        }
+                        conexion.CerrarConexion();
+                    }
+                    else
+                    {
+                        PanelAviso.Visible = true;
+                        conexion.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    if (txtPalabraClave.Text != string.Empty)
+                    {                        
+                        Actividad.FiltroPalabraClave(conexion.Conexion, txtPalabraClave.Text);
+                        conexion.CerrarConexion();
+                    }
+                    else
+                    {
+                        if (txtLocalidad.Text != string.Empty)
+                        {
+                            Actividad.FiltroLocalidad(conexion.Conexion, txtLocalidad.Text);
+                            conexion.CerrarConexion();
+                        }
+                        else
+                        {
+                            Actividad.FiltroKm(conexion.Conexion, trbDistancia.Value);
+
+                            if (cbbDificultad.Text != string.Empty)
+                            {
+                                Actividad.FiltroDificultad(conexion.Conexion, cbbDificultad.Text);
+                                conexion.CerrarConexion();
+                            }
+                            else
+                            {
+                                if (chkCircular.Checked)
+                                {
+                                    Actividad.FiltroCircular(conexion.Conexion, 1);
+                                    conexion.CerrarConexion();
+                                }                                
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                picAviso.Image = Image.FromFile(@"..\..\..\Iconos\aviso_bbdd.png");
+                lblAvisoTitulo.Text = "Servidor desconectado";
+                lblSubtitulo.Text = "¡Ups! El servidor se encuentra apagado";
+            }
+        }
+
+        private int TipoSeleccionado()
+        {
+            switch (cbbTipo.Text)
+            {
+                case "SENDERISMO":
+                    return 1;
+
+                case "ANDAR":
+                    return 2;
+
+                case "CORRER":
+                    return 3;
+
+                case "CAMINATA":
+                    return 4;
+
+                default:
+                    return 0;
+            }
         }
     }
 }
