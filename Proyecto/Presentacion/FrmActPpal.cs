@@ -111,10 +111,12 @@ namespace Eventick
                 panelInfo.Controls.Add(lblInfo9);
                 PictureBox picFavorito = new PictureBox() { /*Name = "picFavorito",*/ Cursor = Cursors.Hand, Image = favoritovacio, Size = new Size(35, 35), Location = new Point(261, 100), SizeMode = PictureBoxSizeMode.Zoom };
                 panelNoticia.Controls.Add(picFavorito);
-                PictureBox picCompartir = new PictureBox() { /*Name = "picCompartir",*/ Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
+                string nombre = "pic" + act.Id;
+                PictureBox picCompartir = new PictureBox() { Name = nombre,Cursor=Cursors.Hand, Image = Image.FromFile(@"..\..\..\Iconos\compartir.png"), Size = new Size(35, 35), Location = new Point(300, 100), SizeMode = PictureBoxSizeMode.Zoom };
                 panelNoticia.Controls.Add(picCompartir);
                 picFavorito.Click += new EventHandler(picFavorito_Click);
                 llblTitulo.Click += new EventHandler(llblTitulo_Click);
+                picCompartir.Click += new EventHandler(picCompartir_Click);
             }
 
         }
@@ -446,6 +448,12 @@ namespace Eventick
             this.Hide();
             frmLogIn login = new frmLogIn();
             login.Show();
+        }
+
+        private void picCompartir_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = sender as PictureBox;
+            Clipboard.SetText(pic.Name.Substring(3));
         }
     }
 }
