@@ -562,7 +562,7 @@ namespace Eventick
             this.panelEliminarEventos.Controls.Add(this.lblEventos);
             this.panelEliminarEventos.Controls.Add(this.picCerrarEliminarEventos);
             this.panelEliminarEventos.Controls.Add(this.dataGridView1);
-            this.panelEliminarEventos.Location = new System.Drawing.Point(164, 114);
+            this.panelEliminarEventos.Location = new System.Drawing.Point(167, 114);
             this.panelEliminarEventos.Name = "panelEliminarEventos";
             this.panelEliminarEventos.Size = new System.Drawing.Size(691, 357);
             this.panelEliminarEventos.TabIndex = 71;
@@ -579,6 +579,7 @@ namespace Eventick
             this.button1.TabIndex = 66;
             this.button1.Text = "ELIMINAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblEventos
             // 
@@ -592,6 +593,7 @@ namespace Eventick
             // 
             // picCerrarEliminarEventos
             // 
+            this.picCerrarEliminarEventos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrarEliminarEventos.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarEliminarEventos.Image")));
             this.picCerrarEliminarEventos.Location = new System.Drawing.Point(664, 3);
             this.picCerrarEliminarEventos.Name = "picCerrarEliminarEventos";
@@ -639,6 +641,7 @@ namespace Eventick
             this.button7.Text = "Cerrar sesión";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panelEliminarActividades
             // 
@@ -646,7 +649,7 @@ namespace Eventick
             this.panelEliminarActividades.Controls.Add(this.lblTituloPanelEliminarAct);
             this.panelEliminarActividades.Controls.Add(this.picCerrarPanelEliminarActividades);
             this.panelEliminarActividades.Controls.Add(this.gtvActividadesEliminar);
-            this.panelEliminarActividades.Location = new System.Drawing.Point(247, 111);
+            this.panelEliminarActividades.Location = new System.Drawing.Point(250, 111);
             this.panelEliminarActividades.Name = "panelEliminarActividades";
             this.panelEliminarActividades.Size = new System.Drawing.Size(695, 357);
             this.panelEliminarActividades.TabIndex = 72;
@@ -663,6 +666,7 @@ namespace Eventick
             this.btnEliminarAct.TabIndex = 66;
             this.btnEliminarAct.Text = "ELIMINAR";
             this.btnEliminarAct.UseVisualStyleBackColor = false;
+            this.btnEliminarAct.Click += new System.EventHandler(this.btnEliminarAct_Click);
             // 
             // lblTituloPanelEliminarAct
             // 
@@ -676,6 +680,7 @@ namespace Eventick
             // 
             // picCerrarPanelEliminarActividades
             // 
+            this.picCerrarPanelEliminarActividades.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrarPanelEliminarActividades.Image = ((System.Drawing.Image)(resources.GetObject("picCerrarPanelEliminarActividades.Image")));
             this.picCerrarPanelEliminarActividades.Location = new System.Drawing.Point(664, 3);
             this.picCerrarPanelEliminarActividades.Name = "picCerrarPanelEliminarActividades";
@@ -683,6 +688,7 @@ namespace Eventick
             this.picCerrarPanelEliminarActividades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrarPanelEliminarActividades.TabIndex = 69;
             this.picCerrarPanelEliminarActividades.TabStop = false;
+            this.picCerrarPanelEliminarActividades.Click += new System.EventHandler(this.picCerrarPanelEliminarActividades_Click_1);
             // 
             // gtvActividadesEliminar
             // 

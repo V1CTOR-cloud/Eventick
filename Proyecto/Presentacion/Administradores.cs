@@ -215,6 +215,64 @@ namespace Eventick
 
         }
 
+
+        public List<Eventos> TotalEventosAdmin(MySqlConnection conexion)
+        {
+            List<Eventos> lista = new List<Eventos>();
+            String consulta = String.Format("SELECT * FROM evento ev INNER JOIN adminevento ae ON ev.id=ae.idevento WHERE ae.idadmin = '{0}'", usuario);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+
+                {
+                Eventos act = new Eventos(reader.GetString(6), reader.GetInt32(9));
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Duracion = Convert.ToDateTime(reader.GetString(4));
+                act.Tipo = reader.GetInt32(5);
+                act.TipoActividadEvento = reader.GetString(6);
+                act.Precio = reader.GetDouble(7);
+                act.CP = reader.GetInt32(9);
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+
+        }
+
+        public List<Actividad> TotalActividadesAdmin(MySqlConnection conexion)
+        {
+            List<Actividad> lista = new List<Actividad>();
+            String consulta = String.Format("SELECT * FROM actividad ac INNER JOIN adminactividad aa ON ac.id=aa.idactividad WHERE aa.idadmin = '{0}'", usuario);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+
+            {
+                Actividad act = new Actividad(reader.GetString(1), reader.GetInt32(10));
+                act.Id = reader.GetString(0);
+                act.Titulo = reader.GetString(1);
+                act.Descripcion = reader.GetString(2);
+                act.Localidad = reader.GetString(3);
+                act.Distancia = reader.GetDouble(4);
+                act.Circular = reader.GetInt16(5);
+                act.Dificultad = reader.GetString(6);
+                act.Duracion = Convert.ToDateTime(reader.GetString(7));
+                act.Tipo = reader.GetInt32(8);
+                lista.Add(act);
+            }
+            reader.Close();
+            return lista;
+
+        }
+
+
         public void ModificarAdmin(MySqlConnection conexion)
         {
             string consulta = String.Format("UPDATE admin SET email='{0}',contrasenia='{1}' WHERE nombre='{2}'", email,contraseña,usuario);

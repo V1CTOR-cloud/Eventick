@@ -323,6 +323,12 @@ namespace Eventick
             mouseDown = false;
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogIn login = new frmLogIn();
+            login.Show();
+        }
     }
 }
 

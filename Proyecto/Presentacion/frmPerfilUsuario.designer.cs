@@ -528,6 +528,7 @@ namespace Eventick
             this.btnLogOut.Text = "Cerrar sesión";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // picEditarFotoPerfil
             // 

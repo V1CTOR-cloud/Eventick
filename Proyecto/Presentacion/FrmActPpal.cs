@@ -440,5 +440,12 @@ namespace Eventick
                     return 0;
             }
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogIn login = new frmLogIn();
+            login.Show();
+        }
     }
 }
