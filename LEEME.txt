@@ -1,0 +1,22 @@
+< --- Enhorabuena has sido capaz de abrirme, aquí te enseñaré como funciona esta aplicacion web. --- >
+
+Bienvenido a mi aplicación web, esta trata de una agenda personal con la que nosotros podremos gestionar
+diferentes cuestiones dependiendo de nuestro rango (administrador, cliente), por la parte de administrador
+podremos gestionar a los usuarios (Añadir,Visualizar,Eliminar y Editar) y por la parte de los usuarios
+dispondremos de un panel de tareas que será personalizado desde el cual podremos 
+(Añadir,Visualizar,Eliminar y Editar).
+
+Los usos de esta aplicación son al gusto del usuario, ya que nos puede valer en multiples escenarios,
+desde organizar las tareas de casa, hasta gestionar un proyecto mediante metodología SCRUM.
+
+¡¡¡ Las posibilidades son infinitas !!!
+
++---------- Primeros pasos ----------+
++ # Dentro de comenzar abre la carpeta de BBDD y ejecuta en este ordén 
++ # (conexión.php, crearbbdd.php, creartablas.php)
++
++ # de esta forma ya tenemos nuestra propia base de datos en nuestro pc
++ 
++---------------- FIN ------------------+
+
+Espero que disfruten de la aplicación
